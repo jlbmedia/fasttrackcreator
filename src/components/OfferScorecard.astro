@@ -1,0 +1,69 @@
+---
+import type { AffiliateProgram } from '../data/affiliates';
+
+interface Props {
+  affiliate: AffiliateProgram;
+  featured?: boolean;
+}
+
+const { affiliate, featured = false } = Astro.props;
+---
+
+<div class={`rounded-2xl border transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between ${
+  featured 
+    ? 'bg-gradient-to-b from-gray-900 to-brand-950/40 border-brand-500/50 shadow-xl shadow-brand-500/10 ring-1 ring-brand-500/30' 
+    : 'bg-gray-900/80 border-gray-800 hover:border-gray-700 hover:bg-gray-900'
+}`}>
+  <div>
+    <!-- Badge & Rating -->
+    <div class="flex items-center justify-between gap-2 mb-4">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300">
+        {affiliate.payoutBadge}
+      </span>
+      <div class="flex items-center space-x-1 text-xs text-amber-400 font-bold">
+        <span>★ {affiliate.rating.toFixed(1)}</span>
+        <span class="text-gray-400 font-normal">({affiliate.reviewCount.toLocaleString()})</span>
+      </div>
+    </div>
+
+    <!-- Product Title & Tagline -->
+    <h3 class="text-xl sm:text-2xl font-black text-white mb-2 leading-snug">
+      {affiliate.name}
+    </h3>
+    <p class="text-xs sm:text-sm text-slate-300 mb-6 leading-relaxed">
+      {affiliate.tagline}
+    </p>
+
+    <!-- Pricing Anchor -->
+    <div class="p-3.5 rounded-xl bg-gray-950/80 border border-gray-800/80 mb-6 flex items-center justify-between">
+      <span class="text-xs text-gray-400">Pricing / Capital:</span>
+      <span class="text-sm font-extrabold text-emerald-400">{affiliate.startingPrice}</span>
+    </div>
+
+    <!-- Key Benefits -->
+    <div class="space-y-2.5 mb-8">
+      {affiliate.keyBenefits.map((benefit) => (
+        <div class="flex items-start space-x-2.5 text-xs sm:text-sm text-slate-300">
+          <svg class="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+          </svg>
+          <span class="leading-relaxed">{benefit}</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Action CTA -->
+  <div>
+    <a
+      href={affiliate.vanityPath}
+      rel="nofollow noopener noreferrer"
+      class="w-full inline-flex items-center justify-center px-6 py-3.5 text-sm font-bold rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white hover:from-brand-400 hover:to-accent-400 transition-all shadow-lg shadow-brand-500/20 active:scale-95"
+    >
+      <span>{affiliate.primaryCtaText}</span>
+    </a>
+    <p class="text-[11px] text-center text-gray-400 mt-2.5">
+      Verified Partner via {affiliate.vendor}
+    </p>
+  </div>
+</div>

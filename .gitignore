@@ -1,0 +1,13 @@
+# Node & dependencies
+node_modules/
+dist/
+.astro/
+
+# Environment & Credentials
+.env
+.env.*
+*gsc*.json
+service-account*.json
+
+# Cloudflare Pages / Wrangler
+.wrangler/

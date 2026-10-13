@@ -1,0 +1,80 @@
+---
+interface ComparisonPoint {
+  factor: string;
+  traditional: string;
+  fasttrack: string;
+}
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  points: ComparisonPoint[];
+  ctaUrl: string;
+  ctaText?: string;
+}
+
+const {
+  title = "The Unit Economics: Why the Traditional Creator Path Fails",
+  subtitle = "Over 90% of aspiring creators quit within 90 days after earning $0. Here is how the fast-track acceleration model compares against unpaid manual labor.",
+  points,
+  ctaUrl,
+  ctaText = "Deploy Fast-Track Acceleration →"
+} = Astro.props;
+---
+
+<section id="economics" class="py-16 md:py-24 border-b border-gray-800 bg-gray-950">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs sm:text-sm font-bold text-accent-400 uppercase tracking-widest mb-2 block">
+        Comparative Unit Economics
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">
+        {title}
+      </h2>
+      <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+        {subtitle}
+      </p>
+    </div>
+
+    <!-- Responsive Comparison Table -->
+    <div class="overflow-x-auto rounded-2xl border border-gray-800 bg-gray-900/60 shadow-2xl mb-10">
+      <table class="w-full text-left text-sm text-slate-300">
+        <thead>
+          <tr class="border-b border-gray-800 text-xs uppercase tracking-wider text-gray-400 bg-gray-950/80">
+            <th class="p-4 sm:p-5 w-1/3">Evaluation Metric</th>
+            <th class="p-4 sm:p-5 w-1/3 text-rose-400 bg-rose-950/20">The 12-Month Startup Grind</th>
+            <th class="p-4 sm:p-5 w-1/3 text-emerald-400 bg-emerald-950/20 font-bold">Fast Track Creator Acceleration</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-800/80">
+          {points.map((pt) => (
+            <tr class="hover:bg-gray-800/30 transition-colors">
+              <td class="p-4 sm:p-5 font-semibold text-white">
+                {pt.factor}
+              </td>
+              <td class="p-4 sm:p-5 text-rose-300/80 bg-rose-950/10">
+                <span class="inline-block mr-1.5">✕</span> {pt.traditional}
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400 bg-emerald-950/20">
+                <span class="inline-block mr-1.5">✓</span> {pt.fasttrack}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Centered Action Button -->
+    <div class="text-center">
+      <a
+        href={ctaUrl}
+        rel="nofollow noopener noreferrer"
+        class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white hover:from-brand-400 hover:to-accent-400 transition-all shadow-xl shadow-brand-500/20 active:scale-95"
+      >
+        <span>{ctaText}</span>
+      </a>
+    </div>
+
+  </div>
+</section>

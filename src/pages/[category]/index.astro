@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboveTheFoldHero from '../../components/AboveTheFoldHero.astro';
+import OfferScorecard from '../../components/OfferScorecard.astro';
+import { CATEGORIES, getAllCategories, type CategoryHub } from '../../data/categories';
+import { getSpokesByCategory } from '../../data/pages';
+import { getAffiliate } from '../../data/affiliates';
+
+export async function getStaticPaths() {
+  return getAllCategories().map((category) => ({
+    params: { category: category.slug },
+    props: { category }
+  }));
+}
+
+interface Props {
+  category: CategoryHub;
+}
+
+const { category } = Astro.props;
+const spokes = getSpokesByCategory(category.slug);
+const featuredAffiliates = category.featuredAffiliates
+  .map(id => getAffiliate(id))
+  .filter(Boolean);
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: category.name, url: `/${category.slug}/` }
+];
+---
+
+<BaseLayout
+  title={category.title}
+  description={category.metaDescription}
+  canonicalPath={`/${category.slug}/`}
+  breadcrumbs={breadcrumbs}
+>
+  <!-- Hero Section -->
+  <AboveTheFoldHero
+    h1={category.h1}
+    badge={category.badge}
+    headline={category.description}
+    subheadline="Browse verified operational blueprints, comparative evaluations, and instant handover shortcuts."
+    audience={category.name}
+    affiliateUrl="#spokes"
+    ctaText="Browse Category Guides ↓"
+  />
+
+  <!-- Category Spokes Grid -->
+  <section id="spokes" class="py-16 md:py-24 border-b border-gray-800 bg-gray-900/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs sm:text-sm font-bold text-accent-400 uppercase tracking-widest mb-2 block">
+          In-Depth Blueprints & Audits
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          {category.name} Directory
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Targeted solutions engineered to accelerate monetization for specific creator archetypes.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        {spokes.map((spoke) => (
+          <a
+            href={`/${spoke.category}/${spoke.slug}/`}
+            class="group p-6 sm:p-8 rounded-2xl border border-gray-800 bg-gray-900/90 hover:border-brand-500/50 hover:bg-gray-900 transition-all shadow-xl flex flex-col justify-between"
+          >
+            <div>
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-4">
+                {spoke.badge}
+              </span>
+              <h3 class="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-brand-300 transition-colors leading-snug">
+                {spoke.h1}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
+                {spoke.metaDescription}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gray-800/80 text-xs font-bold text-accent-400 flex items-center justify-between">
+              <span>Read Full Blueprint</span>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- Featured Category Partners -->
+      {featuredAffiliates.length > 0 && (
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <h3 class="text-xl sm:text-3xl font-black text-white mb-2">
+              Verified Partners in {category.name}
+            </h3>
+            <p class="text-xs sm:text-sm text-slate-400">
+              Audited platforms offering active customer protection and turnkey delivery.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {featuredAffiliates.map((aff) => (
+              <OfferScorecard affiliate={aff!} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>

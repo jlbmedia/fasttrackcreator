@@ -1,0 +1,189 @@
+---
+import { BRAND_NAME, SITE_URL, NAV_LINKS, FOOTER_HUBS } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  schemaType?: string;
+  schemaData?: Record<string, any>;
+  breadcrumbs?: { name: string; url: string }[];
+  announcementText?: string;
+  announcementCtaText?: string;
+  announcementCtaUrl?: string;
+  headerCtaText?: string;
+  headerCtaUrl?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath = Astro.url.pathname,
+  schemaType = "WebPage",
+  schemaData,
+  breadcrumbs = [],
+  announcementText = "⚡ Fast Track 2026: Compare Verified Monetized Channels, AI Influencer Systems & Skool Communities.",
+  announcementCtaText = "Compare Systems →",
+  announcementCtaUrl = "/reviews/",
+  headerCtaText = "Compare Systems",
+  headerCtaUrl = "/reviews/",
+  noindex = false
+} = Astro.props;
+
+// Enforce meta description 120-158 length rule
+if (description.length < 120 || description.length > 158) {
+  console.warn(`[SEO Warning] Meta description for ${title} is ${description.length} chars (Target: 120-158)`);
+}
+
+const siteUrl = Astro.site?.origin || SITE_URL;
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+
+const isAnnouncementAffiliate = announcementCtaUrl.startsWith('/go/') || announcementCtaUrl.startsWith('http');
+const isHeaderAffiliate = headerCtaUrl.startsWith('/go/') || headerCtaUrl.startsWith('http');
+
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": breadcrumbs.map((crumb, idx) => ({
+    "@type": "ListItem",
+    "position": idx + 1,
+    "name": crumb.name,
+    "item": new URL(crumb.url, siteUrl).toString()
+  }))
+} : null;
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": BRAND_NAME,
+  "url": siteUrl,
+  "description": "The premier acceleration portal for creators and media investors to bypass the 12-month startup grind."
+};
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta name="robots" content={noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1"} />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#030712" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content={BRAND_NAME} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    {breadcrumbSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+    )}
+    {schemaData && (
+      <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+    )}
+  </head>
+  <body class="bg-gray-950 text-slate-100 font-sans antialiased min-h-screen flex flex-col selection:bg-brand-500 selection:text-white">
+    
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-brand-600 via-indigo-600 to-accent-600 text-white text-xs sm:text-sm py-2 px-4 text-center font-medium shadow-sm">
+      <span>{announcementText}</span>
+      <a 
+        href={announcementCtaUrl}
+        rel={isAnnouncementAffiliate ? "nofollow noopener noreferrer" : undefined}
+        class="underline font-bold ml-2 hover:text-brand-200 transition-colors"
+      >
+        {announcementCtaText}
+      </a>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 w-full border-b border-gray-800 bg-gray-950/90 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-accent-500 flex items-center justify-center font-black text-white shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+            ⚡
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-lg text-white group-hover:text-brand-400 transition-colors leading-tight">
+              {BRAND_NAME}
+            </span>
+            <span class="text-[10px] text-gray-400 font-medium tracking-wider uppercase">
+              Monetization Portal
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation: Click Depth <= 1 for all Hubs -->
+        <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold text-slate-300">
+          {NAV_LINKS.map(link => (
+            <a href={link.href} class="hover:text-white hover:text-brand-400 transition-colors">
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="flex items-center space-x-3">
+          <a
+            href={headerCtaUrl}
+            rel={isHeaderAffiliate ? "nofollow noopener noreferrer" : undefined}
+            class="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold rounded-xl bg-gradient-to-r from-brand-500 to-accent-500 text-white hover:from-brand-400 hover:to-accent-400 transition-all shadow-md shadow-brand-500/20 active:scale-95"
+          >
+            {headerCtaText}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Slot (Ensures exactly ONE h1 from child page) -->
+    <main class="flex-grow">
+      <slot />
+    </main>
+
+    <!-- Comprehensive Footer -->
+    <footer class="border-t border-gray-800 bg-gray-900/60 pt-12 pb-16 text-slate-400 text-xs sm:text-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          {FOOTER_HUBS.map(hub => (
+            <div>
+              <a href={hub.href} class="font-bold text-slate-200 text-base hover:text-brand-400 block mb-2">
+                {hub.name} →
+              </a>
+              <p class="text-xs text-slate-400 leading-relaxed mb-4">
+                {hub.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+          <div>
+            © {new Date().getFullYear()} {BRAND_NAME}. All rights reserved. Built for creators and media investors.
+          </div>
+          <div class="flex items-center space-x-6 text-gray-400">
+            <span class="hover:text-slate-300">Independent Affiliate Audits</span>
+            <span>•</span>
+            <span class="hover:text-slate-300">Zero Unverified Claims</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

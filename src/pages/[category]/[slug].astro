@@ -1,0 +1,237 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AboveTheFoldHero from '../../components/AboveTheFoldHero.astro';
+import OfferScorecard from '../../components/OfferScorecard.astro';
+import ComparisonMatrix from '../../components/ComparisonMatrix.astro';
+import FAQAccordion from '../../components/FAQAccordion.astro';
+import StickyCTA from '../../components/StickyCTA.astro';
+import { SPOKES, type SpokePage } from '../../data/pages';
+import { CATEGORIES } from '../../data/categories';
+import { getAffiliate } from '../../data/affiliates';
+
+export async function getStaticPaths() {
+  return SPOKES.map((spoke) => ({
+    params: {
+      category: spoke.category,
+      slug: spoke.slug
+    },
+    props: { spoke }
+  }));
+}
+
+interface Props {
+  spoke: SpokePage;
+}
+
+const { spoke } = Astro.props;
+const category = CATEGORIES[spoke.category];
+const primaryAffiliate = getAffiliate(spoke.primaryAffiliateId);
+const secondaryAffiliate = spoke.secondaryAffiliateId ? getAffiliate(spoke.secondaryAffiliateId) : undefined;
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: category?.name || "Hub", url: `/${spoke.category}/` },
+  { name: spoke.audience, url: `/${spoke.category}/${spoke.slug}/` }
+];
+
+// Related spokes in the same category (or other categories)
+const relatedSpokes = SPOKES
+  .filter((s) => s.slug !== spoke.slug)
+  .slice(0, 3);
+
+// Dynamic Product / Software Schema for Google SERP Rich Snippets
+const productSchema = primaryAffiliate ? {
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": primaryAffiliate.name,
+  "description": primaryAffiliate.tagline,
+  "offers": {
+    "@type": "Offer",
+    "price": primaryAffiliate.startingPrice.replace(/[^0-9.]/g, '') || "99.00",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": primaryAffiliate.targetUrl
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": primaryAffiliate.rating.toString(),
+    "reviewCount": primaryAffiliate.reviewCount.toString(),
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+} : undefined;
+---
+
+<BaseLayout
+  title={spoke.title}
+  description={spoke.metaDescription}
+  canonicalPath={`/${spoke.category}/${spoke.slug}/`}
+  breadcrumbs={breadcrumbs}
+  schemaType="Product"
+  schemaData={productSchema}
+  announcementText={`⚡ Fast-Track Solution for ${spoke.audience}: Deploy Turnkey Monetization Today.`}
+  announcementCtaText="Claim Verified Access →"
+  announcementCtaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+  headerCtaText={primaryAffiliate?.primaryCtaText.replace('→', '').trim().slice(0, 24) || "Compare Systems"}
+  headerCtaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+>
+  <!-- Strictly Single H1 Above-The-Fold Hero -->
+  <AboveTheFoldHero
+    h1={spoke.h1}
+    badge={spoke.badge}
+    headline={spoke.heroHeadline}
+    subheadline={spoke.heroSubheadline}
+    audience={spoke.audience}
+    affiliateUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+    ctaText={primaryAffiliate?.primaryCtaText || "Deploy Acceleration Now →"}
+  />
+
+  <!-- Pain Points & Structural Obstacles Breakdown -->
+  <section class="py-16 md:py-20 border-b border-gray-800 bg-gray-950">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs sm:text-sm font-bold text-rose-400 uppercase tracking-widest mb-2 block">
+          The Problem with the Status Quo
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          Why 90% of Creators Give Up in the First 90 Days
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          The traditional creator trajectory was built for platforms, not creators. Here are the core bottlenecks trapping operators in unmonetized purgatory:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        {spoke.painPoints.map((pain, idx) => (
+          <div class="p-6 rounded-2xl border border-rose-950/40 bg-rose-950/10 flex items-start space-x-4">
+            <div class="w-8 h-8 rounded-xl bg-rose-500/20 text-rose-400 font-black text-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              ✕
+            </div>
+            <div>
+              <h3 class="text-sm sm:text-base font-bold text-white mb-1">
+                Friction Point #{idx + 1}
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                {pain}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Key Benefits / The Turnkey Antidote -->
+      <div class="p-8 sm:p-10 rounded-3xl border border-emerald-500/30 bg-gradient-to-b from-gray-900 to-emerald-950/20 shadow-2xl">
+        <div class="max-w-2xl mx-auto text-center mb-8">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 mb-3">
+            The Fast-Track Antidote
+          </span>
+          <h3 class="text-xl sm:text-3xl font-black text-white">
+            How This System Eliminates the 12-Month Delay
+          </h3>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-8">
+          {spoke.keyBenefits.map((benefit) => (
+            <div class="flex items-start space-x-3 text-xs sm:text-sm text-slate-200">
+              <svg class="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span class="leading-relaxed font-medium">{benefit}</span>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center">
+          <a
+            href={primaryAffiliate?.vanityPath || "/reviews/"}
+            rel="nofollow noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 hover:from-emerald-400 hover:to-teal-400 transition-all shadow-lg shadow-emerald-500/20 active:scale-95"
+          >
+            <span>{primaryAffiliate?.primaryCtaText || "Deploy Acceleration Now →"}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Side-by-Side Comparison Matrix -->
+  <ComparisonMatrix
+    points={spoke.comparisonPoints}
+    ctaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+    ctaText={`Deploy Verified Solution for ${spoke.audience} →`}
+  />
+
+  <!-- Primary & Secondary Offer Scorecards -->
+  <section class="py-16 md:py-24 border-b border-gray-800 bg-gray-900/40">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs sm:text-sm font-bold text-brand-400 uppercase tracking-widest mb-2 block">
+          Verified Solution Provider
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+          Recommended Infrastructure
+        </h2>
+      </div>
+
+      <div class={`grid grid-cols-1 ${secondaryAffiliate ? 'md:grid-cols-2' : 'max-w-2xl mx-auto'} gap-8 mb-12`}>
+        {primaryAffiliate && (
+          <OfferScorecard affiliate={primaryAffiliate} featured={true} />
+        )}
+        {secondaryAffiliate && (
+          <OfferScorecard affiliate={secondaryAffiliate} />
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion faqList={spoke.faqList} />
+
+  <!-- Related Blueprints Navigation (Click Depth <= 2) -->
+  <section class="py-16 border-b border-gray-800 bg-gray-950">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-black text-white">
+            Related Acceleration Blueprints
+          </h3>
+          <p class="text-xs sm:text-sm text-slate-400">
+            Compare complementary strategies to compound your creator cash flow.
+          </p>
+        </div>
+        <a href={`/${spoke.category}/`} class="text-xs sm:text-sm font-bold text-brand-400 hover:text-brand-300 transition-colors">
+          View All {category?.name} →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        {relatedSpokes.map((rel) => (
+          <a
+            href={`/${rel.category}/${rel.slug}/`}
+            class="p-5 rounded-2xl border border-gray-800 bg-gray-900/60 hover:border-brand-500/40 hover:bg-gray-900 transition-all group flex flex-col justify-between"
+          >
+            <div>
+              <span class="inline-block text-[10px] font-bold text-brand-400 uppercase tracking-wider mb-2">
+                {rel.badge}
+              </span>
+              <h4 class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors mb-2 leading-snug">
+                {rel.h1}
+              </h4>
+            </div>
+            <div class="text-xs font-bold text-accent-400 mt-4 flex items-center justify-between pt-3 border-t border-gray-800/80">
+              <span>Read Blueprint</span>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Persistent Bottom Urgency Drawer -->
+  <StickyCTA
+    offerText={`Get your custom ${spoke.audience} monetization system active.`}
+    affiliateUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+    ctaText={primaryAffiliate?.primaryCtaText.replace('→', '').trim().slice(0, 24) + ' →' || "Fast-Track Now →"}
+  />
+</BaseLayout>

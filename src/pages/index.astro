@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AboveTheFoldHero from '../components/AboveTheFoldHero.astro';
+import OfferScorecard from '../components/OfferScorecard.astro';
+import ComparisonMatrix from '../components/ComparisonMatrix.astro';
+import FAQAccordion from '../components/FAQAccordion.astro';
+import StickyCTA from '../components/StickyCTA.astro';
+import { getAllAffiliates } from '../data/affiliates';
+import { getAllCategories } from '../data/categories';
+
+const title = "Fast Track Creator | Bypass the 12-Month Grind & Monetize in Days";
+const description = "The premier acceleration portal for creators and media investors. Compare pre-monetized channels, AI influencer systems, and recurring community tools.";
+
+const categories = getAllCategories();
+const affiliates = getAllAffiliates();
+
+const homeComparisonPoints = [
+  { factor: "Time to First Dollar", traditional: "9 to 18 Months of Unpaid Grind", fasttrack: "24 Hours to 7 Days Turnkey" },
+  { factor: "Weekly Time Commitment", traditional: "25+ Hours Filming & Editing", fasttrack: "30 Mins Daily Content Oversight" },
+  { factor: "Camera & Stage Anxiety", traditional: "100% On-Camera Public Vulnerability", fasttrack: "Zero Face/Camera (100% Faceless)" },
+  { factor: "Monetization Reliability", traditional: "AdSense Pennies Early On ($0.05 RPM)", fasttrack: "High-Ticket Bounties & 40% MRR" }
+];
+
+const homeFaqs = [
+  {
+    question: "What is Fast Track Creator?",
+    answer: "Fast Track Creator is an independent evaluation, audit, and acceleration portal designed to help digital creators, faceless video operators, and media investors skip the 12-month startup purgatory and reach cash flow in days using verified turnkey assets, AI personas, and high-retention community platforms."
+  },
+  {
+    question: "How do pre-monetized channels work?",
+    answer: "Instead of spending 9 to 14 months grinding for 1,000 subscribers and 4,000 watch hours on YouTube, you acquire an established channel that has already fulfilled those milestones organically. You receive full ownership via Google Brand Account transfer and begin uploading with instant AdSense revenue eligibility."
+  },
+  {
+    question: "Can beginners really launch an AI influencer in 24 hours?",
+    answer: "Yes. Through systems like Room30, photorealistic AI personas are created with custom LoRA weights and facial consistency in 24 hours. Paired with creator subscription platforms like Fanvue, virtual models can monetize through pay-per-view messaging and private subscriptions without ever filming on camera."
+  },
+  {
+    question: "Why do you recommend Skool and Beacons over older platforms?",
+    answer: "Traditional platforms charge high monthly fees and keep creators on an exhausting launch cycle. Skool pays a 40% lifetime recurring commission and uses gamification to maintain 300% higher member retention. Beacons provides a free link-in-bio storefront that lets creators sell digital products with zero upfront monthly subscription costs."
+  }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/"
+>
+  <!-- Hero Section (Strictly One H1) -->
+  <AboveTheFoldHero
+    h1="Bypass the 12-Month Grind. Get Monetized in Days."
+    badge="2026 Acceleration Portal"
+    headline="Stop wasting months on unpaid manual labor and zero-dollar algorithmic purgatory"
+    subheadline="FastTrackCreator provides verified audits, comparative scorecards, and turnkey pathways to rapid creator cash flow across YouTube, TikTok, AI personas, and recurring communities."
+    audience="Creators, Media Buyers & Digital Asset Investors"
+    affiliateUrl="/reviews/"
+    ctaText="Explore Acceleration Pathways →"
+  />
+
+  <!-- 4 Core Category Pillars -->
+  <section class="py-16 md:py-20 border-b border-gray-800 bg-gray-900/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs sm:text-sm font-bold text-brand-400 uppercase tracking-widest mb-2 block">
+          Choose Your Acceleration Pathway
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight">
+          Four Institutional Shortcuts to Creator Cash Flow
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {categories.map((cat) => (
+          <a
+            href={`/${cat.slug}/`}
+            class="group p-6 rounded-2xl border border-gray-800 bg-gray-900/80 hover:border-brand-500/50 hover:bg-gray-900 transition-all shadow-lg flex flex-col justify-between"
+          >
+            <div>
+              <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-4">
+                {cat.badge}
+              </span>
+              <h3 class="text-xl font-black text-white mb-2 group-hover:text-brand-300 transition-colors">
+                {cat.name} →
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-6">
+                {cat.description}
+              </p>
+            </div>
+            <div class="pt-4 border-t border-gray-800/80 text-xs font-bold text-accent-400 flex items-center justify-between">
+              <span>View Verified Blueprint</span>
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Offers Grid -->
+  <section class="py-16 md:py-24 border-b border-gray-800 bg-gray-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs sm:text-sm font-bold text-accent-400 uppercase tracking-widest mb-2 block">
+          Verified Acceleration Roster
+        </span>
+        <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">
+          Top-Rated Turnkey Solutions & Software Engines
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base">
+          Audited for handover safety, monetization durability, and real-world return on capital.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'dfy-youtube')!} featured={true} />
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'skool')!} featured={true} />
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'room30')!} featured={true} />
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'fameswap')!} />
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'fanvue')!} />
+        <OfferScorecard affiliate={affiliates.find(a => a.id === 'beacons')!} />
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison Matrix -->
+  <ComparisonMatrix
+    points={homeComparisonPoints}
+    ctaUrl="/reviews/"
+    ctaText="Compare All 6 Verified Platforms →"
+  />
+
+  <!-- FAQ Accordion -->
+  <FAQAccordion faqList={homeFaqs} />
+
+  <!-- Bottom Urgency Drawer -->
+  <StickyCTA
+    offerText="Stop working for $0. Step directly into active cash flow."
+    affiliateUrl="/reviews/"
+    ctaText="Compare Systems →"
+  />
+</BaseLayout>
