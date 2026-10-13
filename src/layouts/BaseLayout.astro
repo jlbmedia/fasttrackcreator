@@ -76,6 +76,46 @@ const websiteSchema = {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="theme-color" content="#030712" />
 
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHR1WVZJ59"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YHR1WVZJ59');
+    </script>
+
+    <!-- GA4 Outbound Affiliate Link Tracking -->
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('click', (e) => {
+          const anchor = e.target.closest('a');
+          if (!anchor) return;
+          const href = anchor.getAttribute('href') || '';
+          if (
+            href.startsWith('/go/') ||
+            href.includes('fameswap.com') ||
+            href.includes('dfydave.com') ||
+            href.includes('soldi.ai') ||
+            href.includes('room30.ai') ||
+            href.includes('skool.com') ||
+            href.includes('fanvue.com') ||
+            href.includes('beacons.ai')
+          ) {
+            if (typeof window.gtag === 'function') {
+              window.gtag('event', 'affiliate_click', {
+                event_category: 'outbound_conversion',
+                event_label: (anchor.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60),
+                destination_url: href,
+                source_path: window.location.pathname
+              });
+            }
+          }
+        });
+      });
+    </script>
+
     <!-- Open Graph / Social -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
