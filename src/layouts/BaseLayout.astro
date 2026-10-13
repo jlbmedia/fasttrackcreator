@@ -213,15 +213,28 @@ const websiteSchema = {
           ))}
         </div>
 
-        <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <!-- Legal & Compliance Links -->
+        <div class="pt-8 border-t border-gray-800 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-400">
           <div>
             © {new Date().getFullYear()} {BRAND_NAME}. All rights reserved. Built for creators and media investors.
           </div>
-          <div class="flex items-center space-x-6 text-gray-400">
-            <span class="hover:text-slate-300">Independent Affiliate Audits</span>
+          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-gray-400">
+            <a href="/about/" class="hover:text-brand-400 transition-colors">About Us</a>
             <span>•</span>
-            <span class="hover:text-slate-300">Zero Unverified Claims</span>
+            <a href="/contact/" class="hover:text-brand-400 transition-colors">Contact Us</a>
+            <span>•</span>
+            <a href="/privacy-policy/" class="hover:text-brand-400 transition-colors">Privacy Policy</a>
+            <span>•</span>
+            <a href="/terms-of-service/" class="hover:text-brand-400 transition-colors">Terms of Service</a>
+            <span>•</span>
+            <a href="/affiliate-disclosure/" class="hover:text-brand-400 transition-colors">Affiliate Disclosure</a>
           </div>
+        </div>
+
+        <div class="mt-6 pt-6 border-t border-gray-800/60 text-[11px] text-gray-400 leading-relaxed">
+          <p>
+            <strong>FTC Compliance Notice:</strong> Fast Track Creator participates in select affiliate marketing programs, which means we may get paid commissions on editorially chosen products and services purchased through our links to vendor sites (including Fameswap, Soldi/DFY Dave, Room30, Skool, Fanvue, and Beacons) at zero additional cost to you. Read our full <a href="/affiliate-disclosure/" class="text-brand-400 hover:underline">Affiliate Disclosure</a> and <a href="/terms-of-service/" class="text-brand-400 hover:underline">Earnings Disclaimer</a>.
+          </p>
         </div>
       </div>
     </footer>

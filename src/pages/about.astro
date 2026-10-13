@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BRAND_NAME } from '../data/site';
+
+const title = `About Us | Editorial Standards & Mission - ${BRAND_NAME}`;
+const description = "Learn how Fast Track Creator evaluates digital assets, pre-monetized channels, and AI creator systems. Read our editorial standards and mission.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "About Us", url: "/about/" }
+];
+
+const aboutSchema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": `About ${BRAND_NAME}`,
+  "description": description,
+  "mainEntity": {
+    "@type": "Organization",
+    "name": BRAND_NAME,
+    "url": "https://fasttrackcreator.com",
+    "email": "contact@fasttrackcreator.com",
+    "publishingPrinciples": "https://fasttrackcreator.com/about/",
+    "sameAs": [
+      "https://fasttrackcreator.com"
+    ]
+  }
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/about/"
+  breadcrumbs={breadcrumbs}
+  schemaData={aboutSchema}
+>
+  <div class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb Nav -->
+    <nav class="mb-8 flex items-center space-x-2 text-xs text-gray-400">
+      <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-200">About Us</span>
+    </nav>
+
+    <!-- Header Section (Strictly 1 H1) -->
+    <header class="mb-12 border-b border-gray-800 pb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span>Editorial Mission & Methodology</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+        Empowering Creators & Media Investors to Skip the 12-Month Grind
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal">
+        Fast Track Creator is an independent evaluation portal and intelligence hub built for modern creators, digital publishers, and media investors who want proven shortcuts to digital cash flow without falling victim to hype.
+      </p>
+    </header>
+
+    <!-- Content Body -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 leading-relaxed text-base">
+      
+      <!-- Section 1: The Problem -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">The 12-Month Creator Trap</h2>
+        <p>
+          Every year, millions of aspiring entrepreneurs launch YouTube channels, TikTok pages, and online courses. Over 96% abandon their projects within the first six months. The reason isn't lack of talent—it's the brutal economic reality of algorithmic purgatory. Grinding 20 hours a week for pennies while waiting for arbitrary platform monetization thresholds (like YouTube's 4,000 watch hours or TikTok's follower requirements) drains energy, capital, and motivation.
+        </p>
+        <p>
+          Meanwhile, experienced media investors and growth operators don't start from scratch. They acquire verified pre-monetized channels, deploy photorealistic AI personas with custom LoRA pipelines, and leverage high-retention gamified community software to achieve profitability in days rather than quarters.
+        </p>
+      </section>
+
+      <!-- Section 2: Our Purpose -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Our Mission & Purpose</h2>
+        <p>
+          At <strong>{BRAND_NAME}</strong>, our purpose is simple: to democratize media asset acceleration. We analyze, stress-test, and benchmark the services, marketplaces, and software platforms that enable operators to bypass startup friction safely.
+        </p>
+        <p>
+          We focus on four foundational pillars of modern digital media:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose my-6">
+          <div class="p-5 rounded-2xl bg-gray-900/60 border border-gray-800">
+            <h3 class="text-base font-bold text-brand-400 mb-2">1. Turnkey Media Assets</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Evaluating verified marketplaces (Fameswap, Soldi/DFY Dave) for escrow safety, Google Brand Account transfer security, and Day-1 AdSense eligibility.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-900/60 border border-gray-800">
+            <h3 class="text-base font-bold text-accent-400 mb-2">2. Virtual & AI Creators</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Auditing photorealistic AI influencer models, LoRA consistency frameworks, and private subscription platforms (Room30, Fanvue).
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-900/60 border border-gray-800">
+            <h3 class="text-base font-bold text-indigo-400 mb-2">3. Creator Commerce & Communities</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Benchmarking recurring membership infrastructure (Skool) and zero-subscription digital storefronts (Beacons) against legacy fee-heavy models.
+            </p>
+          </div>
+          <div class="p-5 rounded-2xl bg-gray-900/60 border border-gray-800">
+            <h3 class="text-base font-bold text-emerald-400 mb-2">4. Faceless Production Automation</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Dissecting turnkey script-to-screen production packs, high-RPM niche selection, and passive syndication pipelines.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Editorial Guidelines -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">Our Editorial & Testing Standards</h2>
+        <p>
+          We hold our reviews to rigorous standards of accuracy and objectivity:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Zero Paid Placement:</strong> No vendor or marketplace can pay for a higher rating or a favorable verdict. Every scorecard is earned.</li>
+          <li><strong>Escrow & Transfer Audits:</strong> We prioritize buyer security above all else. Platforms without verified escrow mechanisms or clean ownership transfer protocols are flagged or omitted.</li>
+          <li><strong>Real Unit Economics:</strong> We reject inflated income screenshots. Every review breaks down starting costs, recurring fees, platform takes, realistic conversion timelines, and net margins.</li>
+          <li><strong>Continuous Monitoring:</strong> Platform policies change rapidly. Our editorial team continually updates our spoke reviews when terms, pricing, or marketplace safeguards shift.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Contact & Corrections -->
+      <section class="p-6 rounded-2xl bg-gray-900/80 border border-gray-800 not-prose">
+        <h2 class="text-lg font-bold text-white mb-2">Questions or Editorial Inquiries?</h2>
+        <p class="text-sm text-slate-300 mb-4 leading-relaxed">
+          We welcome feedback, suggestions for new tool audits, and vendor inquiries. If you believe any data point in our reviews needs correction, reach out to our research team directly.
+        </p>
+        <div class="flex flex-wrap gap-4 items-center">
+          <a href="/contact/" class="inline-flex items-center px-4 py-2 text-xs font-bold rounded-xl bg-brand-500 hover:bg-brand-400 text-white transition-colors">
+            Contact Support Desk →
+          </a>
+          <a href="/affiliate-disclosure/" class="text-xs text-slate-400 hover:text-slate-200 underline">
+            Read Affiliate Disclosure
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

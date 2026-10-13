@@ -1,0 +1,105 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BRAND_NAME } from '../data/site';
+
+const title = `Terms of Service | Legal Agreement & Use - ${BRAND_NAME}`;
+const description = "Review the Fast Track Creator Terms of Service. Understand the terms, liability limitations, and rules governing the use of our research portal.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Terms of Service", url: "/terms-of-service/" }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/terms-of-service/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb Nav -->
+    <nav class="mb-8 flex items-center space-x-2 text-xs text-gray-400">
+      <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-200">Terms of Service</span>
+    </nav>
+
+    <!-- Header Section (Strictly 1 H1) -->
+    <header class="mb-12 border-b border-gray-800 pb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-500/10 border border-slate-500/20 text-slate-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span>User Agreement & Disclaimers</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+        Terms of Service
+      </h1>
+      <p class="text-sm text-slate-400">
+        Last Updated: October 13, 2026
+      </p>
+    </header>
+
+    <!-- Content Body -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 leading-relaxed text-base">
+      
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">1. Acceptance of Terms</h2>
+        <p>
+          By accessing or using <strong>Fast Track Creator</strong> (<a href="https://fasttrackcreator.com" class="text-brand-400 hover:underline">fasttrackcreator.com</a>), you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you do not agree to these terms, please discontinue use of the site immediately.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">2. Informational & Educational Use Only</h2>
+        <p>
+          All content, reviews, comparisons, guides, and commentary provided on Fast Track Creator are strictly for <strong>educational and informational purposes</strong>. 
+        </p>
+        <p>
+          Fast Track Creator is not a registered financial advisor, legal counsel, or broker. Nothing on this website constitutes professional financial, tax, or legal advice. Operating digital media channels, acquiring online businesses, or deploying artificial intelligence software carries operational risk. You should perform your own independent due diligence or consult licensed advisors before making financial commitments.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">3. Third-Party Marketplaces & Transactions</h2>
+        <p>
+          Fast Track Creator provides links, reviews, and commentary on third-party services and marketplaces (including Fameswap, Soldi/DFY Dave, Room30, Skool, Fanvue, and Beacons). 
+        </p>
+        <p>
+          Fast Track Creator is <strong>not a party</strong> to any transaction between you and third-party vendors. We are not an escrow agent, custodian, or guarantor. We are not liable for account disputes, algorithm changes by Google/YouTube/TikTok, terms enforcement by third-party platforms, or financial losses incurred through third-party platforms.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">4. Intellectual Property</h2>
+        <p>
+          All original text, scorecards, layout design, visual branding, and code on Fast Track Creator are the intellectual property of Fast Track Creator and are protected by copyright and intellectual property laws. You may not scrape, reproduce, republish, or distribute substantial portions of our content without express written authorization.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">5. Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, Fast Track Creator and its operators shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your access to or use of this website, including but not limited to lost profits, loss of data, platform suspension, or business interruption.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">6. Changes to Terms</h2>
+        <p>
+          We reserve the right to modify these Terms of Service at any time. Continued use of the website following any posted modifications constitutes acceptance of the revised terms.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">7. Contact Information</h2>
+        <p>
+          If you have questions regarding these Terms of Service, contact our administrative team at:
+        </p>
+        <p class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 not-prose text-sm text-slate-300">
+          <strong>Fast Track Creator</strong><br />
+          Email: <a href="mailto:contact@fasttrackcreator.com" class="text-brand-400 hover:underline">contact@fasttrackcreator.com</a>
+        </p>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

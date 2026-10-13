@@ -1,0 +1,123 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BRAND_NAME } from '../data/site';
+
+const title = `Privacy Policy | Data Protection & Cookies - ${BRAND_NAME}`;
+const description = "Read the Fast Track Creator Privacy Policy. Learn how we handle your personal data, Google Analytics cookies, and user privacy rights under GDPR.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Privacy Policy", url: "/privacy-policy/" }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/privacy-policy/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb Nav -->
+    <nav class="mb-8 flex items-center space-x-2 text-xs text-gray-400">
+      <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-200">Privacy Policy</span>
+    </nav>
+
+    <!-- Header Section (Strictly 1 H1) -->
+    <header class="mb-12 border-b border-gray-800 pb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span>GDPR & CCPA Compliant</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+        Privacy Policy
+      </h1>
+      <p class="text-sm text-slate-400">
+        Last Updated: October 13, 2026
+      </p>
+    </header>
+
+    <!-- Content Body -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 leading-relaxed text-base">
+      
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">1. Overview & Commitment</h2>
+        <p>
+          At <strong>{BRAND_NAME}</strong> ("we", "us", or "our"), respecting your digital privacy is fundamental. This Privacy Policy outlines what information we collect when you visit <a href="https://fasttrackcreator.com" class="text-brand-400 hover:underline">fasttrackcreator.com</a>, how we process that information, and your legal rights under applicable privacy frameworks including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">2. Information We Collect</h2>
+        <p>We collect limited information to provide, secure, and improve our research portal:</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Log and Device Data:</strong> Our hosting infrastructure (Cloudflare Pages) automatically logs basic connection data such as your IP address, browser type, operating system, referring URL, and timestamp.</li>
+          <li><strong>Analytics Telemetry:</strong> We use Google Analytics 4 (Measurement ID: <code>G-YHR1WVZJ59</code>) to understand aggregate user behavior, pageviews, session duration, and device categorization.</li>
+          <li><strong>Outbound Link Interactions:</strong> When you click an external link pointing to a partner platform or vanity redirect (e.g., <code>/go/*</code>), an anonymous telemetry event records the destination category and button text to measure content usefulness.</li>
+          <li><strong>Voluntary Communications:</strong> If you contact us directly via email (<a href="mailto:contact@fasttrackcreator.com" class="text-brand-400 hover:underline">contact@fasttrackcreator.com</a>), we receive your email address, name (if provided), and message contents.</li>
+        </ul>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">3. Cookies & Tracking Technologies</h2>
+        <p>
+          Cookies are small text files placed on your device to ensure optimal website performance and compile anonymous audience statistics.
+        </p>
+        <p>
+          <strong>Google Analytics Cookies:</strong> Google Analytics sets first-party cookies (such as <code>_ga</code> and <code>_ga_*</code>) to distinguish unique visitors and track session data. These cookies collect pseudonymous identifiers and do not store personally identifiable information such as your name or home address.
+        </p>
+        <p>
+          You can disable cookies directly through your browser settings or install the official <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" class="text-brand-400 hover:underline">Google Analytics Opt-out Browser Add-on</a>.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">4. How We Use Collected Data</h2>
+        <p>The information we collect is used solely to:</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li>Maintain site stability, security, and defense against malicious scraping or DDoS attacks.</li>
+          <li>Analyze aggregated traffic patterns to discover which comparison scorecards and creator audits provide the highest reader value.</li>
+          <li>Respond to reader inquiries, feedback, and editorial correction requests.</li>
+          <li>Verify affiliate conversion routing integrity.</li>
+        </ul>
+        <p><strong>We do not sell, rent, or trade your personal information to third parties or data brokers.</strong></p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">5. Third-Party Links & Marketplaces</h2>
+        <p>
+          Fast Track Creator contains links to external websites, including affiliate marketplaces (Fameswap, Soldi/DFY Dave, Room30, Skool, Fanvue, Beacons). Once you leave our domain, your activity is governed by the third-party platform's privacy policy and terms. We encourage you to review their policies prior to engaging in transactions.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">6. Your Data Rights (GDPR & CCPA)</h2>
+        <p>Depending on your jurisdiction, you possess specific data rights:</p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Right to Access:</strong> Request confirmation of what personal data we hold about you.</li>
+          <li><strong>Right to Rectification:</strong> Request correction of inaccurate information.</li>
+          <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Request deletion of your personal records.</li>
+          <li><strong>Right to Restrict or Object:</strong> Object to processing of your personal data.</li>
+          <li><strong>CCPA "Do Not Sell My Info":</strong> We do not sell personal information as defined by California law.</li>
+        </ul>
+        <p>
+          To exercise any of these rights, email us at <a href="mailto:contact@fasttrackcreator.com" class="text-brand-400 hover:underline">contact@fasttrackcreator.com</a>.
+        </p>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">7. Contact Information</h2>
+        <p>
+          For questions, concerns, or inquiries regarding this Privacy Policy, please contact our Data Privacy team:
+        </p>
+        <p class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 not-prose text-sm text-slate-300">
+          <strong>Fast Track Creator</strong><br />
+          Email: <a href="mailto:contact@fasttrackcreator.com" class="text-brand-400 hover:underline">contact@fasttrackcreator.com</a><br />
+          Website: <a href="https://fasttrackcreator.com" class="text-brand-400 hover:underline">https://fasttrackcreator.com</a>
+        </p>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>

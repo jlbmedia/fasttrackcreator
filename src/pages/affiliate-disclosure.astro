@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { BRAND_NAME } from '../data/site';
+
+const title = `Affiliate Disclosure & Earnings Disclaimer - ${BRAND_NAME}`;
+const description = "Read our full FTC affiliate disclosure. Learn how Fast Track Creator maintains editorial independence while earning commissions from affiliate links.";
+
+const breadcrumbs = [
+  { name: "Home", url: "/" },
+  { name: "Affiliate Disclosure", url: "/affiliate-disclosure/" }
+];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath="/affiliate-disclosure/"
+  breadcrumbs={breadcrumbs}
+>
+  <div class="py-16 md:py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Breadcrumb Nav -->
+    <nav class="mb-8 flex items-center space-x-2 text-xs text-gray-400">
+      <a href="/" class="hover:text-brand-400 transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-slate-200">Affiliate Disclosure</span>
+    </nav>
+
+    <!-- Header Section (Strictly 1 H1) -->
+    <header class="mb-12 border-b border-gray-800 pb-10">
+      <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold uppercase tracking-wider mb-4">
+        <span>FTC Compliance & Full Transparency</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+        Affiliate Disclosure & Earnings Disclaimer
+      </h1>
+      <p class="text-lg sm:text-xl text-slate-300 leading-relaxed font-normal">
+        In compliance with Federal Trade Commission (FTC) guidelines (16 CFR Part 255), this page discloses our material connections, affiliate relationships, and earnings structure.
+      </p>
+    </header>
+
+    <!-- Content Body -->
+    <div class="prose prose-invert max-w-none space-y-10 text-slate-300 leading-relaxed text-base">
+      
+      <!-- Section 1: FTC Statement -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">1. FTC Compliance Statement</h2>
+        <p>
+          You should assume that <strong>{BRAND_NAME}</strong> (accessible at <a href="https://fasttrackcreator.com" class="text-brand-400 hover:underline">fasttrackcreator.com</a>) has an affiliate relationship and/or another material connection to the providers of goods and services mentioned on this site.
+        </p>
+        <p>
+          When you click on links pointing to external vendors, software platforms, marketplaces, or services, and proceed to create an account, purchase a product, or subscribe to a service, we may receive a referral commission. This compensation comes at <strong>zero additional cost to you</strong>. In fact, through our negotiated partner arrangements, clicking our links frequently provides access to extended trials, fee discounts, or bonus onboarding assets.
+        </p>
+      </section>
+
+      <!-- Section 2: Partner Network -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">2. Our Core Affiliate Partnerships</h2>
+        <p>
+          Our platform participates in select, verified creator economy partner programs. These include, but are not limited to:
+        </p>
+        <div class="space-y-3 not-prose my-6">
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Fameswap (Fameswap LLC)</span>
+              <p class="text-xs text-slate-400">Escrow referral fees earned when users acquire verified YouTube, TikTok, or Instagram accounts.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-500/10 text-brand-400 border border-brand-500/20 whitespace-nowrap">Escrow Bounty</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Soldi.ai / DFY Dave</span>
+              <p class="text-xs text-slate-400">Fixed bounty commissions earned on turnkey monetized YouTube channels, TikTok accounts, and video production packs.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-accent-500/10 text-accent-400 border border-accent-500/20 whitespace-nowrap">High-Ticket Bounty</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Room30 (FirstPromoter)</span>
+              <p class="text-xs text-slate-400">Affiliate bounties earned on photorealistic AI influencer models, turnkey assets, and founder immersion programs.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 whitespace-nowrap">Tiered Commission</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Skool Inc. (Sam Ovens)</span>
+              <p class="text-xs text-slate-400">Recurring monthly commissions (40% MRR) earned when creators launch and host paid communities on Skool.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 whitespace-nowrap">40% Lifetime MRR</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Fanvue Ltd</span>
+              <p class="text-xs text-slate-400">Creator referral revenue share earned when virtual models and AI creators monetize subscriptions.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 whitespace-nowrap">Creator Rev-Share</span>
+          </div>
+
+          <div class="p-4 rounded-xl bg-gray-900/60 border border-gray-800 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <span class="font-bold text-white text-sm">Beacons.ai</span>
+              <p class="text-xs text-slate-400">Recurring monthly commissions (30% MRR) earned on upgraded digital storefronts and creator tools.</p>
+            </div>
+            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 whitespace-nowrap">30% Lifetime MRR</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: Editorial Independence -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">3. Editorial Independence & Testing Integrity</h2>
+        <p>
+          We do not accept payment, free services, or perks in exchange for positive reviews. If a marketplace has poor escrow buyer protections, high transfer failure rates, or hidden monthly fees, we state this clearly in our audit scorecards regardless of commercial relationships.
+        </p>
+        <p>
+          Our recommendations are based strictly on our evaluation rubric:
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+          <li><strong>Transfer & Escrow Safety:</strong> How securely funds and digital assets are handled.</li>
+          <li><strong>Unit Economics:</strong> The true cost of ownership vs projected revenue output.</li>
+          <li><strong>Time to Value:</strong> How quickly an operator can transition from acquisition to cash flow.</li>
+          <li><strong>Long-Term Viability:</strong> Platform compliance with YouTube, TikTok, and payment processor terms.</li>
+        </ul>
+      </section>
+
+      <!-- Section 4: Earnings Disclaimer -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">4. Digital Media Earnings Disclaimer</h2>
+        <p>
+          Any revenue figures, income examples, RPM metrics, or growth stats cited across our reviews, comparison matrices, and case studies are illustrative of potential outcomes or historical performance. <strong>They are not guarantees of income.</strong>
+        </p>
+        <p>
+          Operating digital assets—including YouTube automation channels, TikTok shop accounts, digital storefronts, and AI personas—carries inherent business risk. Success depends on individual operator consistency, content quality, niche selection, algorithmic shifts, market demand, and dedication. Fast Track Creator makes no promises of overnight wealth or passive cash flow without work.
+        </p>
+      </section>
+
+      <!-- Section 5: Amazon Associates -->
+      <section class="space-y-4">
+        <h2 class="text-2xl font-bold text-white tracking-tight">5. Amazon Associates Disclaimer</h2>
+        <p>
+          Where applicable, Fast Track Creator participates in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
