@@ -39,12 +39,26 @@ const homeFaqs = [
     answer: "Traditional platforms charge high monthly fees and keep creators on an exhausting launch cycle. Skool pays a 40% lifetime recurring commission and uses gamification to maintain 300% higher member retention. Beacons provides a free link-in-bio storefront that lets creators sell digital products with zero upfront monthly subscription costs."
   }
 ];
+
+const homeSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Fast Track Creator",
+  "url": "https://fasttrackcreator.com",
+  "logo": "https://fasttrackcreator.com/favicon-48x48.png",
+  "description": description,
+  "email": "contact@fasttrackcreator.com",
+  "sameAs": [
+    "https://fasttrackcreator.com"
+  ]
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   canonicalPath="/"
+  schemaData={homeSchema}
 >
   <!-- Hero Section (Strictly One H1) -->
   <AboveTheFoldHero

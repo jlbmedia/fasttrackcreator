@@ -39,25 +39,53 @@ const relatedSpokes = SPOKES
   .filter((s) => s.slug !== spoke.slug)
   .slice(0, 3);
 
-// Dynamic Product / Software Schema for Google SERP Rich Snippets
-const productSchema = primaryAffiliate ? {
+// Google SERP-compliant Review & Product Snippet Schema
+// Explicitly avoids transactional 'offers' block to prevent invalid Google Merchant Listings checks on editorial review pages
+const reviewSchema = primaryAffiliate ? {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": primaryAffiliate.name,
-  "description": primaryAffiliate.tagline,
-  "offers": {
-    "@type": "Offer",
-    "price": primaryAffiliate.startingPrice.replace(/[^0-9.]/g, '') || "99.00",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "url": primaryAffiliate.targetUrl
+  "@type": "Review",
+  "name": spoke.title,
+  "headline": spoke.h1,
+  "description": spoke.metaDescription,
+  "url": `https://fasttrackcreator.com/${spoke.category}/${spoke.slug}/`,
+  "image": "https://fasttrackcreator.com/icon-512x512.png",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "Fast Track Creator Editorial Team",
+    "url": "https://fasttrackcreator.com/about/"
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Fast Track Creator",
+    "url": "https://fasttrackcreator.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://fasttrackcreator.com/favicon-48x48.png"
+    }
+  },
+  "reviewRating": {
+    "@type": "Rating",
     "ratingValue": primaryAffiliate.rating.toString(),
-    "reviewCount": primaryAffiliate.reviewCount.toString(),
     "bestRating": "5",
     "worstRating": "1"
+  },
+  "itemReviewed": {
+    "@type": "Product",
+    "name": primaryAffiliate.name,
+    "description": primaryAffiliate.tagline,
+    "image": "https://fasttrackcreator.com/icon-512x512.png",
+    "brand": {
+      "@type": "Brand",
+      "name": primaryAffiliate.vendor || primaryAffiliate.name
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": primaryAffiliate.rating.toString(),
+      "reviewCount": primaryAffiliate.reviewCount.toString(),
+      "bestRating": "5",
+      "worstRating": "1"
+    }
   }
 } : undefined;
 ---
@@ -67,8 +95,8 @@ const productSchema = primaryAffiliate ? {
   description={spoke.metaDescription}
   canonicalPath={`/${spoke.category}/${spoke.slug}/`}
   breadcrumbs={breadcrumbs}
-  schemaType="Product"
-  schemaData={productSchema}
+  schemaType="Review"
+  schemaData={reviewSchema}
   announcementText={`⚡ Fast-Track Solution for ${spoke.audience}: Deploy Turnkey Monetization Today.`}
   announcementCtaText="Claim Verified Access →"
   announcementCtaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
