@@ -18,7 +18,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Turnkey Media Real Estate & Monetized Channels',
     description: 'Acquire pre-monetized digital real estate with established AdSense and Creator Rewards active on Day 1. Eliminate 4,000 watch-hour delays.',
     badge: 'Day 1 Monetization',
-    featuredAffiliates: ['dfy-youtube', 'fameswap', 'dfy-tiktok', 'dfy-videos', 'fameswap-youtube']
+    featuredAffiliates: ['dfy-youtube', 'fameswap', 'dfy-tiktok', 'fiverr-automation', 'dfy-videos', 'fameswap-youtube']
   },
   'virtual-creators': {
     slug: 'virtual-creators',
@@ -28,7 +28,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Virtual Creators & AI Influencer Systems',
     description: 'Explore hands-off virtual creator systems, AI video syndication, and fan monetization platforms with zero filming or camera anxiety.',
     badge: '24-Hour Deployment',
-    featuredAffiliates: ['room30', 'fanvue', 'room30-dfy']
+    featuredAffiliates: ['room30', 'fanvue', 'fiverr-ai', 'room30-dfy']
   },
   'creator-commerce': {
     slug: 'creator-commerce',
@@ -38,7 +38,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Creator Commerce & Recurring Community Engines',
     description: 'Transform social attention into recurring monthly cash flow with digital product storefronts, coaching funnels, and private subscription masterminds.',
     badge: 'Under 1k Followers',
-    featuredAffiliates: ['skool', 'beacons']
+    featuredAffiliates: ['skool', 'beacons', 'fiverr-logo']
   },
   'reviews': {
     slug: 'reviews',
@@ -48,7 +48,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Platform Audits, Scorecards & Comparative Reviews',
     description: 'Unbiased, data-driven evaluations of done-for-you monetization platforms, account marketplaces, and creator tools to protect your capital.',
     badge: 'Independent Audits',
-    featuredAffiliates: ['dfy-dave', 'room30', 'fameswap', 'skool', 'beacons', 'fanvue']
+    featuredAffiliates: ['dfy-dave', 'room30', 'fameswap', 'skool', 'beacons', 'fanvue', 'fiverr']
   }
 };
 

@@ -26,3 +26,12 @@
 
 # Beacons
 /go/beacons            https://beacons.ai/signup?c=jlbmedia 302
+
+# Fiverr
+/go/fiverr             https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace 302
+/go/fiverr-video       https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fvideo-animation%2Fvideo-editing 302
+/go/fiverr-automation  https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dyoutube%2Bautomation 302
+/go/fiverr-ai          https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dai%2Binfluencer 302
+/go/fiverr-logo        https://go.fiverr.com/visit/?bta=843111&brand=logomaker 302
+/go/fiverr-affiliates  https://go.fiverr.com/visit/?bta=843111&brand=fiverraffiliates 302
+

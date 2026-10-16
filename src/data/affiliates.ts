@@ -6,7 +6,7 @@ export interface AffiliateProgram {
   targetUrl: string;
   vanityPath: string; // e.g. /go/fameswap
   category: 'turnkey-assets' | 'virtual-creators' | 'creator-commerce' | 'video-automation';
-  payoutModel: 'high-ticket' | 'recurring-mrr' | 'escrow-cut' | 'creator-cut';
+  payoutModel: 'high-ticket' | 'recurring-mrr' | 'escrow-cut' | 'creator-cut' | 'hybrid-revshare';
   payoutBadge: string;
   rating: number;
   reviewCount: number;
@@ -357,6 +357,96 @@ export const AFFILIATE_PROGRAMS: Record<string, AffiliateProgram> = {
       'Direct, zero-cost alternative to Stan Store\'s $29/mo fee'
     ],
     bestForAudience: 'TikTok, Reels, and Shorts creators monetizing audiences under 1,000 followers'
+  },
+
+  // 7. Fiverr (Marketplace, Automation, AI & Logo)
+  'fiverr': {
+    id: 'fiverr',
+    name: 'Fiverr Creator Marketplace',
+    tagline: 'Global freelance talent marketplace for video editing, scriptwriting, voiceover, and creator branding.',
+    vendor: 'Fiverr International Ltd.',
+    targetUrl: 'https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace',
+    vanityPath: '/go/fiverr',
+    category: 'video-automation',
+    payoutModel: 'hybrid-revshare',
+    payoutBadge: '25% FTB CPA + 10% Ongoing Revshare',
+    rating: 4.8,
+    reviewCount: 14500,
+    startingPrice: '$15 - $250 / Project',
+    primaryCtaText: 'Hire Verified Creator Talent on Fiverr →',
+    keyBenefits: [
+      'Comprehensive buyer escrow protection (funds released only upon delivery approval)',
+      'Global pool of specialized YouTube video editors, scriptwriters, and voiceover artists',
+      'Flexible pay-as-you-go production without high-friction agency retainers',
+      'Rapid 24-48 hour turnarounds on short-form Reels, TikToks, and YouTube Shorts'
+    ],
+    bestForAudience: 'Faceless channel operators, lean content creators, and automation builders'
+  },
+  'fiverr-automation': {
+    id: 'fiverr-automation',
+    name: 'Fiverr YouTube Automation Teams',
+    tagline: 'Hire modular scriptwriting, voiceover, and video editing teams for faceless cash cow channels.',
+    vendor: 'Fiverr International Ltd.',
+    targetUrl: 'https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dyoutube%2Bautomation',
+    vanityPath: '/go/fiverr-automation',
+    category: 'turnkey-assets',
+    payoutModel: 'hybrid-revshare',
+    payoutBadge: '25% FTB CPA + 10% Ongoing Revshare',
+    rating: 4.7,
+    reviewCount: 6800,
+    startingPrice: '$25 / Video',
+    primaryCtaText: 'Browse YouTube Automation Gigs on Fiverr →',
+    keyBenefits: [
+      'Complete end-to-end script-to-screen video production packages',
+      'Fraction of the upfront barrier of $5,000+ managed agency channel builds',
+      'Audited seller ratings, verifiable video portfolios, and structured milestone deliveries',
+      'Predictable recurring video batches to maintain continuous upload cadence'
+    ],
+    bestForAudience: 'YouTube channel investors, cash cow operators, and media buyers scaling channel fleets'
+  },
+  'fiverr-ai': {
+    id: 'fiverr-ai',
+    name: 'Fiverr AI Influencer & Model Creation',
+    tagline: 'Hire custom Stable Diffusion, LoRA, and character consistency creators for virtual influencer brands.',
+    vendor: 'Fiverr International Ltd.',
+    targetUrl: 'https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dai%2Binfluencer',
+    vanityPath: '/go/fiverr-ai',
+    category: 'virtual-creators',
+    payoutModel: 'hybrid-revshare',
+    payoutBadge: '25% FTB CPA + 10% Ongoing Revshare',
+    rating: 4.8,
+    reviewCount: 4200,
+    startingPrice: '$35 / Model',
+    primaryCtaText: 'Hire AI Character Specialists on Fiverr →',
+    keyBenefits: [
+      'Custom LoRA checkpoint training for 100% facial and physical consistency',
+      'Production-ready photo batches for Instagram, TikTok, and Fanvue subscriber monetization',
+      'Talking avatar animations, voice cloning, and dynamic lip-sync pipeline setups',
+      'Fast 24-72 hour delivery with full commercial licensing and original generation files'
+    ],
+    bestForAudience: 'Virtual influencer operators, Fanvue agency managers, and digital model creators'
+  },
+  'fiverr-logo': {
+    id: 'fiverr-logo',
+    name: 'Fiverr Logo Maker & Branding Studio',
+    tagline: 'Instant AI-generated, designer-customized logos and brand kits for creator storefronts and channels.',
+    vendor: 'Fiverr International Ltd.',
+    targetUrl: 'https://go.fiverr.com/visit/?bta=843111&brand=logomaker',
+    vanityPath: '/go/fiverr-logo',
+    category: 'creator-commerce',
+    payoutModel: 'hybrid-revshare',
+    payoutBadge: '$30 Fixed CPA + 10% Revshare',
+    rating: 4.9,
+    reviewCount: 19200,
+    startingPrice: '$30 Instant Download',
+    primaryCtaText: 'Design Your Channel Logo in 60 Seconds →',
+    keyBenefits: [
+      'Advanced generator powered by top professional agency typography and iconography',
+      'Instant vector SVG, transparent PNG, and pre-formatted social media exports',
+      'Full commercial ownership rights for YouTube banners, Beacons stores, and merch',
+      'Optional one-click human designer revisions for pixel-perfect brand customization'
+    ],
+    bestForAudience: 'New creators launching Beacons storefronts, Skool communities, and YouTube channels'
   }
 };
 
