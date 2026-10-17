@@ -1,37 +1,37 @@
 # Cloudflare Pages 302 Affiliate Redirects for Fast Track Creator
+# Sub-ID & Attribution Tag: fasttrackcreator
 
 # Fameswap
-/go/fameswap           https://fameswap.com/?ref=1514192 302
-/go/fameswap-youtube   https://fameswap.com/browse-youtube-accounts-for-sale?ref=1514192 302
-/go/fameswap-tiktok    https://fameswap.com/browse-tiktok-accounts-for-sale?ref=1514192 302
-/go/fameswap-instagram https://fameswap.com/browse-instagram-accounts-for-sale?ref=1514192 302
+/go/fameswap           https://fameswap.com/?ref=1514192&sub=fasttrackcreator 302
+/go/fameswap-youtube   https://fameswap.com/browse-youtube-accounts-for-sale?ref=1514192&sub=fasttrackcreator 302
+/go/fameswap-tiktok    https://fameswap.com/browse-tiktok-accounts-for-sale?ref=1514192&sub=fasttrackcreator 302
+/go/fameswap-instagram https://fameswap.com/browse-instagram-accounts-for-sale?ref=1514192&sub=fasttrackcreator 302
 
 # DFY Dave (Soldi.ai)
-/go/dfy-dave           https://www.dfydave.com/?p=B63B41B5 302
-/go/dfy-youtube        https://dfydave.com/monetization?p=B63B41B5 302
-/go/dfy-tiktok         https://www.dfydave.com/tiktok-monetization?p=B63B41B5 302
-/go/dfy-amazon         https://www.dfydave.com/amazon-affiliate-website?p=B63B41B5 302
-/go/dfy-videos         https://buy.dfydave.com/dfy-10-long-form-youtube-videos?p=B63B41B5 302
+/go/dfy-dave           https://www.dfydave.com/?p=B63B41B5&subid=fasttrackcreator 302
+/go/dfy-youtube        https://dfydave.com/monetization?p=B63B41B5&subid=fasttrackcreator 302
+/go/dfy-tiktok         https://www.dfydave.com/tiktok-monetization?p=B63B41B5&subid=fasttrackcreator 302
+/go/dfy-amazon         https://www.dfydave.com/amazon-affiliate-website?p=B63B41B5&subid=fasttrackcreator 302
+/go/dfy-videos         https://buy.dfydave.com/dfy-10-long-form-youtube-videos?p=B63B41B5&subid=fasttrackcreator 302
 
-# Room30 (FirstPromoter)
-/go/room30             https://room30.ai/offer?fpr=joseph65 302
-/go/room30-dfy         https://room30.ai/dfy-ai-influencer?fpr=joseph65 302
-/go/room30-vip         https://room30.ai/three-days-with-greg?fpr=joseph65 302
+# Room30 (FirstPromoter - fp_sid Sub-ID)
+/go/room30             https://room30.ai/offer?fpr=joseph65&fp_sid=fasttrackcreator 302
+/go/room30-dfy         https://room30.ai/dfy-ai-influencer?fpr=joseph65&fp_sid=fasttrackcreator 302
+/go/room30-vip         https://room30.ai/three-days-with-greg?fpr=joseph65&fp_sid=fasttrackcreator 302
 
 # Skool
-/go/skool              https://www.skool.com/signup?ref=f5c036bfb1ee414b80732fbee6b19ccd 302
+/go/skool              https://www.skool.com/signup?ref=f5c036bfb1ee414b80732fbee6b19ccd&utm_source=fasttrackcreator 302
 
 # Fanvue
-/go/fanvue             https://www.fanvue.com/signup?referral=FV-YQ6P77 302
+/go/fanvue             https://www.fanvue.com/signup?referral=FV-YQ6P77&source=fasttrackcreator&campaign=fasttrackcreator 302
 
 # Beacons
-/go/beacons            https://beacons.ai/signup?c=jlbmedia 302
+/go/beacons            https://beacons.ai/signup?c=jlbmedia&utm_source=fasttrackcreator 302
 
-# Fiverr
-/go/fiverr             https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace 302
-/go/fiverr-video       https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fvideo-animation%2Fvideo-editing 302
-/go/fiverr-automation  https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dyoutube%2Bautomation 302
-/go/fiverr-ai          https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dai%2Binfluencer 302
-/go/fiverr-logo        https://go.fiverr.com/visit/?bta=843111&brand=logomaker 302
-/go/fiverr-affiliates  https://go.fiverr.com/visit/?bta=843111&brand=fiverraffiliates 302
-
+# Fiverr (Cellxpert afp & subid Sub-ID)
+/go/fiverr             https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&afp=fasttrackcreator&subid=fasttrackcreator 302
+/go/fiverr-video       https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&afp=fasttrackcreator&subid=fasttrackcreator&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fcategories%2Fvideo-animation%2Fvideo-editing 302
+/go/fiverr-automation  https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&afp=fasttrackcreator&subid=fasttrackcreator&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dyoutube%2Bautomation 302
+/go/fiverr-ai          https://go.fiverr.com/visit/?bta=843111&brand=fiverrmarketplace&afp=fasttrackcreator&subid=fasttrackcreator&landingPage=https%3A%2F%2Fwww.fiverr.com%2Fsearch%2Fgigs%3Fquery%3Dai%2Binfluencer 302
+/go/fiverr-logo        https://go.fiverr.com/visit/?bta=843111&brand=logomaker&afp=fasttrackcreator&subid=fasttrackcreator 302
+/go/fiverr-affiliates  https://go.fiverr.com/visit/?bta=843111&brand=fiverraffiliates&afp=fasttrackcreator&subid=fasttrackcreator 302

@@ -115,7 +115,9 @@ const websiteSchema = {
                 event_category: 'outbound_conversion',
                 event_label: (anchor.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60),
                 destination_url: href,
-                source_path: window.location.pathname
+                source_path: window.location.pathname,
+                site_source: 'fasttrackcreator.com',
+                subid: 'fasttrackcreator'
               });
             }
           }
