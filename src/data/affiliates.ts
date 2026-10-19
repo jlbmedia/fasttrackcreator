@@ -447,6 +447,52 @@ export const AFFILIATE_PROGRAMS: Record<string, AffiliateProgram> = {
       'Optional one-click human designer revisions for pixel-perfect brand customization'
     ],
     bestForAudience: 'New creators launching Beacons storefronts, Skool communities, and YouTube channels'
+  },
+
+  // 8. LinkStack (Founding Partner)
+  'linkstack': {
+    id: 'linkstack',
+    name: 'LinkStack Creator Commerce & DM Automation',
+    tagline: 'All-in-one link-in-bio storefront, smart deep links, and Meta-approved Instagram DM automation.',
+    vendor: 'LinkStack.fyi / Kyle Colquitt',
+    targetUrl: 'https://www.linkstack.fyi/?ref=jlb&utm_source=fasttrackcreator',
+    vanityPath: '/go/linkstack',
+    category: 'creator-commerce',
+    payoutModel: 'recurring-mrr',
+    payoutBadge: '70% Year 1 + 40% Lifetime MRR',
+    rating: 4.9,
+    reviewCount: 1850,
+    startingPrice: 'Free Tier Available ($0 - $24.92/mo)',
+    primaryCtaText: 'Launch Your Free LinkStack Account →',
+    keyBenefits: [
+      'Official Meta Tech Provider with compliant Instagram DM & comment automation',
+      'Smart in-app deep linking bypasses in-app browsers to stop Amazon & YouTube link leaks',
+      'Digital downloads, courses, and call booking with 0% platform fee on Growth tier',
+      'Free forever tier available with zero credit card required to start'
+    ],
+    bestForAudience: 'Instagram creators, digital product sellers, and affiliate promoters stopping bio link drop-off'
+  },
+  'linkstack-deep-links': {
+    id: 'linkstack-deep-links',
+    name: 'LinkStack Smart Deep Link Engine',
+    tagline: 'Deep link routing engine that opens external links directly inside native iOS and Android apps.',
+    vendor: 'LinkStack.fyi / Kyle Colquitt',
+    targetUrl: 'https://www.linkstack.fyi/p/link-leak-scanner?ref=jlb&utm_source=fasttrackcreator',
+    vanityPath: '/go/linkstack-scanner',
+    category: 'creator-commerce',
+    payoutModel: 'recurring-mrr',
+    payoutBadge: '70% Year 1 + 40% Lifetime MRR',
+    rating: 4.9,
+    reviewCount: 920,
+    startingPrice: 'Free Tool Included',
+    primaryCtaText: 'Audit Your Bio Links for Free →',
+    keyBenefits: [
+      'Forces Amazon, YouTube, and Spotify links to open directly inside native mobile apps',
+      'Protects creator affiliate cookies by preventing logged-out in-app browser sessions',
+      'Built-in link leak scanner identifies broken attribution across social bios',
+      'Geo-targeted country and device routing for global affiliate optimization'
+    ],
+    bestForAudience: 'Affiliate marketers, TikTok Shop creators, and YouTubers maximizing mobile link conversion'
   }
 };
 

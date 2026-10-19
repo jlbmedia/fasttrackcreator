@@ -38,7 +38,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Creator Commerce & Recurring Community Engines',
     description: 'Transform social attention into recurring monthly cash flow with digital product storefronts, coaching funnels, and private subscription masterminds.',
     badge: 'Under 1k Followers',
-    featuredAffiliates: ['skool', 'beacons', 'fiverr-logo']
+    featuredAffiliates: ['linkstack', 'skool', 'beacons', 'linkstack-deep-links', 'fiverr-logo']
   },
   'reviews': {
     slug: 'reviews',
@@ -48,7 +48,7 @@ export const CATEGORIES: Record<string, CategoryHub> = {
     h1: 'Platform Audits, Scorecards & Comparative Reviews',
     description: 'Unbiased, data-driven evaluations of done-for-you monetization platforms, account marketplaces, and creator tools to protect your capital.',
     badge: 'Independent Audits',
-    featuredAffiliates: ['dfy-dave', 'room30', 'fameswap', 'skool', 'beacons', 'fanvue', 'fiverr']
+    featuredAffiliates: ['linkstack', 'dfy-dave', 'room30', 'fameswap', 'skool', 'beacons', 'fanvue', 'fiverr']
   }
 };
 

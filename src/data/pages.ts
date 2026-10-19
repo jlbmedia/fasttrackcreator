@@ -582,6 +582,56 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'best-stan-store-alternatives-for-creators',
+    category: 'creator-commerce',
+    keyword: 'stan store alternative',
+    audience: 'Digital Product Sellers & Faceless Creators',
+    title: 'Best Stan Store Alternatives for Creators (Free vs Paid) | Fast Track Creator',
+    metaDescription: 'Compare the best Stan Store alternatives in 2026. Explore free storefronts, built-in Instagram DM automations, and zero-fee digital product tiers.',
+    h1: 'Best Stan Store Alternatives for Digital Creators in 2026',
+    badge: '2026 Storefront Audit',
+    heroHeadline: 'Stop Paying $29/Month for a Basic Creator Store',
+    heroSubheadline: 'We evaluated leading Stan Store competitors across free tiers, transaction fees, in-app deep linking, and automated Instagram DM lead capture for digital sellers.',
+    primaryAffiliateId: 'linkstack',
+    secondaryAffiliateId: 'beacons',
+    painPoints: [
+      'Paying Stan Store\'s mandatory $29 to $99/mo subscription creates negative cash flow before making your first sale',
+      'Lack of built-in Instagram DM or comment automation forces creators to buy ManyChat for another $15 to $45/mo',
+      'Instagram and TikTok in-app browser crashes log buyers out of Amazon or YouTube, leaking 30% to 50% of affiliate sales',
+      'Stan Store cancels affiliate tracking and forfeits pending commissions if you ever pause or cancel your paid subscription'
+    ],
+    keyBenefits: [
+      '100% free starter tiers (LinkStack and Beacons) allowing creators to launch and sell with zero monthly overhead',
+      'Official Meta Tech Provider integration with native comment-to-DM triggers built directly into the storefront',
+      'Smart deep-linking engine that bypasses in-app browser traps and opens target apps natively with active logins',
+      '0% transaction fees on LinkStack Growth ($24.92/mo) or Beacons Pro ($10/mo) vs Stan\'s fixed $29/mo barrier'
+    ],
+    comparisonPoints: [
+      { factor: 'Monthly Fixed Platform Cost', traditional: 'Stan Store: Mandatory $29 to $99/Mo', fasttrack: 'LinkStack: $0 Free Plan or $24.92 Growth' },
+      { factor: 'Instagram DM Automation', traditional: 'None (Requires $15-$45/Mo ManyChat)', fasttrack: 'LinkStack: Built-in Meta-Approved DM Bot' },
+      { factor: 'In-App Link Leak Protection', traditional: 'Standard URLs (Buyers Trapped in Webview)', fasttrack: 'Smart Deep Links Force Native App Launch' },
+      { factor: 'Affiliate Program Overhead', traditional: 'Must Pay $29/Mo to Remain an Affiliate', fasttrack: 'Free to Join: Up to 70% First Year + 40% MRR' }
+    ],
+    faqList: [
+      {
+        question: 'What is the best free alternative to Stan Store?',
+        answer: 'LinkStack and Beacons are the leading free Stan Store alternatives. Both offer free plans that let you deploy a custom link-in-bio and sell digital products without paying Stan Store\'s upfront $29 monthly fee.'
+      },
+      {
+        question: 'Why do creators switch from Stan Store to LinkStack?',
+        answer: 'Creators switch to LinkStack for two major reasons: built-in Instagram comment-to-DM automation (eliminating a separate ManyChat subscription) and smart deep linking, which forces YouTube, Amazon, and Spotify links to open in their native apps rather than the restricted Instagram in-app browser.'
+      },
+      {
+        question: 'Does LinkStack charge transaction fees on digital downloads?',
+        answer: 'On LinkStack\'s free plan, there is a small transaction fee per sale. When you upgrade to LinkStack Growth at $24.92/month (cheaper than Stan\'s $29/month), transaction fees drop to 0%, giving you unlimited digital sales and booking revenue.'
+      },
+      {
+        question: 'Can I automate Instagram DMs with Stan Store?',
+        answer: 'No. Stan Store does not provide native Instagram DM or comment automation. Creators using Stan Store must pay an additional $15 to $45 per month for third-party tools like ManyChat, whereas LinkStack includes Meta-approved DM automation directly.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 4: REVIEWS & INDEPENDENT AUDITS
@@ -861,6 +911,56 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'Can you find turnkey YouTube automation teams on Fiverr?',
         answer: 'Yes. Hundreds of specialized production teams on Fiverr offer complete faceless channel packs that bundle SEO scriptwriting, professional voiceovers, licensed B-roll motion graphics, and click-optimized YouTube thumbnails into a single fixed-price milestone.'
+      }
+    ]
+  },
+  {
+    slug: 'linkstack-creator-platform-review-and-pricing',
+    category: 'reviews',
+    keyword: 'linkstack review',
+    audience: 'Social Commerce Creators & Instagram Sellers',
+    title: 'LinkStack Review: All-in-One Link in Bio & DM Automation | Fast Track Creator',
+    metaDescription: 'In-depth LinkStack review for creators: audit deep links, Meta Instagram DM automation, digital storefronts, pricing tiers, and the 70% partner bounty.',
+    h1: 'LinkStack Review: All-in-One Link in Bio & Instagram DM Automation',
+    badge: 'Official Meta Tech Provider',
+    heroHeadline: 'Replace Stan Store and ManyChat with One Unified Creator Stack',
+    heroSubheadline: 'We tested LinkStack across smart deep linking, in-app browser leak prevention, automated Instagram comment-to-DM funnels, and 0% transaction fee digital sales.',
+    primaryAffiliateId: 'linkstack',
+    secondaryAffiliateId: 'linkstack-deep-links',
+    painPoints: [
+      'Juggling Stan Store ($29/mo) and ManyChat ($15+/mo) drains $44 to $74 every month in fragmented software fees',
+      'Instagram and TikTok in-app webviews strip user login sessions, causing over 40% of affiliate cart abandonment',
+      'Manual direct messaging to interested reel commenters is physically impossible once a video goes viral',
+      'Traditional link-in-bio tools take 9% to 15% transaction cuts while offering zero marketing automation'
+    ],
+    keyBenefits: [
+      'Official Meta Tech Provider status guarantees 100% compliant, ban-proof Instagram comment & DM automation',
+      'Smart deep-linking technology forces links to open inside native apps (YouTube, Amazon, Spotify) instead of webviews',
+      'Digital storefront selling ebooks, templates, consultations, and courses with 0% platform fee on Growth tier',
+      'Generous partner ecosystem paying 70% Year 1 direct subscription revenue and 40% ongoing lifetime MRR'
+    ],
+    comparisonPoints: [
+      { factor: 'Instagram DM Automation', traditional: 'ManyChat Integration ($15 to $45/Mo)', fasttrack: 'Native Meta-Approved Automated DMs' },
+      { factor: 'In-App Webview Handling', traditional: 'Traps Users (Forces Logins & Loses Sales)', fasttrack: 'Deep Links Bypass Webview to Native App' },
+      { factor: 'Combined Monthly Tech Stack', traditional: '$44 to $74/Mo for Stan + ManyChat', fasttrack: '$0 Free or $24.92/Mo All-In-One' },
+      { factor: 'Partner Referral Bounty', traditional: 'Standard 20% to 30% One-Time / Short MRR', fasttrack: '70% First Year + 40% Lifetime MRR' }
+    ],
+    faqList: [
+      {
+        question: 'Is LinkStack officially approved by Meta for Instagram automation?',
+        answer: 'Yes. LinkStack is an official Meta Tech Provider. Its comment-to-DM and auto-responder features utilize Meta\'s official Graph API, ensuring your Instagram account remains 100% safe from shadowbans or algorithmic flags.'
+      },
+      {
+        question: 'How does LinkStack\'s deep linking increase creator revenue?',
+        answer: 'When a follower clicks a standard link on Instagram, it opens in a restricted in-app browser where the user is logged out of Amazon, YouTube, or Spotify. LinkStack\'s smart deep links automatically break out of the webview and open the native mobile app where the user is already authenticated, skyrocketing conversions.'
+      },
+      {
+        question: 'What are LinkStack\'s pricing plans in 2026?',
+        answer: 'LinkStack offers a Free Forever plan with basic link-in-bio and deep links, a Starter plan at $9.92/month for expanding creators, and a full-featured Growth plan at $24.92/month which includes unlimited DM automations, 0% digital product transaction fees, and custom domain hosting.'
+      },
+      {
+        question: 'How does the LinkStack affiliate partner program work?',
+        answer: 'LinkStack offers one of the highest payouts in the creator economy: 70% direct subscription revenue in Year 1, 40% ongoing lifetime recurring MRR for the life of the customer, and a 10% second-tier referral share. Payouts are issued monthly with a low $25 minimum threshold.'
       }
     ]
   }
