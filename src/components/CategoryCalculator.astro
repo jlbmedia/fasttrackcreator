@@ -1,0 +1,538 @@
+---
+interface Props {
+  categorySlug: string;
+}
+
+const { categorySlug } = Astro.props;
+---
+
+<section class="py-16 md:py-20 border-b border-gray-800 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    {categorySlug === 'turnkey-assets' && (
+      <div id="turnkey-calc-container" class="rounded-3xl border border-brand-500/30 bg-gray-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-3">
+            Interactive Cash Flow Model
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+            Media Asset Payback & AdSense Calculator
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Calculate your estimated break-even period and annual AdSense cash flow when acquiring pre-monetized digital real estate.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Controls Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="tk-cost">Acquisition Cost (Channel / Asset)</label>
+                <span id="tk-cost-val" class="text-brand-400 font-mono">$700</span>
+              </div>
+              <input
+                id="tk-cost"
+                type="range"
+                min="250"
+                max="3500"
+                step="50"
+                value="700"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>$250 (Starter)</span>
+                <span>$1,500</span>
+                <span>$3,500 (Authority)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="tk-views">Estimated Monthly Long-Form Views</label>
+                <span id="tk-views-val" class="text-brand-400 font-mono">60,000</span>
+              </div>
+              <input
+                id="tk-views"
+                type="range"
+                min="10000"
+                max="500000"
+                step="5000"
+                value="60000"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>10k Views</span>
+                <span>150k Views</span>
+                <span>500k Views</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="tk-rpm">Niche RPM (Revenue Per 1,000 Views)</label>
+                <span id="tk-rpm-val" class="text-emerald-400 font-mono">$12.00</span>
+              </div>
+              <input
+                id="tk-rpm"
+                type="range"
+                min="2"
+                max="35"
+                step="0.5"
+                value="12"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>$2 (Memes/Gaming)</span>
+                <span>$12 (Tech/Biz)</span>
+                <span>$35 (Finance/SaaS)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Summary Column -->
+          <div class="lg:col-span-5 p-6 rounded-2xl bg-gray-950/90 border border-gray-800 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Monthly AdSense Cash Flow</div>
+                <div id="tk-res-monthly" class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1 font-mono">$720.00</div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Payback Time</div>
+                  <div id="tk-res-payback" class="text-lg font-bold text-brand-300 mt-1 font-mono">1.0 Mos</div>
+                </div>
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Annual ROI</div>
+                  <div id="tk-res-roi" class="text-lg font-bold text-cyan-300 mt-1 font-mono">1,234%</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <a
+                href="/go/fameswap"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-brand-500 text-white hover:bg-brand-400 transition-colors shadow-lg shadow-brand-500/20"
+              >
+                Browse Channels on Fameswap →
+              </a>
+              <a
+                href="/go/dfy-videos"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-gray-800 text-slate-200 hover:bg-gray-700 hover:text-white transition-colors"
+              >
+                Order DFY YouTube Video Packs →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {categorySlug === 'creator-commerce' && (
+      <div id="commerce-calc-container" class="rounded-3xl border border-brand-500/30 bg-gray-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-3">
+            Creator Economy ROI Model
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+            Creator Stack Savings & Skool MRR Engine
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            See how much you save replacing Stan Store and ManyChat with LinkStack, plus your compounding passive income referring Skool communities.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Controls Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="cc-spend">Current Monthly Software Stack (Stan + ManyChat)</label>
+                <span id="cc-spend-val" class="text-rose-400 font-mono">$59/mo</span>
+              </div>
+              <input
+                id="cc-spend"
+                type="range"
+                min="0"
+                max="180"
+                step="5"
+                value="59"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-rose-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>$0 (Free link)</span>
+                <span>$59 (Stan + ManyChat)</span>
+                <span>$180+ (Circle + Tools)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="cc-skool">Active Skool Community Referrals (40% MRR)</label>
+                <span id="cc-skool-val" class="text-brand-400 font-mono">5 Groups</span>
+              </div>
+              <input
+                id="cc-skool"
+                type="range"
+                min="1"
+                max="50"
+                step="1"
+                value="5"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>1 Group ($39/mo)</span>
+                <span>15 Groups</span>
+                <span>50 Groups ($1,980/mo)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="cc-sales">Monthly Digital Product Sales</label>
+                <span id="cc-sales-val" class="text-emerald-400 font-mono">$500/mo</span>
+              </div>
+              <input
+                id="cc-sales"
+                type="range"
+                min="0"
+                max="5000"
+                step="100"
+                value="500"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>$0</span>
+                <span>$1,500</span>
+                <span>$5,000+</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Summary Column -->
+          <div class="lg:col-span-5 p-6 rounded-2xl bg-gray-950/90 border border-gray-800 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Skool Lifetime Recurring MRR</div>
+                <div id="cc-res-skool-mrr" class="text-2xl sm:text-3xl font-black text-brand-400 mt-1 font-mono">$198.00/mo</div>
+                <div class="text-[11px] text-slate-400 mt-0.5 font-medium">$2,376.00 passive annual cash flow</div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Annual Stack Saved</div>
+                  <div id="cc-res-saved" class="text-lg font-bold text-emerald-400 mt-1 font-mono">$409/yr</div>
+                </div>
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">1-Yr Value Added</div>
+                  <div id="cc-res-total" class="text-lg font-bold text-cyan-300 mt-1 font-mono">$2,785</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <a
+                href="/go/linkstack"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-emerald-500 text-slate-950 hover:bg-emerald-400 transition-colors shadow-lg shadow-emerald-500/20 font-bold"
+              >
+                Launch Free Store with LinkStack →
+              </a>
+              <a
+                href="/go/skool"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-gray-800 text-slate-200 hover:bg-gray-700 hover:text-white transition-colors"
+              >
+                Start 14-Day Free Skool Trial →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {categorySlug === 'virtual-creators' && (
+      <div id="virtual-calc-container" class="rounded-3xl border border-brand-500/30 bg-gray-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-3">
+            AI Persona Cash Flow Engine
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+            Virtual Model Earnings & Fanvue Scaler
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Project your monthly subscription and pay-per-view (PPV) earnings across an AI influencer fleet with 80% creator take-home pay.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Controls Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="vc-personas">Number of Virtual Models / Personas</label>
+                <span id="vc-personas-val" class="text-brand-400 font-mono">2 Models</span>
+              </div>
+              <input
+                id="vc-personas"
+                type="range"
+                min="1"
+                max="10"
+                step="1"
+                value="2"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>1 Model</span>
+                <span>5 Models</span>
+                <span>10 Models (Agency)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="vc-subs">Paid Subscribers per Model</label>
+                <span id="vc-subs-val" class="text-brand-400 font-mono">80 Subs</span>
+              </div>
+              <input
+                id="vc-subs"
+                type="range"
+                min="20"
+                max="500"
+                step="10"
+                value="80"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-brand-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>20 Subs</span>
+                <span>150 Subs</span>
+                <span>500 Subs</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs sm:text-sm font-bold text-slate-200 mb-2">
+                <label for="vc-price">Subscription Price ($/Month)</label>
+                <span id="vc-price-val" class="text-emerald-400 font-mono">$15.00/mo</span>
+              </div>
+              <input
+                id="vc-price"
+                type="range"
+                min="5"
+                max="35"
+                step="1"
+                value="15"
+                class="w-full h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer accent-emerald-500"
+              />
+              <div class="flex justify-between text-[11px] text-slate-400 mt-1">
+                <span>$5/mo</span>
+                <span>$15/mo</span>
+                <span>$35/mo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Summary Column -->
+          <div class="lg:col-span-5 p-6 rounded-2xl bg-gray-950/90 border border-gray-800 flex flex-col justify-between space-y-5">
+            <div class="space-y-4">
+              <div class="p-3.5 rounded-xl bg-gray-900 border border-gray-800">
+                <div class="text-[11px] text-slate-400 uppercase tracking-wider font-semibold">Net Fanvue Creator Payout (80%)</div>
+                <div id="vc-res-net" class="text-2xl sm:text-3xl font-black text-emerald-400 mt-1 font-mono">$2,496.00/mo</div>
+                <div class="text-[11px] text-slate-400 mt-0.5 font-medium">$31,200.00 annual take-home cash flow</div>
+              </div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">OnlyFans Risk</div>
+                  <div class="text-lg font-bold text-rose-400 mt-1 font-mono">$0 (Banned)</div>
+                </div>
+                <div class="p-3 rounded-xl bg-gray-900 border border-gray-800">
+                  <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Asset Value</div>
+                  <div id="vc-res-asset" class="text-lg font-bold text-cyan-300 mt-1 font-mono">~$78,000</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-2.5 pt-2">
+              <a
+                href="/go/fanvue"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-brand-500 text-white hover:bg-brand-400 transition-colors shadow-lg shadow-brand-500/20"
+              >
+                Monetize Virtual Models on Fanvue →
+              </a>
+              <a
+                href="/go/room30"
+                rel="nofollow noopener noreferrer"
+                class="w-full text-center block px-4 py-2.5 text-xs font-bold rounded-xl bg-gray-800 text-slate-200 hover:bg-gray-700 hover:text-white transition-colors"
+              >
+                Deploy Room30 AI Persona in 24h →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    )}
+
+    {categorySlug === 'reviews' && (
+      <div id="reviews-audit-container" class="rounded-3xl border border-brand-500/30 bg-gray-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-3">
+            2026 Platform Verification
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-2">
+            Creator Platform Safety & Fee Benchmark
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300">
+            Compare transaction surcharges, escrow protections, and affiliate revenue share across audited partners.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-gray-950/80 border border-gray-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-brand-400 uppercase tracking-wider">Account Market</span>
+                <span class="text-xs font-bold text-emerald-400">Escrow Safe</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Fameswap</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Full buyer escrow holding, OGE verification, and YouTube Brand Account mediation. 20% flat seller fee.
+              </p>
+            </div>
+            <a href="/go/fameswap" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300 transition-colors flex items-center justify-between pt-3 border-t border-gray-800">
+              <span>View Escrow Terms</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-gray-950/80 border border-gray-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider">Store & DMs</span>
+                <span class="text-xs font-bold text-emerald-400">0% Platform Fee</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">LinkStack</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Official Meta Tech Provider with native Instagram comment-to-DM triggers and deep link breakout. 70% Year 1 bounty.
+              </p>
+            </div>
+            <a href="/go/linkstack" rel="nofollow noopener noreferrer" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center justify-between pt-3 border-t border-gray-800">
+              <span>Audit Features</span>
+              <span>→</span>
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-gray-950/80 border border-gray-800 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-xs font-bold text-cyan-400 uppercase tracking-wider">Community MRR</span>
+                <span class="text-xs font-bold text-cyan-400">40% Lifetime MRR</span>
+              </div>
+              <h3 class="text-lg font-bold text-white mb-2">Skool</h3>
+              <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                Flat $99/mo rate with unlimited courses, gamified point retention, and zero checkout transaction surcharges.
+              </p>
+            </div>
+            <a href="/go/skool" rel="nofollow noopener noreferrer" class="text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-between pt-3 border-t border-gray-800">
+              <span>Explore Skool Economics</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+</section>
+
+<script is:inline>
+  function initCalculators() {
+    // 1. Turnkey Assets Calculator
+    const tkCost = document.getElementById('tk-cost');
+    const tkViews = document.getElementById('tk-views');
+    const tkRpm = document.getElementById('tk-rpm');
+    if (tkCost && tkViews && tkRpm) {
+      function updateTurnkey() {
+        const cost = parseFloat(tkCost.value);
+        const views = parseFloat(tkViews.value);
+        const rpm = parseFloat(tkRpm.value);
+
+        document.getElementById('tk-cost-val').textContent = '$' + cost.toLocaleString();
+        document.getElementById('tk-views-val').textContent = views.toLocaleString();
+        document.getElementById('tk-rpm-val').textContent = '$' + rpm.toFixed(2);
+
+        const monthlyAdSense = (views / 1000) * rpm;
+        const paybackMonths = cost / (monthlyAdSense || 1);
+        const annualRoi = ((monthlyAdSense * 12) / cost) * 100;
+
+        document.getElementById('tk-res-monthly').textContent = '$' + monthlyAdSense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        document.getElementById('tk-res-payback').textContent = paybackMonths < 0.1 ? '< 0.1 Mos' : paybackMonths.toFixed(1) + ' Mos';
+        document.getElementById('tk-res-roi').textContent = Math.round(annualRoi).toLocaleString() + '%';
+      }
+      [tkCost, tkViews, tkRpm].forEach(el => el.addEventListener('input', updateTurnkey));
+      updateTurnkey();
+    }
+
+    // 2. Creator Commerce Calculator
+    const ccSpend = document.getElementById('cc-spend');
+    const ccSkool = document.getElementById('cc-skool');
+    const ccSales = document.getElementById('cc-sales');
+    if (ccSpend && ccSkool && ccSales) {
+      function updateCommerce() {
+        const spend = parseFloat(ccSpend.value);
+        const skoolRefs = parseFloat(ccSkool.value);
+        const sales = parseFloat(ccSales.value);
+
+        document.getElementById('cc-spend-val').textContent = '$' + spend + '/mo';
+        document.getElementById('cc-skool-val').textContent = skoolRefs + (skoolRefs === 1 ? ' Group' : ' Groups');
+        document.getElementById('cc-sales-val').textContent = '$' + sales.toLocaleString() + '/mo';
+
+        const skoolMrr = skoolRefs * 39.60;
+        const skoolAnnual = skoolMrr * 12;
+        // Switching to LinkStack free ($0) or growth ($24.92) compared to spend
+        const annualSaved = Math.max(0, (spend - 24.92) * 12);
+        const totalValue = skoolAnnual + annualSaved;
+
+        document.getElementById('cc-res-skool-mrr').textContent = '$' + skoolMrr.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '/mo';
+        document.getElementById('cc-res-saved').textContent = '$' + Math.round(annualSaved).toLocaleString() + '/yr';
+        document.getElementById('cc-res-total').textContent = '$' + Math.round(totalValue).toLocaleString();
+      }
+      [ccSpend, ccSkool, ccSales].forEach(el => el.addEventListener('input', updateCommerce));
+      updateCommerce();
+    }
+
+    // 3. Virtual Creators Calculator
+    const vcPersonas = document.getElementById('vc-personas');
+    const vcSubs = document.getElementById('vc-subs');
+    const vcPrice = document.getElementById('vc-price');
+    if (vcPersonas && vcSubs && vcPrice) {
+      function updateVirtual() {
+        const personas = parseFloat(vcPersonas.value);
+        const subs = parseFloat(vcSubs.value);
+        const price = parseFloat(vcPrice.value);
+
+        document.getElementById('vc-personas-val').textContent = personas + (personas === 1 ? ' Model' : ' Models');
+        document.getElementById('vc-subs-val').textContent = subs.toLocaleString() + ' Subs';
+        document.getElementById('vc-price-val').textContent = '$' + price.toFixed(2) + '/mo';
+
+        // Subscriptions + estimated 30% PPV add-on per subscriber ($12 avg purchase)
+        const subGross = personas * subs * price;
+        const ppvGross = personas * (subs * 0.35) * 15;
+        const totalGross = subGross + ppvGross;
+        const netFanvue = totalGross * 0.80; // 80% creator take
+        const annualNet = netFanvue * 12;
+        const assetValue = annualNet * 2.5; // typical media asset multiple
+
+        document.getElementById('vc-res-net').textContent = '$' + netFanvue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '/mo';
+        document.getElementById('vc-res-asset').textContent = '~$' + Math.round(assetValue).toLocaleString();
+      }
+      [vcPersonas, vcSubs, vcPrice].forEach(el => el.addEventListener('input', updateVirtual));
+      updateVirtual();
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCalculators);
+  } else {
+    initCalculators();
+  }
+</script>

@@ -400,6 +400,56 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'best-faceless-youtube-channel-niches-and-ideas',
+    category: 'turnkey-assets',
+    keyword: 'faceless youtube channel ideas',
+    audience: 'Faceless Creators & YouTube Automation Investors',
+    title: 'Best Faceless YouTube Channel Ideas & High-RPM Niches | Fast Track Creator',
+    metaDescription: 'Discover the best faceless YouTube channel ideas for 2026. Explore high-RPM niches ($15-$40 RPM), turnkey video editing workflows, and monetization rules.',
+    h1: 'Best Faceless YouTube Channel Ideas: High-RPM Niches for 2026',
+    badge: 'High-RPM Blueprint',
+    heroHeadline: 'Launch a High-RPM Faceless YouTube Channel in 2026',
+    heroSubheadline: 'No filming, no on-camera presence. Explore top-performing faceless automation niches (finance, luxury documentaries, tech history) and turnkey production pipelines.',
+    primaryAffiliateId: 'dfy-videos',
+    secondaryAffiliateId: 'fiverr-automation',
+    painPoints: [
+      'Choosing low-RPM niches (gaming, memes) pays pennies ($1–$2 RPM) despite millions of grueling views',
+      'Spending 25+ hours weekly editing complex Premiere timelines or learning motion graphic keyframes',
+      'Using low-quality robotic AI voiceovers that trigger YouTube repetitious or reused content demonetization',
+      'Giving up after 6 months because the channel stalled reaching the 4,000 watch-hour YPP threshold'
+    ],
+    keyBenefits: [
+      'Target lucrative high-RPM niches (personal finance, B2B software, luxury case studies) paying $15 to $40+ RPM',
+      'Outsource script-to-screen production using professional turnkey video packs or specialized freelance teams',
+      'Stack diversified monetization: AdSense checks + high-ticket affiliate review funnels + digital downloads',
+      'Build scalable digital media assets that compound in value and can be transferred on marketplaces'
+    ],
+    comparisonPoints: [
+      { factor: 'Target RPM Earning Potential', traditional: 'Low Niches (Gaming/Comedy): $1.20 - $3.00 RPM', fasttrack: 'High Niches (Finance/B2B): $15.00 - $45.00 RPM' },
+      { factor: 'Weekly Production Workflow', traditional: '20+ Hours Manual Voiceover & Timeline Editing', fasttrack: 'Turnkey DFY Video Packs & Modular Freelance Teams' },
+      { factor: 'Monetization Architecture', traditional: 'Solely Dependent on YouTube AdSense Checks', fasttrack: 'AdSense + High-Ticket Affiliate Links + Lead Funnels' },
+      { factor: 'Asset Transfer & Liquidity', traditional: 'Tied to Personal Face (Zero Liquidity)', fasttrack: 'Turnkey Brand Asset Transferable on Fameswap' }
+    ],
+    faqList: [
+      {
+        question: 'What are the highest-RPM faceless YouTube channel niches in 2026?',
+        answer: 'The highest-RPM faceless niches are Personal Finance & Investing ($20-$45 RPM), Business & Luxury Case Studies ($18-$35 RPM), SaaS & Software Tutorials ($15-$30 RPM), and Tech Innovations ($12-$25 RPM).'
+      },
+      {
+        question: 'Does YouTube monetize faceless channels with AI voiceovers?',
+        answer: 'Yes, provided the content provides original educational or narrative value and uses natural-sounding, licensed text-to-speech or human voiceovers. YouTube only demonetizes low-effort, repetitive, or mass-scraped robotic slideshows.'
+      },
+      {
+        question: 'How fast can a faceless YouTube channel become profitable?',
+        answer: 'When acquiring a pre-monetized channel or combining rapid DFY video production with high-paying affiliate offers (such as Skool or LinkStack in the description), channels can generate revenue from their first 5 to 10 videos.'
+      },
+      {
+        question: 'How many videos should a faceless YouTube channel publish per week?',
+        answer: 'For long-form faceless documentary or analysis channels, 2 to 3 high-retention 8-to-12 minute videos per week is optimal. Quality, click-through rate, and average percentage viewed vastly outweigh sheer upload volume.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 2: VIRTUAL CREATORS & AI MODELS
@@ -593,6 +643,56 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'How do virtual influencers generate revenue?',
         answer: 'AI influencers earn primarily through Fanvue subscriber tiers and pay-per-view direct messages ($2,000 to $10,000+/month for top accounts), brand sponsorships for digital product placements, and automated affiliate promotions.'
+      }
+    ]
+  },
+  {
+    slug: 'fanvue-vs-onlyfans-for-ai-creators',
+    category: 'virtual-creators',
+    keyword: 'fanvue vs onlyfans',
+    audience: 'Virtual Persona Developers & AI Model Agencies',
+    title: 'Fanvue vs OnlyFans for AI Creators: 2026 Platform Audit | Fast Track Creator',
+    metaDescription: 'Fanvue vs OnlyFans for AI creators: explore account ban policies, synthetic media rules, automated voice DMs, payment verification, and fee structures.',
+    h1: 'Fanvue vs. OnlyFans for AI Creators: 2026 Platform Audit',
+    badge: 'AI Policy Verified',
+    heroHeadline: 'Why AI Creators Are Leaving OnlyFans for Fanvue',
+    heroSubheadline: 'OnlyFans bans or de-indexes synthetic personas without warning. Discover why virtual model agencies use Fanvue for compliant subscriptions, automated audio, and 80% payouts.',
+    primaryAffiliateId: 'fanvue',
+    secondaryAffiliateId: 'room30-dfy',
+    painPoints: [
+      'OnlyFans requires physical government ID matching every face shown, making AI models instantly bannable',
+      'Agencies building virtual influencer fleets risk sudden account terminations and frozen payout balances on OF',
+      'OnlyFans has zero native voice generation or automated AI interaction tooling for subscriber retention',
+      'Customer support on legacy platforms ignores synthetic creators when KYC verification fails'
+    ],
+    keyBenefits: [
+      'Explicit policy framework permitting synthetic avatars and AI influencer personas with single-owner KYC',
+      'Native AI voice note messaging and smart broadcast sequences that multiply pay-per-view conversion',
+      '80% net creator payout with multi-currency payouts including direct crypto settlement to avoid merchant blocks',
+      'Agency-friendly multi-creator management dashboard for scaling multiple virtual personas seamlessly'
+    ],
+    comparisonPoints: [
+      { factor: 'Synthetic Model Policy', traditional: 'OnlyFans: Strict ban; model face must match passport ID', fasttrack: 'Fanvue: Full legal compliance under operator KYC' },
+      { factor: 'Audio & Voice Tools', traditional: 'OnlyFans: Manual voice recording uploads only', fasttrack: 'Fanvue: Native AI voice note engine integration' },
+      { factor: 'Account Ban Risk', traditional: 'OnlyFans: Extreme risk of sudden deplatforming & frozen funds', fasttrack: 'Fanvue: Zero ban risk for compliant AI creators' },
+      { factor: 'Payout Options', traditional: 'OnlyFans: Strict traditional bank wires only', fasttrack: 'Fanvue: Global bank transfer, card, and crypto rails' }
+    ],
+    faqList: [
+      {
+        question: 'Can you put AI models on OnlyFans in 2026?',
+        answer: 'No. OnlyFans strict Terms of Service require that any individual appearing on the platform undergo biometric identity verification matching government-issued identification. AI-generated models fail this verification, leading to swift account bans and frozen balances.'
+      },
+      {
+        question: 'Why is Fanvue the preferred choice for virtual influencers?',
+        answer: 'Fanvue is designed specifically to support next-generation creators, including AI model agencies. The account owner verifies their human identity once, and can then operate synthetic characters legitimately with full monetization features.'
+      },
+      {
+        question: 'What tools do I need to start an AI creator business on Fanvue?',
+        answer: 'You need an AI image generation pipeline (such as Room30 or custom Stable Diffusion/Flux setups) to create consistent character visuals, and a Fanvue creator account to monetize subscriber subscriptions and pay-per-view content.'
+      },
+      {
+        question: 'Does Fanvue take a higher percentage than OnlyFans?',
+        answer: 'No. Both Fanvue and OnlyFans charge an identical 20% platform fee, allowing creators to keep 80% of all subscription revenue, tips, and pay-per-view sales.'
       }
     ]
   },
@@ -840,6 +940,56 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'skool-vs-circle-for-community-creators',
+    category: 'creator-commerce',
+    keyword: 'skool vs circle',
+    audience: 'Course Creators & Community Leaders',
+    title: 'Skool vs Circle: Which Community Platform is Best? | Fast Track Creator',
+    metaDescription: 'Compare Skool vs Circle for 2026. Discover why creators choose Skool for 60%+ engagement, gamified points, simple $99 pricing, and 40% lifetime MRR.',
+    h1: 'Skool vs. Circle: 2026 Community Platform Comparison',
+    badge: '2026 Platform Audit',
+    heroHeadline: 'Why Creators Are Choosing Skool Over Circle in 2026',
+    heroSubheadline: 'Circle offers complex enterprise customization, but Skool delivers 3x higher student daily engagement, built-in gamification, a flat $99/mo rate, and a 40% recurring affiliate bounty.',
+    primaryAffiliateId: 'skool',
+    secondaryAffiliateId: 'beacons',
+    painPoints: [
+      'Circle charges tiered pricing up to $399/mo plus transaction fees on course checkout',
+      'Low student engagement in Circle channels leaves communities feeling like dead Slack workspaces',
+      'Cobbling together Kajabi or Teachable with Circle creates broken multi-login headaches',
+      'Circle affiliate program pays only 20% capped for 12 months versus lifetime passive MRR'
+    ],
+    keyBenefits: [
+      'Skool flat $99/mo pricing includes unlimited courses, unlimited members, and zero platform transaction fees',
+      'Built-in level unlock mechanics and gamified leaderboards drive 60%+ daily active user retention',
+      'Native iOS and Android mobile app keeps members engaged right in their pocket notification feed',
+      '40% lifetime recurring affiliate payout pays $39.60/month per active community referral forever'
+    ],
+    comparisonPoints: [
+      { factor: 'Monthly Software Price', traditional: 'Circle: $99 to $399+/mo with feature gates', fasttrack: 'Skool: Flat $99/mo with everything included' },
+      { factor: 'Student Daily Engagement', traditional: 'Circle: ~12% active (feels like corporate Slack)', fasttrack: 'Skool: 60%+ active driven by gamified points' },
+      { factor: 'Affiliate Payout Terms', traditional: 'Circle: 20% commission capped at 12 months', fasttrack: 'Skool: 40% LIFETIME monthly recurring MRR' },
+      { factor: 'Setup & Course Integration', traditional: 'Circle: Multi-space setup takes weeks to configure', fasttrack: 'Skool: Unified community, classroom & calendar in 1 hour' }
+    ],
+    faqList: [
+      {
+        question: 'Why do creators switch from Circle to Skool?',
+        answer: 'Creators switch because Skool combines community discussion, course classroom hosting, and an event calendar into a single uncluttered feed. Skool’s gamification and point system keep members active without the creator needing to constantly manufacture conversations.'
+      },
+      {
+        question: 'Is Skool cheaper than Circle?',
+        answer: 'Yes. Circle starts at $99/mo for basic plans but charges up to $399/mo for enterprise features, plus extra transaction fees unless you pay their highest tier. Skool is a single flat $99/month with zero platform transaction fees, unlimited courses, and unlimited members.'
+      },
+      {
+        question: 'Can I migrate my members and courses from Circle to Skool easily?',
+        answer: 'Yes. Skool makes it easy to bulk invite members via email CSV and upload your video modules and downloadable course assets in a few hours. Most creators complete migration in under a weekend.'
+      },
+      {
+        question: 'Which platform is better for mobile app access?',
+        answer: 'Both platforms offer mobile apps, but Skool\'s app is widely praised by creators for its fast speed, simple navigation, push notifications for leaderboard milestones, and friction-free course video playback.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 4: REVIEWS & INDEPENDENT AUDITS
@@ -947,15 +1097,16 @@ export const SPOKES: SpokePage[] = [
   {
     slug: 'skool-community-platform-review-and-pricing',
     category: 'reviews',
-    keyword: 'skool community platform review and pricing',
-    audience: 'Community Creators & Marketers',
-    title: 'Skool Community Platform Review & 40% Affiliate Breakdown | Fast Track Creator',
-    metaDescription: 'Comprehensive audit of Skool.com pricing, community gamification, and its 40% recurring MRR partner engine. Is the $99/mo fee worth it for creators?',
-    h1: 'Skool Community Platform Review & 40% Affiliate Breakdown',
+    keyword: 'skool review',
+    audience: 'Community Creators & Course Operators',
+    title: 'Skool Review & Pricing (2026): Is It Worth $99/Month? | Fast Track Creator',
+    metaDescription: 'In-depth 2026 Skool review: evaluate Sam Ovens\' community platform, flat $99/mo pricing, gamified leaderboards, course hosting, and 40% lifetime MRR.',
+    h1: 'Skool Review & Pricing: Is Sam Ovens\' Community Platform Worth It?',
     badge: '40% MRR Engine',
     heroHeadline: 'Is Skool Worth the $99/Month? An Unfiltered Platform Review',
     heroSubheadline: 'We break down Sam Ovens\'s Skool platform: community engagement mechanics, mobile app usability, course classroom limits, and how their 40% recurring affiliate program turns members into advocates.',
     primaryAffiliateId: 'skool',
+    secondaryAffiliateId: 'beacons',
     painPoints: [
       'Paying for 5 different software tools (Circle, Teachable, Zapier, Slack, Loom) costs $400+/mo',
       'Students buy courses and never log back in, creating zero recurring community value',
@@ -986,6 +1137,10 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'Does Skool offer a free trial?',
         answer: 'Yes. Skool provides a full 14-day free trial allowing you to build your community, upload course modules, and invite founding members before any billing begins.'
+      },
+      {
+        question: 'What are Skool\'s hidden costs or transaction fees?',
+        answer: 'Skool has no hidden software fees and charges 0% platform transaction fees. You pay a single flat $99/month plus standard Stripe payment processing fees (2.9% + 30¢ per transaction) on customer payments.'
       }
     ]
   },
@@ -1181,6 +1336,56 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'How does the LinkStack affiliate partner program work?',
         answer: 'LinkStack offers one of the highest payouts in the creator economy: 70% direct subscription revenue in Year 1, 40% ongoing lifetime recurring MRR for the life of the customer, and a 10% second-tier referral share. Payouts are issued monthly with a low $25 minimum threshold.'
+      }
+    ]
+  },
+  {
+    slug: 'fanvue-creator-platform-review-and-earnings',
+    category: 'reviews',
+    keyword: 'fanvue review',
+    audience: 'AI Creators & Virtual Model Managers',
+    title: 'Fanvue Review: Legit or Scam for AI Creators? (2026) | Fast Track Creator',
+    metaDescription: 'Fanvue review and 2026 safety audit: we evaluate platform fees, AI model acceptance, automated pay-per-view messaging, payouts, and creator earnings.',
+    h1: 'Fanvue Review: Legit or Scam for Virtual Model Creators?',
+    badge: '2026 Platform Audit',
+    heroHeadline: 'Is Fanvue the Best Platform for Monetizing AI Models?',
+    heroSubheadline: 'Unlike OnlyFans which aggressively restricts synthetic creators, Fanvue embraces AI models with native voice notes, automated PPV messaging, and reliable 80/20 payouts.',
+    primaryAffiliateId: 'fanvue',
+    secondaryAffiliateId: 'room30',
+    painPoints: [
+      'OnlyFans routinely bans or demonetizes synthetic AI model creators without recourse',
+      'Managing high-volume subscriber direct messages manually burns out model agencies',
+      'Traditional creator platforms lack native voice note generation or AI-friendly terms of service',
+      'Hidden chargebacks and slow payout processing leave creators waiting weeks for their funds'
+    ],
+    keyBenefits: [
+      '100% compliant, officially supportive Terms of Service for AI influencers and virtual models',
+      '80% creator revenue share with rapid global payouts via bank transfer, card, and crypto',
+      'Built-in automated pay-per-view (PPV) messaging and mass broadcast messaging tools',
+      'Support for AI voice notes, interactive media tiers, and custom subscriber subscriptions'
+    ],
+    comparisonPoints: [
+      { factor: 'AI Model Policy', traditional: 'OnlyFans: Strict bans & unannounced account terminations', fasttrack: 'Fanvue: 100% welcomed with dedicated AI tags' },
+      { factor: 'Messaging Automation', traditional: 'Legacy Platforms: Manual typing or third-party bot scripts', fasttrack: 'Fanvue: Native PPV broadcast & voice message triggers' },
+      { factor: 'Platform Revenue Split', traditional: 'OnlyFans: 80% creator / 20% platform (high chargeback risk)', fasttrack: 'Fanvue: 80% creator / 20% platform + crypto payout options' },
+      { factor: 'Discoverability & Growth', traditional: 'Zero internal search or creator discovery tools', fasttrack: 'Curated explore feeds and creator collaboration tags' }
+    ],
+    faqList: [
+      {
+        question: 'Is Fanvue legit and safe for creators?',
+        answer: 'Yes, Fanvue is a legitimate UK-registered creator subscription platform (Fanvue Ltd) founded in 2020. It has paid out tens of millions of dollars to global creators, supports verified bank and crypto payouts, and is widely recognized as the premier platform for AI model monetization.'
+      },
+      {
+        question: 'Does Fanvue allow AI-generated models and influencers?',
+        answer: 'Yes. Fanvue explicitly permits and actively supports AI-generated models and virtual personas, provided creators verify their real identity during KYC onboarding and clearly tag synthetic content according to platform guidelines.'
+      },
+      {
+        question: 'How much can you earn on Fanvue?',
+        answer: 'Creators retain 80% of all subscription revenue, tips, and pay-per-view message sales. Top AI model creators generate $5,000 to $40,000+ monthly through automated content feeds, premium voice notes, and tiered subscription tiers.'
+      },
+      {
+        question: 'How does Fanvue payout earnings to creators?',
+        answer: 'Fanvue processes payouts via direct bank transfer, debit card, and cryptocurrency options (e.g. USDT/crypto rails) to prevent arbitrary merchant processor holds. Payouts are typically processed within 24 to 48 hours of approval.'
       }
     ]
   }
