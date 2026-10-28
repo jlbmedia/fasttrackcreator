@@ -1,11 +1,14 @@
 import fs from 'fs';
 
 const files = [
+  'dist/turnkey-assets/buy-tiktok-shop-accounts-for-sale/index.html',
+  'dist/turnkey-assets/monetized-youtube-channels-for-sale/index.html',
+  'dist/turnkey-assets/buy-aged-instagram-accounts-and-theme-pages/index.html',
+  'dist/reviews/fameswap-marketplace-review-and-safety-audit/index.html',
   'dist/creator-commerce/linkstack-vs-stan-store-for-creators/index.html',
   'dist/reviews/room30-ai-influencer-portfolio-review/index.html',
   'dist/reviews/dfy-dave-monetized-channels-review/index.html',
-  'dist/reviews/linkstack-creator-platform-review-and-pricing/index.html',
-  'dist/creator-commerce/best-stan-store-alternatives-for-creators/index.html'
+  'dist/reviews/linkstack-creator-platform-review-and-pricing/index.html'
 ];
 
 for (const f of files) {

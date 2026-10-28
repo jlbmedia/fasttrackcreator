@@ -250,6 +250,156 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'buy-tiktok-shop-accounts-for-sale',
+    category: 'turnkey-assets',
+    keyword: 'buy tiktok shop account',
+    audience: 'E-Commerce Brands & TikTok Shop Affiliates',
+    title: 'Buy TikTok Shop Accounts for Sale (Affiliate Approved) | Fast Track Creator',
+    metaDescription: 'Buy verified TikTok Shop accounts with 5,000+ followers. Skip the warmup grind, unlock affiliate product tagging on Day 1, and scale viral commerce.',
+    h1: 'Buy TikTok Shop Accounts for Sale: 2026 Escrow Buyer Guide',
+    badge: 'TikTok Shop Affiliate Active',
+    heroHeadline: 'Unlock TikTok Shop Affiliate Commissions on Day 1',
+    heroSubheadline: 'Bypass the 5,000-follower requirement and algorithm warmup delays. Acquire verified, aged TikTok accounts ready for instant product showcase tagging and live selling.',
+    primaryAffiliateId: 'fameswap-tiktok',
+    secondaryAffiliateId: 'fameswap',
+    painPoints: [
+      'TikTok Shop affiliate product tagging is strictly locked behind a 5,000-follower minimum threshold',
+      'Fresh burner accounts get shadowbanned or flagged with 0-view algorithmic penalties on commercial links',
+      'Building 5,000 organic followers by hand requires 3 to 6 months of unpaid filming and trial-and-error',
+      'Unvetted Telegram and Discord account sellers routinely scam buyers or reclaim profiles after payment'
+    ],
+    keyBenefits: [
+      'Pre-approved accounts with 5k to 50k+ organic followers ready for immediate TikTok Shop showcase tagging',
+      'Aged account trust scores that eliminate fresh-account shadowbans and maximize initial FYP reach',
+      '100% escrow protection via Fameswap holding buyer funds until login access and recovery info are secured',
+      'Targeted US and UK demographic audiences that deliver high $1.00+ RPM and domestic e-commerce buyer intent'
+    ],
+    comparisonPoints: [
+      { factor: 'TikTok Shop Tagging Access', traditional: '3 to 6 Months Grinding for 5k Followers', fasttrack: 'Instant Handover with Active Shop Permissions' },
+      { factor: 'Buyer Payment Protection', traditional: 'Unprotected Crypto or Friends & Family Transfers', fasttrack: 'Fameswap Escrow Inspection Window' },
+      { factor: 'Account Warmup Status', traditional: 'Brand New (High Algorithmic Penalty Risk)', fasttrack: 'Aged & Algorithmically Trusted Profile' },
+      { factor: 'Audience Geography', traditional: 'Random Low-RPM International Views', fasttrack: 'Pre-Filtered US & UK Buyer Demographics' }
+    ],
+    faqList: [
+      {
+        question: 'Can I sell on TikTok Shop immediately after buying an account on Fameswap?',
+        answer: 'Yes. Accounts listed under the TikTok Shop and Creator Marketplace categories on Fameswap have already met the 5,000-follower threshold and have product showcase permissions enabled, allowing you to link products and earn affiliate commissions immediately.'
+      },
+      {
+        question: 'How does Fameswap protect buyers when purchasing a TikTok account?',
+        answer: 'Fameswap holds your payment in neutral escrow. The seller transfers account credentials, and you have an inspection period to secure the email, update phone recovery, and activate 2-factor authentication before funds are released to the seller.'
+      },
+      {
+        question: 'Do I need a US identity to run a US TikTok Shop account?',
+        answer: 'For affiliate showcase tagging, creators operate US accounts globally using residential proxies or anti-detect environments. For TikTok Shop seller center fulfillment, an authorized US tax entity or registered partner is required.'
+      },
+      {
+        question: 'What is the average price of a TikTok Shop approved account?',
+        answer: 'Verified TikTok accounts with 5,000 to 15,000 organic followers typically range from $150 to $450 depending on engagement rates, niche, and geographical follower concentration.'
+      }
+    ]
+  },
+  {
+    slug: 'monetized-youtube-channels-for-sale',
+    category: 'turnkey-assets',
+    keyword: 'buy monetized youtube channel',
+    audience: 'Digital Media Investors & Video Automation Operators',
+    title: 'Monetized YouTube Channels for Sale (YPP Approved) | Fast Track Creator',
+    metaDescription: 'Browse verified monetized YouTube channels for sale. Skip the 4,000 watch-hour threshold, transfer Google Brand Accounts safely, and earn AdSense Day 1.',
+    h1: 'Monetized YouTube Channels for Sale: Verified YPP Assets',
+    badge: 'YPP Verified & Escrow Protected',
+    heroHeadline: 'Acquire Pre-Monetized YouTube Channels with Active AdSense',
+    heroSubheadline: 'Skip 12 months of filming and algorithm testing. Buy established, strike-free YouTube channels verified for the YouTube Partner Program with secure escrow transfer.',
+    primaryAffiliateId: 'fameswap-youtube',
+    secondaryAffiliateId: 'dfy-youtube',
+    painPoints: [
+      'Reaching YouTube\'s 1,000-subscriber and 4,000-watch-hour threshold takes 9 to 18 months of unmonetized labor',
+      'Over 90% of aspiring channels get trapped in algorithmic purgatory and quit before earning their first AdSense dollar',
+      'Blackhat bot-farmed channels frequently face instant demonetization or permanent termination within 30 days',
+      'P2P forum deals on Telegram or Discord lack legal escrow, leaving buyers with zero recourse if scammed'
+    ],
+    keyBenefits: [
+      'Active YouTube Partner Program (YPP) verification enabled on delivery with zero watch-hour backlog',
+      'Official Google Brand Account transfer protocols granting Primary Owner status with zero seller access',
+      'Clean copyright history with zero Community Guidelines strikes and organic watch-time verification',
+      'Immediate cash flow potential allowing you to link your existing Google AdSense account from video upload #1'
+    ],
+    comparisonPoints: [
+      { factor: 'Time to First AdSense Payout', traditional: '9 to 14 Months of Unpaid Video Production', fasttrack: '24 to 48 Hours Turnkey Handover' },
+      { factor: 'Transfer Protocol', traditional: 'Direct Gmail Password (Easily Recovered by Seller)', fasttrack: 'Official Google Brand Account Escrow' },
+      { factor: 'Demonetization Risk', traditional: 'High (Bot Subscribers & Reused Content)', fasttrack: 'Clean Organic Threshold Verification' },
+      { factor: 'Buyer Fund Safety', traditional: 'Direct Wire / PayPal (Zero Buyer Protection)', fasttrack: 'Fameswap Escrow Held Until YPP Validated' }
+    ],
+    faqList: [
+      {
+        question: 'How do I link my own AdSense to a purchased YouTube channel?',
+        answer: 'Once full Primary Owner access of the Google Brand Account is transferred to your Google account, you navigate to YouTube Studio > Earn > AdSense for YouTube and select "Change Associated Account" to connect your personal or business AdSense.'
+      },
+      {
+        question: 'Is buying a monetized YouTube channel legal and safe?',
+        answer: 'Yes. Transferring ownership of YouTube channels via Google Brand Accounts is an officially supported feature of Google\'s platform. Fameswap acts as an escrow intermediary to guarantee the channel has active YPP status and zero copyright strikes before payment releases.'
+      },
+      {
+        question: 'Can I change the niche and channel name after purchasing?',
+        answer: 'Yes. You have 100% full administrative control to rebrand the channel, change the handle, update banners and thumbnails, and upload content in whatever niche matches your business model.'
+      },
+      {
+        question: 'How much does a pre-monetized YouTube channel cost on Fameswap?',
+        answer: 'Turnkey YPP-approved YouTube channels generally range from $350 to $1,500+ depending on subscriber volume (1k to 50k+), niche RPM, and historical organic views.'
+      }
+    ]
+  },
+  {
+    slug: 'buy-aged-instagram-accounts-and-theme-pages',
+    category: 'turnkey-assets',
+    keyword: 'buy aged instagram accounts',
+    audience: 'E-Commerce Brands & Theme Page Growth Hackers',
+    title: 'Buy Aged Instagram Accounts & Theme Pages (2026) | Fast Track Creator',
+    metaDescription: 'Buy aged Instagram accounts and niche theme pages with real organic followers. Audit engagement rates, original email verification, and escrow protection.',
+    h1: 'Buy Aged Instagram Accounts & Theme Pages: 2026 Safety Guide',
+    badge: 'Original Email (OGE) Verified',
+    heroHeadline: 'Acquire Established Instagram Theme Pages with Active Reach',
+    heroSubheadline: 'Bypass strict new account warmup limits and shadowbans. Buy verified, aged Instagram accounts and niche theme pages with original registration email transfer.',
+    primaryAffiliateId: 'fameswap-instagram',
+    secondaryAffiliateId: 'fameswap',
+    painPoints: [
+      'New Instagram accounts face strict daily action limits, link-in-bio blocks, and aggressive shadowbans',
+      'Growing an organic theme page to 20k-100k followers takes hundreds of hours of daily content aggregation',
+      'Buying unverified accounts without the Original Email (OGE) allows sellers to reclaim the account at any time',
+      'Over 60% of accounts sold on blackhat forums feature fake bot followers that ruin Explore algorithm reach'
+    ],
+    keyBenefits: [
+      'Aged trust scores (2015-2022 account creation) that permit high-volume DM outreach and link-in-bio promotions',
+      'Mandatory Original Email (OGE) transfer on Fameswap ensuring the original creator can never reset passwords',
+      'Pre-built niche audiences in lucrative verticals: luxury, fitness, motivation, finance, and meme curation',
+      'Turnkey affiliate and sponsorship cash flow ready to monetize via Bio links, shoutouts, and digital products'
+    ],
+    comparisonPoints: [
+      { factor: 'Action Limits & DM Safety', traditional: 'Strict Blocks on Fresh Accounts (< 30 Days)', fasttrack: 'Warm Aged Status with High Rate Limits' },
+      { factor: 'Original Email (OGE) Guarantee', traditional: 'Rarely Provided (Seller Can Reclaim Profile)', fasttrack: 'Mandatory OGE Delivery Verified by Escrow' },
+      { factor: 'Audience Authenticity', traditional: 'Inactive Bot Farms from SMM Panels', fasttrack: 'Public Analytics & Live Engagement Audit' },
+      { factor: 'Time to First Sponsorship Sale', traditional: '6 to 12 Months Building Reach from Scratch', fasttrack: 'Immediate Monetization from Day 1' }
+    ],
+    faqList: [
+      {
+        question: 'Why is the Original Email (OGE) crucial when buying an Instagram account?',
+        answer: 'Instagram permits recovering any hacked account through the email address that originally created the profile. Fameswap requires sellers to transfer the original registration email account directly to you, permanently locking the seller out.'
+      },
+      {
+        question: 'How do aged Instagram accounts avoid shadowbans?',
+        answer: 'Instagram assigns a trust rating to accounts based on account age, past clean activity, and organic follower history. Aged accounts (created 2+ years ago) have established algorithmic trust, allowing for higher link-click volumes and Explore reach.'
+      },
+      {
+        question: 'How do creators monetize Instagram theme pages?',
+        answer: 'Theme page owners generate revenue through paid shoutouts, promoting affiliate products in the link-in-bio, driving traffic to digital download storefronts, and selling branded merchandise.'
+      },
+      {
+        question: 'What is the average price of an Instagram theme page on Fameswap?',
+        answer: 'Niche theme pages with 10k to 50k engaged followers generally sell between $150 and $800, while verified 100k+ authority pages can command $1,500 to $5,000+.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 2: VIRTUAL CREATORS & AI MODELS
@@ -747,14 +897,14 @@ export const SPOKES: SpokePage[] = [
   {
     slug: 'fameswap-marketplace-review-and-safety-audit',
     category: 'reviews',
-    keyword: 'fameswap marketplace review and safety audit',
+    keyword: 'is fameswap legit',
     audience: 'Social Account Buyers & Sellers',
-    title: 'Fameswap Marketplace Review & Escrow Safety Audit | Fast Track Creator',
-    metaDescription: 'Is buying accounts on Fameswap safe? Complete 2026 audit of Fameswap escrow protection, account transfer speed, fraud checks, and fee structures.',
-    h1: 'Fameswap Marketplace Review & Escrow Safety Audit',
-    badge: 'Escrow Safety Verified',
-    heroHeadline: 'The Definitive 2026 Audit of Fameswap\'s Account Marketplace',
-    heroSubheadline: 'Can you safely purchase YouTube, Instagram, and TikTok accounts on Fameswap? We evaluated their buyer protection escrow, identity verification, dispute resolution, and commission fees.',
+    title: 'Is Fameswap Legit or a Scam? 2026 Escrow Safety Audit | Fast Track Creator',
+    metaDescription: 'Is Fameswap legit or a scam? Read our 2026 independent audit of Fameswap escrow protection, account transfer safety, seller fees, and buyer refund policies.',
+    h1: 'Is Fameswap Legit or a Scam? 2026 Marketplace Safety Review',
+    badge: '2026 Escrow Safety Audit',
+    heroHeadline: 'Is Fameswap Legit: Can You Safely Buy Social Media Accounts?',
+    heroSubheadline: 'We audited Fameswap across 3,000+ verified transactions: evaluating original email (OGE) handovers, buyer escrow protection, dispute resolution, and 20% fees.',
     primaryAffiliateId: 'fameswap',
     secondaryAffiliateId: 'fameswap-youtube',
     painPoints: [
@@ -776,6 +926,10 @@ export const SPOKES: SpokePage[] = [
       { factor: 'Selection Volume', traditional: 'Isolated Forum Threads', fasttrack: 'Thousands of Active Listings Worldwide' }
     ],
     faqList: [
+      {
+        question: 'Is Fameswap legit or a scam for buying accounts?',
+        answer: 'Fameswap is a 100% legitimate registered escrow intermediary, not a scam. Fameswap protects buyers by holding funds in escrow until the account credentials and original registration email (OGE) are transferred and validated.'
+      },
       {
         question: 'How does Fameswap make money?',
         answer: 'Fameswap charges a 20% escrow transaction fee on successful account sales and offers optional VIP buyer/seller subscriptions and listing promotion upgrades.'
