@@ -389,6 +389,10 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'What ongoing maintenance is required after handover?',
         answer: 'With 90 pieces of scheduled video content in place, the asset can operate on autopilot for 3 months. Many investors hire virtual assistants for 30 minutes daily to schedule posts and answer messages.'
+      },
+      {
+        question: 'Where can I read an independent audit of Room30 services?',
+        answer: 'Read our comprehensive editorial analysis in the Room30 AI Influencer Portfolio Review for a complete breakdown of the $175 starter kits, the $4,997 enterprise package, and real Fanvue revenue models.'
       }
     ]
   },
@@ -519,7 +523,7 @@ export const SPOKES: SpokePage[] = [
       { factor: 'Monthly Cost to Launch', traditional: 'Stan Store: Mandatory $29 to $99/Month', fasttrack: 'Beacons: 100% Free Plan Available' },
       { factor: 'Affiliate Program Requirement', traditional: 'Must Pay Monthly to Keep Affiliate Link', fasttrack: 'Free to Join & Earn 30% Recurring MRR' },
       { factor: 'Integrated Media Kit', traditional: 'Basic or Requires Third-Party Software', fasttrack: 'Built-In Auto-Syncing Media Kit' },
-      { factor: 'Digital Product Checkout', traditional: '1-Click Checkout at $29/mo Cost', fasttrack: 'Instant Checkout with Zero Monthly Fees' }
+      { factor: 'Alternative for Instagram DMs', traditional: 'Stan Store: Requires ManyChat ($15-$45/Mo)', fasttrack: 'LinkStack: Built-In Automated Comment-to-DM' }
     ],
     faqList: [
       {
@@ -529,6 +533,10 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'Can I sell digital downloads like PDFs and presets on Beacons?',
         answer: 'Yes. Beacons supports instant digital product delivery. When a customer enters their email and pays via Apple Pay, Google Pay, or card, they receive an immediate download link.'
+      },
+      {
+        question: 'What is the difference between Beacons, Stan Store, and LinkStack?',
+        answer: 'Stan Store charges a mandatory $29/month subscription. Beacons offers a free starter plan with auto-updating media kits, while LinkStack provides free link-in-bio storefronts, smart deep links that bypass in-app browsers, and built-in Meta-approved Instagram DM automation.'
       },
       {
         question: 'Why is Beacons better than Stan Store for affiliate marketers?',
@@ -548,7 +556,7 @@ export const SPOKES: SpokePage[] = [
     heroHeadline: 'Monetize Faceless Audiences from Day 1 with Digital Product Funnels',
     heroSubheadline: 'You don\'t need 10,000 followers to earn thousands per month. Connect a high-converting link-in-bio store to your faceless Instagram Reels or TikTok page and sell templates, guides, and vaults.',
     primaryAffiliateId: 'beacons',
-    secondaryAffiliateId: 'skool',
+    secondaryAffiliateId: 'linkstack',
     painPoints: [
       'Waiting for YouTube AdSense or TikTok Creator Rewards leaves accounts earning $0 for months',
       'Affiliate link drops in bios convert poorly without an appealing mobile storefront',
@@ -563,7 +571,7 @@ export const SPOKES: SpokePage[] = [
     ],
     comparisonPoints: [
       { factor: 'Minimum Audience Required', traditional: '1,000 to 10,000 Followers for AdSense', fasttrack: 'Start Earning with 50 to 100 Followers' },
-      { factor: 'Setup Time', traditional: '3 to 5 Days Building Complex Shopify Store', fasttrack: '10 Minutes on Beacons.ai' },
+      { factor: 'Bio Link & DM Funnel Tool', traditional: 'Separate Shopify + ManyChat ($50+/Mo)', fasttrack: 'LinkStack & Beacons ($0 Free Launch)' },
       { factor: 'Customer Acquisition Cost', traditional: 'Requires Paid Ads to Reach Breakeven', fasttrack: '100% Organic Viral Short-Form Traffic' },
       { factor: 'Email List Ownership', traditional: 'Lost to Social Algorithms', fasttrack: 'Captured in Your Private Database' }
     ],
@@ -574,7 +582,7 @@ export const SPOKES: SpokePage[] = [
       },
       {
         question: 'How do I drive followers from reels to my bio link?',
-        answer: 'Use short-form video hooks that offer a specific lead magnet or template, and include a clear call-to-action like "Grab the free template in my bio" or use ManyChat automation to DM the link automatically.'
+        answer: 'Use short-form video hooks that offer a specific lead magnet or template, and include a clear call-to-action like "Grab the free template in my bio" or use LinkStack\'s native Meta-approved comment-to-DM automation to deliver the download link instantly to their inbox.'
       },
       {
         question: 'Do I need a business license to sell digital downloads?',
@@ -632,6 +640,56 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'linkstack-vs-stan-store-for-creators',
+    category: 'creator-commerce',
+    keyword: 'linkstack vs stan store',
+    audience: 'Social Commerce Creators & Storefront Sellers',
+    title: 'LinkStack vs Stan Store: Which is Better for Creators? | Fast Track Creator',
+    metaDescription: 'Compare LinkStack vs Stan Store for 2026. Discover why creators are replacing Stan\'s $29/mo fee with LinkStack\'s free plan, deep links, and automated DMs.',
+    h1: 'LinkStack vs. Stan Store: 2026 Head-to-Head Comparison',
+    badge: '2026 Head-to-Head Audit',
+    heroHeadline: 'Why Creators Are Replacing Stan Store with LinkStack',
+    heroSubheadline: 'Stan Store charges a mandatory $29/month before you make a sale and lacks native DM automation. Discover how LinkStack delivers free digital storefronts, smart deep links, and built-in Instagram comment-to-DM funnels.',
+    primaryAffiliateId: 'linkstack',
+    secondaryAffiliateId: 'beacons',
+    painPoints: [
+      'Stan Store forces creators into a mandatory $29 to $99/mo fee before making their first digital sale',
+      'Stan Store has zero native Instagram DM or comment automation, forcing creators to buy ManyChat for $15-$45/mo',
+      'Standard links inside Instagram in-app browsers strip user sessions and leak up to 40% of affiliate cart checkouts',
+      'Canceling or pausing a Stan Store subscription cancels all active affiliate tracking and forfeits pending commissions'
+    ],
+    keyBenefits: [
+      'Genuinely free plan ($0) with unlimited links and deep links to launch your digital business with zero overhead',
+      'Official Meta Tech Provider with native Instagram comment-to-DM autoresponders integrated directly into the platform',
+      'Smart deep-linking technology forcing external links to launch inside native apps (YouTube, Amazon, Spotify)',
+      '0% transaction fees on LinkStack Growth ($24.92/mo) which is lower than Stan Store\'s entry-level $29/mo pricing'
+    ],
+    comparisonPoints: [
+      { factor: 'Entry-Level Monthly Cost', traditional: 'Stan Store: Mandatory $29 to $99/Month', fasttrack: 'LinkStack: $0 Free Plan Available' },
+      { factor: 'Instagram DM Automation', traditional: 'None (Requires $15-$45/Mo ManyChat)', fasttrack: 'LinkStack: Built-in Meta-Approved DM Bot' },
+      { factor: 'In-App Webview Protection', traditional: 'Standard URLs (Trapped in App Browser)', fasttrack: 'Smart Deep Links Force Native App Opens' },
+      { factor: 'Affiliate Partner Program', traditional: 'Must Pay $29/Mo to Keep Affiliate Link', fasttrack: 'Free to Join: Up to 70% First Year + 40% MRR' }
+    ],
+    faqList: [
+      {
+        question: 'Is LinkStack cheaper than Stan Store?',
+        answer: 'Yes. LinkStack has a 100% Free Forever plan, while Stan Store charges a mandatory $29 per month minimum. Even LinkStack\'s top-tier Growth plan ($24.92/month billed annually) is less expensive than Stan Store\'s basic tier.'
+      },
+      {
+        question: 'Can LinkStack replace ManyChat for Instagram DM automation?',
+        answer: 'Yes. LinkStack is an official Meta Tech Provider with native comment-to-DM triggers built directly into the platform, allowing you to automatically deliver digital downloads, lead magnets, and affiliate links when followers comment on your Reels or posts.'
+      },
+      {
+        question: 'How does LinkStack\'s deep linking prevent lost sales compared to Stan Store?',
+        answer: 'Stan Store links open inside Instagram\'s restricted in-app browser where users are logged out of YouTube, Amazon, and Spotify. LinkStack\'s smart deep links automatically break out of the webview and launch the user\'s native mobile app where they are already logged in, dramatically increasing checkout completion.'
+      },
+      {
+        question: 'Does LinkStack take a cut of digital product sales?',
+        answer: 'LinkStack charges a small transaction fee on its Free plan, but charges 0% transaction fees on its Growth plan ($24.92/mo), matching Stan Store\'s 0% fee while costing less per month and including DM automation.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 4: REVIEWS & INDEPENDENT AUDITS
@@ -639,14 +697,14 @@ export const SPOKES: SpokePage[] = [
   {
     slug: 'dfy-dave-monetized-channels-review',
     category: 'reviews',
-    keyword: 'dfy dave monetized channels review',
+    keyword: 'dave nick scam',
     audience: 'Digital Investors & Video Operators',
-    title: 'DFY Dave Monetized Channels Review: Legit or Scam? | Fast Track Creator',
-    metaDescription: 'In-depth audit of Dave Nick\'s DFY Dave platform. We analyze channel handover timelines, YPP compliance, pricing tiers, and real buyer earnings.',
-    h1: 'DFY Dave Monetized Channels Review: Legit or Scam?',
-    badge: '2026 Platform Audit',
-    heroHeadline: 'Is Dave Nick\'s Turnkey Channel Platform Worth the Investment?',
-    heroSubheadline: 'We audited DFY Dave\'s pre-monetized YouTube channels, Creator Rewards TikTok accounts, and video production packages. Here is the unvarnished breakdown of pricing, handover security, and ROI.',
+    title: 'Dave Nick Scam or Legit? DFY Dave Monetized Channels Review | Fast Track Creator',
+    metaDescription: 'Is Dave Nick a scam or legit? Read our 2026 independent audit of DFY Dave turnkey monetized YouTube channels, TikTok accounts, handover safety, and ROI.',
+    h1: 'Dave Nick Scam or Legit? DFY Dave Monetized Channels 2026 Review',
+    badge: '2026 Legit vs Scam Audit',
+    heroHeadline: 'Dave Nick Scam or Legit: Is DFY Dave Worth Your Investment?',
+    heroSubheadline: 'We audited Dave Nick\'s Soldi.ai and DFY Dave platform across YPP compliance, replacement warranties, YouTube channel handovers, and real buyer monetization.',
     primaryAffiliateId: 'dfy-dave',
     secondaryAffiliateId: 'dfy-youtube',
     painPoints: [
@@ -668,6 +726,10 @@ export const SPOKES: SpokePage[] = [
       { factor: 'Platform Reputation', traditional: 'Anonymous Forum Accounts', fasttrack: 'Backed by Soldi.ai and Dave Nick ($1M+ Brand)' }
     ],
     faqList: [
+      {
+        question: 'Is Dave Nick a scam or a legitimate platform for monetized channels?',
+        answer: 'Dave Nick (Soldi.ai) is a legitimate media acquisition platform, not a scam. They deliver genuine YouTube Partner Program (YPP) enrolled channels via official Google Brand Account transfers, protected by a replacement warranty against initial transfer flags.'
+      },
       {
         question: 'Is buying a monetized YouTube channel against YouTube\'s Terms of Service?',
         answer: 'YouTube permits transferring ownership of Google Brand Accounts between Google users. DFY Dave transfers the channel legitimately as a Brand Account Primary Owner, preserving full compliance.'
@@ -776,14 +838,14 @@ export const SPOKES: SpokePage[] = [
   {
     slug: 'room30-ai-influencer-portfolio-review',
     category: 'reviews',
-    keyword: 'room30 ai influencer portfolio review',
+    keyword: 'room30 ai reviews',
     audience: 'AI Investors & Virtual Model Operators',
-    title: 'Room30 AI Influencer Portfolio Review & Pricing | Fast Track Creator',
-    metaDescription: 'Complete evaluation of Room30.ai virtual persona generator. We break down the $175 entry portfolio, $4,997 DFY business, and real output quality.',
-    h1: 'Room30 AI Influencer Portfolio Review & Pricing',
-    badge: 'Virtual Persona Tested',
-    heroHeadline: 'Room30 Review: Can AI Influencers Really Generate Predictable Income?',
-    heroSubheadline: 'An objective evaluation of Gregory Cooke\'s Room30 system: examining model photo consistency, video animation workflows, $175 vs $4,997 packages, and real Fanvue monetization metrics.',
+    title: 'Room30 AI Influencer Portfolio Review & Pricing (2026) | Fast Track Creator',
+    metaDescription: 'Room30 AI review & 2026 pricing breakdown: we audit Gregory Cooke\'s virtual models, the $175 portfolio, $4,997 DFY enterprise, and real Fanvue revenue.',
+    h1: 'Room30 AI Influencer Portfolio Review, Pricing & Real Earnings',
+    badge: '2026 Model Audit',
+    heroHeadline: 'Room30 Review: Can AI Influencer Portfolios Really Generate Cash Flow?',
+    heroSubheadline: 'An independent 2026 evaluation of Gregory Cooke\'s Room30 system: analyzing facial consistency, LoRA weights, $175 starter kits vs $4,997 enterprises, and real Fanvue monetization.',
     primaryAffiliateId: 'room30',
     secondaryAffiliateId: 'room30-dfy',
     painPoints: [
@@ -805,6 +867,10 @@ export const SPOKES: SpokePage[] = [
       { factor: 'Monetization Integration', traditional: 'Undefined Business Model', fasttrack: 'Direct Funnel to Fanvue Subscriptions' }
     ],
     faqList: [
+      {
+        question: 'Is Room30 legit or a scam for AI influencers?',
+        answer: 'Room30 is a legitimate AI model production agency founded by Gregory Cooke. They provide proprietary cloud-hosted LoRA workflows with locked facial consistency, delivering full photorealistic portfolios and Fanvue funnel blueprints within 24 to 48 hours.'
+      },
       {
         question: 'What is included in Room30\'s $175 entry-level portfolio?',
         answer: 'The $175 portfolio includes your custom photorealistic AI persona, high-resolution lifestyle image renders, video generation prompts, and the complete monetization blueprint for launching on social media.'

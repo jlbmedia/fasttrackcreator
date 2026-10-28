@@ -1,15 +1,18 @@
 import fs from 'fs';
 
 const files = [
-  'dist/creator-commerce/best-stan-store-alternatives-for-creators/index.html',
-  'dist/reviews/linkstack-creator-platform-review-and-pricing/index.html'
+  'dist/creator-commerce/linkstack-vs-stan-store-for-creators/index.html',
+  'dist/reviews/room30-ai-influencer-portfolio-review/index.html',
+  'dist/reviews/dfy-dave-monetized-channels-review/index.html',
+  'dist/reviews/linkstack-creator-platform-review-and-pricing/index.html',
+  'dist/creator-commerce/best-stan-store-alternatives-for-creators/index.html'
 ];
 
 for (const f of files) {
   const html = fs.readFileSync(f, 'utf8');
   const h1Matches = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi) || [];
-  const metaDescMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["'](.*?)["']/i);
-  const canonicalMatch = html.match(/<link[^>]*rel=["']canonical["'][^>]*href=["'](.*?)["']/i);
+  const metaDescMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content="([^"]*)"/i);
+  const canonicalMatch = html.match(/<link[^>]*rel=["']canonical["'][^>]*href="([^"]*)"/i);
   const schemaMatches = html.match(/<script type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi) || [];
 
   console.log(`\n=== AUDIT: ${f} ===`);
@@ -18,9 +21,10 @@ for (const f of files) {
     console.log(`H1 Text: "${h1Matches[0].replace(/<[^>]+>/g, '').trim()}"`);
   }
   if (metaDescMatch) {
-    console.log(`Meta Description Length: ${metaDescMatch[1].length} characters`);
-    console.log(`Meta Description: "${metaDescMatch[1]}"`);
-    if (metaDescMatch[1].length >= 120 && metaDescMatch[1].length <= 158) {
+    const rawDesc = metaDescMatch[1].replace(/&#38;/g, '&');
+    console.log(`Meta Description Length: ${rawDesc.length} characters`);
+    console.log(`Meta Description: "${rawDesc}"`);
+    if (rawDesc.length >= 120 && rawDesc.length <= 158) {
       console.log('✅ Meta Description PASS (120-158 chars)');
     } else {
       console.log('❌ Meta Description FAIL');
