@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AboveTheFoldHero from '../components/AboveTheFoldHero.astro';
+import CreatorMatcher from '../components/CreatorMatcher.astro';
 import OfferScorecard from '../components/OfferScorecard.astro';
 import ComparisonMatrix from '../components/ComparisonMatrix.astro';
 import FAQAccordion from '../components/FAQAccordion.astro';
@@ -70,6 +71,9 @@ const homeSchema = {
     affiliateUrl="/reviews/"
     ctaText="Explore Acceleration Pathways →"
   />
+
+  <!-- Interactive Creator Monetization Matcher -->
+  <CreatorMatcher />
 
   <!-- 4 Core Category Pillars -->
   <section class="py-16 md:py-20 border-b border-gray-800 bg-gray-900/50">

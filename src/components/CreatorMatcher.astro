@@ -1,0 +1,434 @@
+---
+interface Props {
+  headline?: string;
+  subheadline?: string;
+}
+
+const {
+  headline = "Find Your Fast-Track Creator Architecture",
+  subheadline = "Answer 3 quick questions to match your creator archetype with verified tools, turnkey assets, or high-MRR communities."
+} = Astro.props;
+---
+
+<section id="diagnostic-matcher" class="py-16 md:py-20 border-b border-gray-800 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-3">
+        Interactive Monetization Matcher
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-3">
+        {headline}
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+        {subheadline}
+      </p>
+    </div>
+
+    <!-- Matcher Card Container -->
+    <div class="rounded-3xl border border-brand-500/30 bg-gray-900/90 p-6 sm:p-10 shadow-2xl backdrop-blur relative overflow-hidden">
+      <!-- Step 1: Format Selection -->
+      <div id="matcher-step-1" class="matcher-step block">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Step 1 of 3</span>
+          <span class="text-xs text-slate-400">Primary Channel Format</span>
+        </div>
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-6">
+          What is your primary monetization format or platform?
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <button
+            type="button"
+            data-format="youtube"
+            class="format-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group flex items-start space-x-3.5"
+          >
+            <span class="text-2xl">📺</span>
+            <div>
+              <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">Faceless YouTube & Automation</div>
+              <div class="text-xs text-slate-400 mt-0.5">High-RPM AdSense videos, turnkey YPP channels, and cash cows</div>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-format="virtual"
+            class="format-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group flex items-start space-x-3.5"
+          >
+            <span class="text-2xl">🤖</span>
+            <div>
+              <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">Virtual AI Creators & Models</div>
+              <div class="text-xs text-slate-400 mt-0.5">Consistent LoRA personas, Fanvue subscriptions & zero camera filming</div>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-format="community"
+            class="format-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group flex items-start space-x-3.5"
+          >
+            <span class="text-2xl">💎</span>
+            <div>
+              <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">Paid Communities & Masterminds</div>
+              <div class="text-xs text-slate-400 mt-0.5">Gamified Skool courses, student retention, and 40% recurring MRR</div>
+            </div>
+          </button>
+
+          <button
+            type="button"
+            data-format="storefront"
+            class="format-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group flex items-start space-x-3.5"
+          >
+            <span class="text-2xl">📱</span>
+            <div>
+              <div class="text-sm font-bold text-white group-hover:text-brand-300 transition-colors">Instagram Commerce & Bio Storefront</div>
+              <div class="text-xs text-slate-400 mt-0.5">Automated comment-to-DMs, deep links, and digital product sales</div>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: Audience Status -->
+      <div id="matcher-step-2" class="matcher-step hidden">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Step 2 of 3</span>
+          <span class="text-xs text-slate-400">Current Audience Size</span>
+        </div>
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-6">
+          What is your current audience status?
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <button
+            type="button"
+            data-audience="zero"
+            class="audience-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">Starting from 0</div>
+            <div class="text-xs text-slate-400">Zero followers, zero watch hours, starting fresh</div>
+          </button>
+
+          <button
+            type="button"
+            data-audience="under1k"
+            class="audience-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">Under 1,000</div>
+            <div class="text-xs text-slate-400">Active posting, seeking first monetization milestones</div>
+          </button>
+
+          <button
+            type="button"
+            data-audience="scaling"
+            class="audience-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">1k to 10k+ Growing</div>
+            <div class="text-xs text-slate-400">Established attention ready to convert into automated cash flow</div>
+          </button>
+        </div>
+        <div class="mt-6 flex justify-start">
+          <button type="button" id="matcher-back-1" class="text-xs font-bold text-slate-400 hover:text-white transition-colors">
+            ← Back to Step 1
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 3: Capital & Time Budget -->
+      <div id="matcher-step-3" class="matcher-step hidden">
+        <div class="flex items-center justify-between mb-6">
+          <span class="text-xs font-bold text-brand-400 uppercase tracking-widest">Step 3 of 3</span>
+          <span class="text-xs text-slate-400">Capital & Resource Strategy</span>
+        </div>
+        <h3 class="text-lg sm:text-2xl font-bold text-white mb-6">
+          What is your capital investment strategy?
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <button
+            type="button"
+            data-budget="lean"
+            class="budget-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">Lean & Free ($0 - $25/mo)</div>
+            <div class="text-xs text-slate-400">Zero-cost tools, free plans, low-risk setup</div>
+          </button>
+
+          <button
+            type="button"
+            data-budget="software"
+            class="budget-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">Growth Software ($25 - $99/mo)</div>
+            <div class="text-xs text-slate-400">High-retention community or storefront engines</div>
+          </button>
+
+          <button
+            type="button"
+            data-budget="turnkey"
+            class="budget-btn p-5 rounded-2xl border border-gray-800 bg-gray-950/80 hover:border-brand-500/60 hover:bg-gray-800/80 text-left transition-all group"
+          >
+            <div class="text-base font-bold text-white mb-1 group-hover:text-brand-300">Turnkey Capital ($250 - $1k+)</div>
+            <div class="text-xs text-slate-400">Acquire pre-monetized channels, accounts, or models</div>
+          </button>
+        </div>
+        <div class="mt-6 flex justify-start">
+          <button type="button" id="matcher-back-2" class="text-xs font-bold text-slate-400 hover:text-white transition-colors">
+            ← Back to Step 2
+          </button>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <div id="matcher-result" class="matcher-step hidden">
+        <div class="flex items-center justify-between mb-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+            ✓ Matched Fast-Track Architecture
+          </span>
+          <button type="button" id="matcher-restart" class="text-xs font-bold text-slate-400 hover:text-white transition-colors">
+            ↻ Retake Matcher
+          </button>
+        </div>
+
+        <div class="p-6 sm:p-8 rounded-2xl bg-gray-950 border border-gray-800 mb-6">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+            <div>
+              <span id="result-badge" class="text-xs font-bold text-brand-400 uppercase tracking-widest block mb-1">Recommended Solution</span>
+              <h4 id="result-title" class="text-xl sm:text-2xl font-black text-white leading-snug"></h4>
+            </div>
+            <div class="text-left sm:text-right">
+              <span class="text-xs text-slate-400 block">Monetization Timeline</span>
+              <span id="result-timeline" class="text-sm font-bold text-emerald-400"></span>
+            </div>
+          </div>
+
+          <p id="result-description" class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6"></p>
+
+          <div class="p-4 rounded-xl bg-gray-900 border border-gray-800 mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span class="text-[11px] text-slate-400 uppercase font-semibold block">Primary Verified Partner</span>
+              <span id="result-partner-name" class="text-base font-bold text-white"></span>
+              <span id="result-partner-terms" class="text-xs text-brand-300 block"></span>
+            </div>
+            <a
+              id="result-partner-cta"
+              href="#"
+              rel="nofollow noopener noreferrer"
+              class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold rounded-xl bg-brand-500 text-white hover:bg-brand-400 transition-colors shadow-lg shadow-brand-500/20 flex-shrink-0"
+            >
+              Claim Access Now →
+            </a>
+          </div>
+
+          <div class="flex items-center justify-between pt-4 border-t border-gray-800/80">
+            <span class="text-xs text-slate-400">Read in-depth editorial guide:</span>
+            <a id="result-spoke-link" href="#" class="text-xs font-bold text-accent-400 hover:text-accent-300 transition-colors flex items-center space-x-1">
+              <span id="result-spoke-title">Read Full Blueprint</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function initMatcher() {
+    let selectedFormat = null;
+    let selectedAudience = null;
+    let selectedBudget = null;
+
+    const step1 = document.getElementById('matcher-step-1');
+    const step2 = document.getElementById('matcher-step-2');
+    const step3 = document.getElementById('matcher-step-3');
+    const resultCard = document.getElementById('matcher-result');
+
+    const formatBtns = document.querySelectorAll('.format-btn');
+    const audienceBtns = document.querySelectorAll('.audience-btn');
+    const budgetBtns = document.querySelectorAll('.budget-btn');
+
+    const back1 = document.getElementById('matcher-back-1');
+    const back2 = document.getElementById('matcher-back-2');
+    const restartBtn = document.getElementById('matcher-restart');
+
+    if (!step1 || !step2 || !step3 || !resultCard) return;
+
+    formatBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedFormat = btn.getAttribute('data-format');
+        step1.classList.add('hidden');
+        step2.classList.remove('hidden');
+      });
+    });
+
+    back1?.addEventListener('click', () => {
+      step2.classList.add('hidden');
+      step1.classList.remove('hidden');
+    });
+
+    audienceBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedAudience = btn.getAttribute('data-audience');
+        step2.classList.add('hidden');
+        step3.classList.remove('hidden');
+      });
+    });
+
+    back2?.addEventListener('click', () => {
+      step3.classList.add('hidden');
+      step2.classList.remove('hidden');
+    });
+
+    budgetBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedBudget = btn.getAttribute('data-budget');
+        step3.classList.add('hidden');
+        renderResult();
+      });
+    });
+
+    restartBtn?.addEventListener('click', () => {
+      selectedFormat = null;
+      selectedAudience = null;
+      selectedBudget = null;
+      resultCard.classList.add('hidden');
+      step1.classList.remove('hidden');
+    });
+
+    function renderResult() {
+      // Diagnostic recommendation matrix
+      let result = {
+        title: "Pre-Monetized YouTube Channel & DFY Video Pipeline",
+        timeline: "24 to 48 Hours Turnkey",
+        description: "Skip the 4,000 watch-hour grind entirely. Acquire an organically enrolled YouTube Partner Program (YPP) channel and pair it with turnkey DFY video packs for Day 1 AdSense revenue.",
+        partnerName: "DFY Dave & Fameswap",
+        partnerTerms: "Verified YPP Enrollment + Brand Account Escrow",
+        partnerUrl: "/go/dfy-youtube",
+        ctaText: "Browse Pre-Monetized Channels →",
+        spokeUrl: "/turnkey-assets/how-to-buy-a-monetized-youtube-channel-safely/",
+        spokeTitle: "YouTube Channel Buying & Due Diligence Guide"
+      };
+
+      if (selectedFormat === 'youtube') {
+        if (selectedBudget === 'turnkey' || selectedAudience === 'zero') {
+          result = {
+            title: "Pre-Monetized YouTube Channel Acquisition (YPP Enrolled)",
+            timeline: "24 to 48 Hours",
+            description: "Bypass 9 to 18 months of filming with zero revenue. Take primary ownership of a verified Google Brand Account with AdSense monetization active immediately.",
+            partnerName: "Fameswap & DFY Dave",
+            partnerTerms: "Full Escrow Protection + Original Email (OGE)",
+            partnerUrl: "/go/fameswap-youtube",
+            ctaText: "Browse Monetized Channels on Fameswap →",
+            spokeUrl: "/turnkey-assets/how-to-buy-a-monetized-youtube-channel-safely/",
+            spokeTitle: "How to Buy a Monetized Channel Safely"
+          };
+        } else {
+          result = {
+            title: "High-RPM Faceless Video Automation & Freelance Teams",
+            timeline: "1 to 2 Weeks",
+            description: "Launch in top-tier RPM niches ($15-$40 RPM in personal finance, SaaS, or luxury) by hiring modular scriptwriting and editing teams on Fiverr.",
+            partnerName: "Fiverr Creator Marketplace & DFY Videos",
+            partnerTerms: "Milestone Escrow + Fixed Gig Pricing ($25-$120)",
+            partnerUrl: "/go/dfy-videos",
+            ctaText: "Order Turnkey Video Packs →",
+            spokeUrl: "/turnkey-assets/best-faceless-youtube-channel-niches-and-ideas/",
+            spokeTitle: "Best Faceless YouTube Niches Blueprint"
+          };
+        }
+      } else if (selectedFormat === 'virtual') {
+        if (selectedBudget === 'turnkey') {
+          result = {
+            title: "Turnkey AI Influencer Portfolio (10k Followers + Content)",
+            timeline: "24 Hours to 3 Days",
+            description: "Deploy a complete virtual persona holding company with a trained proprietary LoRA, organic follower foundation, and turnkey Fanvue subscription backend.",
+            partnerName: "Room30 AI Turnkey Portfolio",
+            partnerTerms: "100% Locked Face Consistency + Commercial IP Rights",
+            partnerUrl: "/go/room30",
+            ctaText: "Deploy Room30 AI System in 24h →",
+            spokeUrl: "/virtual-creators/how-to-create-an-ai-influencer-with-consistent-face/",
+            spokeTitle: "AI Model Identity Consistency Guide"
+          };
+        } else {
+          result = {
+            title: "AI Virtual Model Launch with Fanvue Subscriptions",
+            timeline: "Immediate Launch",
+            description: "OnlyFans aggressively bans synthetic models. Launch safely on Fanvue with full AI model ToS support, automated PPV voice notes, and 80% creator take-home pay.",
+            partnerName: "Fanvue Creator Subscriptions",
+            partnerTerms: "80% Net Payout + Automated PPV Voice Engine",
+            partnerUrl: "/go/fanvue",
+            ctaText: "Launch Creator Account on Fanvue →",
+            spokeUrl: "/virtual-creators/fanvue-vs-onlyfans-for-ai-creators/",
+            spokeTitle: "Fanvue vs OnlyFans AI Creator Audit"
+          };
+        }
+      } else if (selectedFormat === 'community') {
+        result = {
+          title: "Gamified Creator Community with 40% Lifetime MRR",
+          timeline: "Live in 15 Minutes",
+          description: "Replace disjointed Facebook groups and clunky Kajabi courses. Skool delivers 60%+ daily student engagement via point leaderboards and pays a 40% recurring monthly referral commission.",
+          partnerName: "Skool Community Platform",
+          partnerTerms: "Flat $99/Mo + 40% Lifetime MRR (~$39.60/Mo)",
+          partnerUrl: "/go/skool",
+          ctaText: "Start 14-Day Free Skool Trial →",
+          spokeUrl: "/creator-commerce/skool-vs-kajabi-for-course-creators/",
+          spokeTitle: "Skool vs Kajabi Head-to-Head Audit"
+        };
+      } else if (selectedFormat === 'storefront') {
+        if (selectedBudget === 'lean') {
+          result = {
+            title: "Free Beacons.ai Link-in-Bio Storefront",
+            timeline: "Live in 5 Minutes",
+            description: "Monetize an audience under 1,000 followers with zero upfront software subscriptions. Sell digital guides, consultations, and media kits without Stan Store's $29/mo fee.",
+            partnerName: "Beacons.ai Creator Storefront",
+            partnerTerms: "Free Forever Tier + 30% Lifetime MRR Partner Cut",
+            partnerUrl: "/go/beacons",
+            ctaText: "Build Free Beacons Storefront →",
+            spokeUrl: "/creator-commerce/beacons-vs-stan-store-for-tiktok-creators/",
+            spokeTitle: "Beacons vs Stan Store Comparison"
+          };
+        } else {
+          result = {
+            title: "LinkStack Unified Storefront & Meta Instagram DM Automation",
+            timeline: "Live in 10 Minutes",
+            description: "Official Meta Tech Provider with ban-proof comment-to-DM triggers, smart deep links that bypass restricted in-app webviews, and a 0% transaction fee digital store.",
+            partnerName: "LinkStack Creator Commerce",
+            partnerTerms: "70% Year 1 + 40% Lifetime MRR Partner Share",
+            partnerUrl: "/go/linkstack",
+            ctaText: "Launch Free Store on LinkStack →",
+            spokeUrl: "/creator-commerce/linkstack-vs-manychat-for-instagram-creators/",
+            spokeTitle: "LinkStack vs ManyChat Instagram Audit"
+          };
+        }
+      }
+
+      document.getElementById('result-title').textContent = result.title;
+      document.getElementById('result-timeline').textContent = result.timeline;
+      document.getElementById('result-description').textContent = result.description;
+      document.getElementById('result-partner-name').textContent = result.partnerName;
+      document.getElementById('result-partner-terms').textContent = result.partnerTerms;
+      
+      const ctaBtn = document.getElementById('result-partner-cta');
+      ctaBtn.setAttribute('href', result.partnerUrl);
+      ctaBtn.textContent = result.ctaText;
+
+      const spokeLink = document.getElementById('result-spoke-link');
+      spokeLink.setAttribute('href', result.spokeUrl);
+      document.getElementById('result-spoke-title').textContent = result.spokeTitle;
+
+      resultCard.classList.remove('hidden');
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'matcher_diagnostic_complete', {
+          event_category: 'matcher_engagement',
+          match_format: selectedFormat,
+          match_audience: selectedAudience,
+          match_budget: selectedBudget,
+          matched_tool: result.partnerName,
+          source_path: window.location.pathname
+        });
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMatcher);
+  } else {
+    initMatcher();
+  }
+</script>

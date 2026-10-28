@@ -1190,6 +1190,56 @@ export const SPOKES: SpokePage[] = [
       }
     ]
   },
+  {
+    slug: 'stan-store-vs-beacons-pricing-and-features',
+    category: 'creator-commerce',
+    keyword: 'stan store vs beacons',
+    audience: 'TikTok & Instagram Creators Under 1k Followers',
+    title: 'Stan Store vs Beacons: Which is Best for Creators? | Fast Track Creator',
+    metaDescription: 'Compare Stan Store vs Beacons for 2026. Discover why new creators avoid Stan\'s $29/mo fee and launch free digital storefronts on Beacons with zero risk.',
+    h1: 'Stan Store vs. Beacons: 2026 Creator Storefront Comparison',
+    badge: 'Storefront Benchmark',
+    heroHeadline: 'Stan Store vs Beacons: Stop Paying $29/Month Before Making a Sale',
+    heroSubheadline: 'Stan Store charges a mandatory $29 to $99 every single month before you ever make a dollar. Beacons delivers a robust free-forever plan with digital downloads, link-in-bio tools, and media kits.',
+    primaryAffiliateId: 'beacons',
+    secondaryAffiliateId: 'linkstack',
+    painPoints: [
+      'Stan Store demands $29 to $99 every month even if you make zero sales, creating immediate financial pressure',
+      'Creators with under 1,000 followers waste hundreds of dollars on subscriptions before finding product-market fit',
+      'Stan Store lacks native media kit generation and automated brand deal invoicing tools',
+      'Canceling Stan Store immediately revokes access to your bio link and deletes customer lead funnels'
+    ],
+    keyBenefits: [
+      'Beacons free-forever tier allows creators to launch and sell digital products with $0 monthly software bills',
+      'Includes built-in auto-updating media kit that syncs real-time follower counts for brand sponsorships',
+      'Sell digital downloads, 1:1 coaching appointments, and course access from a unified mobile-first storefront',
+      'Optional upgrade to Beacons Pro ($10/mo) eliminates platform transaction fees at one-third of Stan’s price'
+    ],
+    comparisonPoints: [
+      { factor: 'Monthly Entry Fee', traditional: 'Stan Store: Mandatory $29 to $99/Mo', fasttrack: 'Beacons: Free Forever ($0/Month)' },
+      { factor: 'Audience Under 1k Friendly', traditional: 'Stan Store: High Financial Risk', fasttrack: 'Beacons: Zero Financial Barrier' },
+      { factor: 'Media Kit & Invoicing', traditional: 'Stan Store: None (Third-Party Needed)', fasttrack: 'Beacons: Native Auto-Syncing Kit' },
+      { factor: 'Affiliate Payout Cut', traditional: 'Stan Store: 20% Capped', fasttrack: 'Beacons: 30% Lifetime Recurring MRR' }
+    ],
+    faqList: [
+      {
+        question: 'Is Beacons better than Stan Store for beginners?',
+        answer: 'Yes. Beginners with audiences under 10,000 followers should use Beacons because it offers a free plan with zero monthly subscription barrier. Stan Store forces you to pay $29 every single month regardless of whether you make any sales.'
+      },
+      {
+        question: 'Does Beacons take a fee on digital sales?',
+        answer: 'On Beacons free tier, they charge a 9% transaction fee so you only pay when you make money. Once you earn consistent revenue, you can upgrade to Beacons Pro for $10/month to drop transaction fees to 0%, which is still one-third the cost of Stan Store.'
+      },
+      {
+        question: 'Can I sell digital downloads and courses on Beacons?',
+        answer: 'Yes. Beacons allows you to host downloadable PDFs, video guides, consultation bookings, and tiered subscriptions directly from your link-in-bio store.'
+      },
+      {
+        question: 'How does LinkStack compare to both Stan Store and Beacons?',
+        answer: 'If you want native Instagram DM automation combined with a link-in-bio storefront and smart deep links, LinkStack is the top choice because it replaces both Stan Store and ManyChat.'
+      }
+    ]
+  },
 
   // ----------------------------------------------------
   // HUB 4: REVIEWS & INDEPENDENT AUDITS
@@ -1586,6 +1636,106 @@ export const SPOKES: SpokePage[] = [
       {
         question: 'How does Fanvue payout earnings to creators?',
         answer: 'Fanvue processes payouts via direct bank transfer, debit card, and cryptocurrency options (e.g. USDT/crypto rails) to prevent arbitrary merchant processor holds. Payouts are typically processed within 24 to 48 hours of approval.'
+      }
+    ]
+  },
+  {
+    slug: 'fameswap-vs-swapd-for-social-media-accounts',
+    category: 'reviews',
+    keyword: 'fameswap vs swapd',
+    audience: 'Social Media Investors & Account Traders',
+    title: 'Fameswap vs Swapd: Which Marketplace is Safest in 2026? | Fast Track Creator',
+    metaDescription: 'Fameswap vs Swapd marketplace safety audit: compare escrow fees, invitation barriers, payment methods, YouTube Brand Account transfers, and buyer protection.',
+    h1: 'Fameswap vs. Swapd: 2026 Social Account Marketplace Audit',
+    badge: 'Escrow Safety Benchmark',
+    heroHeadline: 'Fameswap vs Swapd: Where Should You Buy Social Media Accounts?',
+    heroSubheadline: 'We audited both premier account marketplaces across buyer escrow protocols, seller fees, dispute mediation, original email (OGE) guarantees, and YouTube Brand Account transfers.',
+    primaryAffiliateId: 'fameswap',
+    secondaryAffiliateId: 'fameswap-youtube',
+    painPoints: [
+      'Buying accounts on unvetted forums risks seller password recovery and complete capital loss',
+      'Swapd requires strict invite codes and high transaction thresholds that lock out mainstream buyers',
+      'Complex escrow mediation rules and crypto-only payment options intimidate non-technical investors',
+      'Lack of verified audience analytics leads buyers to acquire dead accounts inflated by bot panels'
+    ],
+    keyBenefits: [
+      'Fameswap offers friction-free open registration with verified credit card, bank wire, and escrow options',
+      'Mandatory original email (OGE) transfer protocols permanently secure account recovery access',
+      'Direct escrow mediation team inspects YouTube Brand Account permissions before funds release',
+      'Publicly audited transaction ratings and live audience analytics for thousands of active listings'
+    ],
+    comparisonPoints: [
+      { factor: 'Buyer Access & Registration', traditional: 'Swapd: Gated by Private Invites & Strict KYC', fasttrack: 'Fameswap: Instant Open Registration' },
+      { factor: 'Accepted Payment Methods', traditional: 'Swapd: Heavily Crypto / Wire Focused', fasttrack: 'Fameswap: Credit Card, Wire & Escrow' },
+      { factor: 'Escrow Transaction Fee', traditional: 'Swapd: Variable High-Tier Escrow Fees', fasttrack: 'Fameswap: Transparent Flat 20% Fee' },
+      { factor: 'YouTube Account Support', traditional: 'Swapd: Forum Thread Negotiations', fasttrack: 'Fameswap: Structured Brand Account Handover' }
+    ],
+    faqList: [
+      {
+        question: 'Is Fameswap or Swapd safer for buying social media accounts?',
+        answer: 'Both platforms use escrow systems to protect buyer funds. However, Fameswap is significantly more accessible for creators and business operators because it offers instant registration, accepts standard credit card and wire payments, and provides automated original email (OGE) verification.'
+      },
+      {
+        question: 'Why do buyers prefer Fameswap over Swapd?',
+        answer: 'Fameswap has a simpler, cleaner marketplace catalog with thousands of searchable listings, live audience demographic data, and transparent escrow fees, whereas Swapd functions as an invite-only private forum with strict barriers to entry.'
+      },
+      {
+        question: 'Does Fameswap protect buyers if an account gets reclaimed?',
+        answer: 'Yes. Fameswap holds payment in escrow and requires sellers to transfer the original registration email address (OGE). Funds are not released until the buyer confirms full access and secures recovery settings.'
+      },
+      {
+        question: 'Can I buy monetized YouTube channels on Fameswap?',
+        answer: 'Yes. Fameswap is the world\'s largest marketplace for established YouTube channels, offering pre-monetized channels transferred via official Google Brand Account ownership.'
+      }
+    ]
+  },
+  {
+    slug: 'matt-par-tube-mastery-vs-dfy-dave',
+    category: 'reviews',
+    keyword: 'tube mastery review',
+    audience: 'Faceless Channel Operators & YouTube Automation Buyers',
+    title: 'Matt Par Tube Mastery vs DFY Dave: 2026 Audit | Fast Track Creator',
+    metaDescription: 'Matt Par Tube Mastery vs DFY Dave: compare $997 DIY video course training against turnkey pre-monetized YouTube channel handovers with active YPP enrollment.',
+    h1: 'Matt Par Tube Mastery vs. DFY Dave: DIY Course vs. Turnkey Asset',
+    badge: 'Course vs Asset Audit',
+    heroHeadline: 'Matt Par Tube Mastery vs DFY Dave: Learn for 12 Months or Own Today?',
+    heroSubheadline: 'Matt Par\'s Tube Mastery costs $997 for video lessons and still leaves you with a 9-month grind for 4,000 watch hours. DFY Dave delivers pre-monetized YouTube channels ready for Day 1 AdSense revenue.',
+    primaryAffiliateId: 'dfy-dave',
+    secondaryAffiliateId: 'dfy-youtube',
+    painPoints: [
+      'Paying $997 for YouTube video courses leaves you with zero assets and 300+ hours of unpaid filming labor',
+      'Over 92% of course students quit before ever fulfilling the 4,000 watch-hour YPP monetization requirement',
+      'Course curriculums quickly become obsolete as YouTube updates thumbnail algorithms and reused content rules',
+      'Solo creators burn out trying to script, voice, edit, and optimize 50+ videos alone with $0 AdSense checks'
+    ],
+    keyBenefits: [
+      'DFY Dave delivers ready-to-monetize YouTube channels with active YPP and AdSense enrollment on Day 1',
+      'Bypasses the 9 to 14-month algorithmic purgatory through white-glove Google Brand Account handover',
+      'Pair pre-monetized channels with turnkey DFY long-form video production packs in high-RPM niches',
+      'Protected by replacement warranties against initial enrollment flags with 1-on-1 transfer assistance'
+    ],
+    comparisonPoints: [
+      { factor: 'Deliverable Type', traditional: 'Tube Mastery: Video Course Lessons (Zero Asset)', fasttrack: 'DFY Dave: Monetized YouTube Channel Asset' },
+      { factor: 'Time to First AdSense Dollar', traditional: 'Tube Mastery: 9 to 18 Months of Unpaid Effort', fasttrack: 'DFY Dave: 24 to 48 Hours Turnkey' },
+      { factor: 'Upfront Capital Required', traditional: 'Tube Mastery: $997 (Course Only)', fasttrack: 'DFY Dave: $695 (Fully Monetized Asset)' },
+      { factor: 'Student / Buyer Success Rate', traditional: 'Tube Mastery: < 8% Reach Full Monetization', fasttrack: 'DFY Dave: 100% Active YPP Handover' }
+    ],
+    faqList: [
+      {
+        question: 'Is Matt Par\'s Tube Mastery worth $997?',
+        answer: 'Tube Mastery provides solid fundamentals for understanding YouTube automation, but it is an informational course, not a business asset. Students still have to spend months creating content and grinding to reach 1,000 subscribers and 4,000 watch hours with a high risk of dropping out.'
+      },
+      {
+        question: 'Why do investors prefer DFY Dave over YouTube courses?',
+        answer: 'Investors prefer DFY Dave because it delivers a real, cash-flowing asset for less money ($695) than a course ($997). You step directly into an active YouTube Partner Program channel on Day 1 and start publishing high-RPM content immediately.'
+      },
+      {
+        question: 'Can I buy pre-made faceless videos from DFY Dave?',
+        answer: 'Yes. DFY Dave offers professional 10, 20, or 30-video production packs complete with SEO scriptwriting, studio voiceovers, motion graphics editing, and clickable thumbnails tailored to high-RPM niches.'
+      },
+      {
+        question: 'What happens if a channel experiences an issue during transfer?',
+        answer: 'DFY Dave provides a replacement warranty covering initial transfer and verification. If an enrollment issue occurs prior to handover, a replacement channel is provided.'
       }
     ]
   }

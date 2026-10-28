@@ -1,0 +1,296 @@
+---
+interface Props {
+  categorySlug: string;
+}
+
+const { categorySlug } = Astro.props;
+---
+
+<section class="py-16 md:py-20 border-b border-gray-800 bg-gray-950">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <span class="text-xs sm:text-sm font-bold text-brand-400 uppercase tracking-widest mb-2 block">
+        Side-by-Side Architectural Audit
+      </span>
+      <h2 class="text-2xl sm:text-4xl font-black text-white tracking-tight mb-4">
+        {categorySlug === 'turnkey-assets' && "Turnkey Media Asset Acquisition Benchmark"}
+        {categorySlug === 'creator-commerce' && "Creator Commerce, Storefront & Community Matrix"}
+        {categorySlug === 'virtual-creators' && "Virtual Creator Systems & Subscription Platform Matrix"}
+        {categorySlug === 'reviews' && "2026 Master Platform Safety & Legitimacy Scorecard"}
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-400">
+        Objective data points comparing pricing, platform fees, buyer escrow protections, and monetization speed.
+      </p>
+    </div>
+
+    <div class="overflow-x-auto rounded-2xl border border-gray-800 shadow-2xl bg-gray-900/60">
+      {categorySlug === 'turnkey-assets' && (
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-gray-800 bg-gray-950/90 text-slate-300 font-bold uppercase tracking-wider text-[11px]">
+              <th class="p-4 sm:p-5">Platform / Method</th>
+              <th class="p-4 sm:p-5">Primary Asset</th>
+              <th class="p-4 sm:p-5">Escrow Protection</th>
+              <th class="p-4 sm:p-5">YPP Pre-Enrollment</th>
+              <th class="p-4 sm:p-5">Demonetization Risk</th>
+              <th class="p-4 sm:p-5 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/80">
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Fameswap Marketplace</span>
+              </td>
+              <td class="p-4 sm:p-5 text-slate-300">YouTube, TikTok & IG Accounts</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">Full Escrow + OGE Transfer</td>
+              <td class="p-4 sm:p-5 text-slate-300">Audited Monetized Listings</td>
+              <td class="p-4 sm:p-5 text-slate-300">Low (Verified Analytics)</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/fameswap" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Browse Listings →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>DFY Dave (Soldi.ai)</span>
+              </td>
+              <td class="p-4 sm:p-5 text-slate-300">Turnkey Monetized Channels</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">White-Glove Brand Transfer</td>
+              <td class="p-4 sm:p-5 text-slate-300">100% Pre-Enrolled YPP</td>
+              <td class="p-4 sm:p-5 text-slate-300">Zero (Replacement Warranty)</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/dfy-youtube" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Claim Channel →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-400 flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+                <span>Flippa / Public Forums</span>
+              </td>
+              <td class="p-4 sm:p-5 text-slate-400">Unvetted Channel Listings</td>
+              <td class="p-4 sm:p-5 text-rose-400">Minimal / Direct PayPal</td>
+              <td class="p-4 sm:p-5 text-slate-400">Unverified Bot Hours</td>
+              <td class="p-4 sm:p-5 text-rose-400">Extreme (Seller Password Recovery)</td>
+              <td class="p-4 sm:p-5 text-right text-slate-500">Unvetted</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+
+      {categorySlug === 'creator-commerce' && (
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-gray-800 bg-gray-950/90 text-slate-300 font-bold uppercase tracking-wider text-[11px]">
+              <th class="p-4 sm:p-5">Platform</th>
+              <th class="p-4 sm:p-5">Monthly Software Fee</th>
+              <th class="p-4 sm:p-5">Platform Transaction Cut</th>
+              <th class="p-4 sm:p-5">Instagram DM Automation</th>
+              <th class="p-4 sm:p-5">Mobile Deep Linking</th>
+              <th class="p-4 sm:p-5">Partner MRR Bounty</th>
+              <th class="p-4 sm:p-5 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/80">
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>LinkStack</span>
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">$0 Free / $24.92 Growth</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">0% on Growth</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">Meta-Approved Auto DMs</td>
+              <td class="p-4 sm:p-5 text-emerald-400">Smart App Breakout</td>
+              <td class="p-4 sm:p-5 font-bold text-cyan-300">70% Year 1 + 40% MRR</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/linkstack" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Start Free →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Skool</span>
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-slate-200">Flat $99/Month</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">0% Surcharge</td>
+              <td class="p-4 sm:p-5 text-slate-400">Integrated Community Feed</td>
+              <td class="p-4 sm:p-5 text-slate-300">Native iOS/Android App</td>
+              <td class="p-4 sm:p-5 font-bold text-cyan-300">40% Lifetime MRR (~$39.60)</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/skool" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">14-Day Trial →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-300 flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-blue-400"></span>
+                <span>Beacons.ai</span>
+              </td>
+              <td class="p-4 sm:p-5 text-emerald-400">$0 Free Tier Available</td>
+              <td class="p-4 sm:p-5 text-slate-300">9% Free / 0% Pro</td>
+              <td class="p-4 sm:p-5 text-slate-400">Basic Link Routing</td>
+              <td class="p-4 sm:p-5 text-slate-400">Standard Webview</td>
+              <td class="p-4 sm:p-5 text-slate-300">30% Lifetime MRR</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/beacons" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Build Store →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-400">Stan Store</td>
+              <td class="p-4 sm:p-5 text-rose-400">$29 - $99/Month</td>
+              <td class="p-4 sm:p-5 text-slate-300">0% Surcharge</td>
+              <td class="p-4 sm:p-5 text-rose-400">None (Requires ManyChat)</td>
+              <td class="p-4 sm:p-5 text-rose-400">In-App Webview Leaks</td>
+              <td class="p-4 sm:p-5 text-slate-400">20% Capped</td>
+              <td class="p-4 sm:p-5 text-right text-slate-500">Legacy</td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-400">Kajabi</td>
+              <td class="p-4 sm:p-5 text-rose-400">$149 - $399/Month</td>
+              <td class="p-4 sm:p-5 text-slate-300">0% Surcharge</td>
+              <td class="p-4 sm:p-5 text-rose-400">None (Email Only)</td>
+              <td class="p-4 sm:p-5 text-slate-400">Heavy Web LMS</td>
+              <td class="p-4 sm:p-5 text-slate-400">30% Capped</td>
+              <td class="p-4 sm:p-5 text-right text-slate-500">Tier Creep</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+
+      {categorySlug === 'virtual-creators' && (
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-gray-800 bg-gray-950/90 text-slate-300 font-bold uppercase tracking-wider text-[11px]">
+              <th class="p-4 sm:p-5">Platform / Workflow</th>
+              <th class="p-4 sm:p-5">AI Model Policy</th>
+              <th class="p-4 sm:p-5">Voice Notes & PPV DMs</th>
+              <th class="p-4 sm:p-5">Net Creator Split</th>
+              <th class="p-4 sm:p-5">Deplatforming Risk</th>
+              <th class="p-4 sm:p-5 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/80">
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Fanvue</span>
+              </td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">100% Permitted & Supported</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">Native AI Voice Engine</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">80% Net Creator Split</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">Zero (KYC Covered)</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/fanvue" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Launch on Fanvue →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors bg-brand-500/5">
+              <td class="p-4 sm:p-5 font-bold text-white flex items-center space-x-2">
+                <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                <span>Room30 AI Turnkey</span>
+              </td>
+              <td class="p-4 sm:p-5 text-emerald-400">Custom Proprietary LoRA</td>
+              <td class="p-4 sm:p-5 text-slate-300">Full Video & Photo Vault</td>
+              <td class="p-4 sm:p-5 text-emerald-400">Keep 100% of IP Asset</td>
+              <td class="p-4 sm:p-5 text-emerald-400">Zero (Full Commercial Rights)</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/room30" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Deploy Persona →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-400">OnlyFans</td>
+              <td class="p-4 sm:p-5 text-rose-400">Strict Ban (Biometric ID Check)</td>
+              <td class="p-4 sm:p-5 text-slate-400">Manual Voice Audio Only</td>
+              <td class="p-4 sm:p-5 text-slate-400">80% (High Chargebacks)</td>
+              <td class="p-4 sm:p-5 text-rose-400">Extreme (Immediate Ban)</td>
+              <td class="p-4 sm:p-5 text-right text-slate-500">Banned</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+
+      {categorySlug === 'reviews' && (
+        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-gray-800 bg-gray-950/90 text-slate-300 font-bold uppercase tracking-wider text-[11px]">
+              <th class="p-4 sm:p-5">Platform</th>
+              <th class="p-4 sm:p-5">Core Category</th>
+              <th class="p-4 sm:p-5">Audited Legitimacy</th>
+              <th class="p-4 sm:p-5">Escrow / Buyer Security</th>
+              <th class="p-4 sm:p-5">Safety Grade</th>
+              <th class="p-4 sm:p-5 text-right">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-800/80">
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">Fameswap</td>
+              <td class="p-4 sm:p-5 text-slate-300">Account Marketplace</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">100% Legit Escrow Intermediary</td>
+              <td class="p-4 sm:p-5 text-slate-300">Full Escrow + OGE Transfer</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A+</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/fameswap" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Audit Terms →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">DFY Dave (Soldi.ai)</td>
+              <td class="p-4 sm:p-5 text-slate-300">Turnkey Media Real Estate</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">Legit Media Brand ($1M+ Volume)</td>
+              <td class="p-4 sm:p-5 text-slate-300">Replacement Handover Warranty</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A+</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/dfy-dave" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">View Catalog →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">Skool</td>
+              <td class="p-4 sm:p-5 text-slate-300">Community & LMS</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">Sam Ovens / Backed by Top Creators</td>
+              <td class="p-4 sm:p-5 text-slate-300">Stripe Direct Settlement (0% Cut)</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A+</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/skool" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Join Skool →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">LinkStack</td>
+              <td class="p-4 sm:p-5 text-slate-300">Storefront & DM Automation</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">Official Meta Tech Provider</td>
+              <td class="p-4 sm:p-5 text-slate-300">Stripe Connect + 0% Fees</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A+</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/linkstack" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Audit Specs →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">Room30 AI</td>
+              <td class="p-4 sm:p-5 text-slate-300">Virtual Influencer Portfolios</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">Verified Gregory Cooke Holding Co.</td>
+              <td class="p-4 sm:p-5 text-slate-300">24-Hour LoRA Delivery Guarantee</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/room30" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">View Systems →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-white">Fanvue</td>
+              <td class="p-4 sm:p-5 text-slate-300">AI Creator Subscriptions</td>
+              <td class="p-4 sm:p-5 text-emerald-400 font-bold">UK Registered (Fanvue Ltd)</td>
+              <td class="p-4 sm:p-5 text-slate-300">Bank & Crypto Payout Rails</td>
+              <td class="p-4 sm:p-5 font-bold text-emerald-400">A</td>
+              <td class="p-4 sm:p-5 text-right">
+                <a href="/go/fanvue" rel="nofollow noopener noreferrer" class="text-xs font-bold text-brand-400 hover:text-brand-300">Claim Access →</a>
+              </td>
+            </tr>
+            <tr class="hover:bg-gray-800/40 transition-colors">
+              <td class="p-4 sm:p-5 font-bold text-slate-400">OnlyFans (for AI)</td>
+              <td class="p-4 sm:p-5 text-slate-400">Legacy Subscriptions</td>
+              <td class="p-4 sm:p-5 text-rose-400 font-bold">AI Prohibited / High Account Ban Rate</td>
+              <td class="p-4 sm:p-5 text-rose-400">Frozen Balances on KYC Failure</td>
+              <td class="p-4 sm:p-5 font-bold text-rose-400">F</td>
+              <td class="p-4 sm:p-5 text-right text-slate-500">Restricted</td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+    </div>
+  </div>
+</section>

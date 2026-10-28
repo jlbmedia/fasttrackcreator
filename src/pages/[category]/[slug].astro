@@ -114,8 +114,29 @@ const reviewSchema = primaryAffiliate ? {
     ctaText={primaryAffiliate?.primaryCtaText || "Deploy Acceleration Now →"}
   />
 
+  <!-- Sticky Quick-Jump Table of Contents -->
+  <nav aria-label="Page Table of Contents" class="sticky top-0 z-30 bg-gray-950/95 backdrop-blur border-b border-gray-800 py-3 px-4 shadow-lg">
+    <div class="max-w-5xl mx-auto flex items-center justify-between overflow-x-auto gap-4 text-xs font-bold text-slate-300">
+      <div class="flex items-center space-x-5 whitespace-nowrap">
+        <span class="text-[11px] uppercase tracking-wider text-brand-400">Jump To:</span>
+        <a href="#problem" class="hover:text-white hover:underline transition-all">Obstacles</a>
+        <a href="#comparison" class="hover:text-white hover:underline transition-all">Comparison Matrix</a>
+        <a href="#solution" class="hover:text-white hover:underline transition-all">Verified Partner</a>
+        <a href="#faqs" class="hover:text-white hover:underline transition-all">FAQs</a>
+      </div>
+      <a
+        href={primaryAffiliate?.vanityPath || "/reviews/"}
+        rel="nofollow noopener noreferrer"
+        class="hidden sm:inline-flex items-center px-3.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/20 transition-colors text-xs font-bold whitespace-nowrap"
+      >
+        <span>{primaryAffiliate?.primaryCtaText.replace('→', '').trim().slice(0, 20) || "Deploy System"}</span>
+        <span class="ml-1">→</span>
+      </a>
+    </div>
+  </nav>
+
   <!-- Pain Points & Structural Obstacles Breakdown -->
-  <section class="py-16 md:py-20 border-b border-gray-800 bg-gray-950">
+  <section id="problem" class="py-16 md:py-20 border-b border-gray-800 bg-gray-950">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs sm:text-sm font-bold text-rose-400 uppercase tracking-widest mb-2 block">
@@ -183,14 +204,16 @@ const reviewSchema = primaryAffiliate ? {
   </section>
 
   <!-- Side-by-Side Comparison Matrix -->
-  <ComparisonMatrix
-    points={spoke.comparisonPoints}
-    ctaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
-    ctaText={`Deploy Verified Solution for ${spoke.audience} →`}
-  />
+  <div id="comparison">
+    <ComparisonMatrix
+      points={spoke.comparisonPoints}
+      ctaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
+      ctaText={`Deploy Verified Solution for ${spoke.audience} →`}
+    />
+  </div>
 
   <!-- Primary & Secondary Offer Scorecards -->
-  <section class="py-16 md:py-24 border-b border-gray-800 bg-gray-900/40">
+  <section id="solution" class="py-16 md:py-24 border-b border-gray-800 bg-gray-900/40">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-2xl mx-auto mb-12">
         <span class="text-xs sm:text-sm font-bold text-brand-400 uppercase tracking-widest mb-2 block">
@@ -213,7 +236,9 @@ const reviewSchema = primaryAffiliate ? {
   </section>
 
   <!-- FAQ Accordion -->
-  <FAQAccordion faqList={spoke.faqList} />
+  <div id="faqs">
+    <FAQAccordion faqList={spoke.faqList} />
+  </div>
 
   <!-- Related Blueprints Navigation (Click Depth <= 2) -->
   <section class="py-16 border-b border-gray-800 bg-gray-950">
