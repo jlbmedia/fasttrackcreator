@@ -112,9 +112,14 @@ const websiteSchema = {
             href.includes('linkstack.fyi')
           ) {
             if (typeof window.gtag === 'function') {
+              const label = (anchor.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+              const domain = href.startsWith('http') ? new URL(href).hostname : 'fasttrackcreator.com';
               window.gtag('event', 'affiliate_click', {
                 event_category: 'outbound_conversion',
-                event_label: (anchor.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 60),
+                event_label: label,
+                link_url: href,
+                link_domain: domain,
+                outbound: true,
                 destination_url: href,
                 source_path: window.location.pathname,
                 site_source: 'fasttrackcreator.com',
@@ -126,17 +131,22 @@ const websiteSchema = {
       });
     </script>
 
-    <!-- Open Graph / Social -->
+    <!-- Open Graph / Social (1200x630 High-Resolution Cards) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content={BRAND_NAME} />
+    <meta property="og:image" content="https://fasttrackcreator.com/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Fast Track Creator: Accelerate Monetization in 2026" />
 
-    <!-- Twitter -->
+    <!-- Twitter Summary Large Image -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://fasttrackcreator.com/og-card.png" />
 
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />

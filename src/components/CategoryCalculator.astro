@@ -446,12 +446,27 @@ const { categorySlug } = Astro.props;
 
 <script is:inline>
   function initCalculators() {
+    let gaDebounceTimer = null;
+    function trackCalculatorInteraction(toolName, details) {
+      if (typeof window.gtag === 'function') {
+        clearTimeout(gaDebounceTimer);
+        gaDebounceTimer = setTimeout(() => {
+          window.gtag('event', 'calculator_interact', {
+            event_category: 'dwell_engagement',
+            calculator_name: toolName,
+            interaction_details: details,
+            source_path: window.location.pathname
+          });
+        }, 1200);
+      }
+    }
+
     // 1. Turnkey Assets Calculator
     const tkCost = document.getElementById('tk-cost');
     const tkViews = document.getElementById('tk-views');
     const tkRpm = document.getElementById('tk-rpm');
     if (tkCost && tkViews && tkRpm) {
-      function updateTurnkey() {
+      function updateTurnkey(isUserChange) {
         const cost = parseFloat(tkCost.value);
         const views = parseFloat(tkViews.value);
         const rpm = parseFloat(tkRpm.value);
@@ -467,9 +482,13 @@ const { categorySlug } = Astro.props;
         document.getElementById('tk-res-monthly').textContent = '$' + monthlyAdSense.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         document.getElementById('tk-res-payback').textContent = paybackMonths < 0.1 ? '< 0.1 Mos' : paybackMonths.toFixed(1) + ' Mos';
         document.getElementById('tk-res-roi').textContent = Math.round(annualRoi).toLocaleString() + '%';
+
+        if (isUserChange === true) {
+          trackCalculatorInteraction('turnkey-assets-calc', `views:${views},cost:${cost},rpm:${rpm}`);
+        }
       }
-      [tkCost, tkViews, tkRpm].forEach(el => el.addEventListener('input', updateTurnkey));
-      updateTurnkey();
+      [tkCost, tkViews, tkRpm].forEach(el => el.addEventListener('input', () => updateTurnkey(true)));
+      updateTurnkey(false);
     }
 
     // 2. Creator Commerce Calculator
@@ -477,7 +496,7 @@ const { categorySlug } = Astro.props;
     const ccSkool = document.getElementById('cc-skool');
     const ccSales = document.getElementById('cc-sales');
     if (ccSpend && ccSkool && ccSales) {
-      function updateCommerce() {
+      function updateCommerce(isUserChange) {
         const spend = parseFloat(ccSpend.value);
         const skoolRefs = parseFloat(ccSkool.value);
         const sales = parseFloat(ccSales.value);
@@ -495,9 +514,13 @@ const { categorySlug } = Astro.props;
         document.getElementById('cc-res-skool-mrr').textContent = '$' + skoolMrr.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '/mo';
         document.getElementById('cc-res-saved').textContent = '$' + Math.round(annualSaved).toLocaleString() + '/yr';
         document.getElementById('cc-res-total').textContent = '$' + Math.round(totalValue).toLocaleString();
+
+        if (isUserChange === true) {
+          trackCalculatorInteraction('creator-commerce-calc', `skoolRefs:${skoolRefs},spend:${spend}`);
+        }
       }
-      [ccSpend, ccSkool, ccSales].forEach(el => el.addEventListener('input', updateCommerce));
-      updateCommerce();
+      [ccSpend, ccSkool, ccSales].forEach(el => el.addEventListener('input', () => updateCommerce(true)));
+      updateCommerce(false);
     }
 
     // 3. Virtual Creators Calculator
@@ -505,7 +528,7 @@ const { categorySlug } = Astro.props;
     const vcSubs = document.getElementById('vc-subs');
     const vcPrice = document.getElementById('vc-price');
     if (vcPersonas && vcSubs && vcPrice) {
-      function updateVirtual() {
+      function updateVirtual(isUserChange) {
         const personas = parseFloat(vcPersonas.value);
         const subs = parseFloat(vcSubs.value);
         const price = parseFloat(vcPrice.value);
@@ -524,9 +547,13 @@ const { categorySlug } = Astro.props;
 
         document.getElementById('vc-res-net').textContent = '$' + netFanvue.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '/mo';
         document.getElementById('vc-res-asset').textContent = '~$' + Math.round(assetValue).toLocaleString();
+
+        if (isUserChange === true) {
+          trackCalculatorInteraction('virtual-creators-calc', `personas:${personas},subs:${subs},price:${price}`);
+        }
       }
-      [vcPersonas, vcSubs, vcPrice].forEach(el => el.addEventListener('input', updateVirtual));
-      updateVirtual();
+      [vcPersonas, vcSubs, vcPrice].forEach(el => el.addEventListener('input', () => updateVirtual(true)));
+      updateVirtual(false);
     }
   }
 
