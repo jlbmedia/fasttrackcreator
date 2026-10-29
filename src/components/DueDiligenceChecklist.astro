@@ -1,0 +1,153 @@
+---
+interface Props {
+  categorySlug: string;
+  audience: string;
+}
+
+const { categorySlug, audience } = Astro.props;
+---
+
+<section class="py-16 md:py-20 border-b border-gray-800 bg-gray-900/60 print:bg-white print:text-black">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-3xl border border-brand-500/30 bg-gray-950/90 p-6 sm:p-10 shadow-2xl backdrop-blur print:border-none print:shadow-none print:p-0">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 pb-6 border-b border-gray-800">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-brand-500/10 border border-brand-500/30 text-brand-300 mb-2">
+            Institutional Verification Tool
+          </span>
+          <h2 class="text-xl sm:text-3xl font-black text-white tracking-tight">
+            Commercial Due Diligence Checklist
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 mt-1">
+            Actionable verification protocol tailored for {audience}.
+          </p>
+        </div>
+
+        <div class="flex items-center space-x-3 not-print">
+          <button
+            type="button"
+            id="copy-checklist-btn"
+            class="px-4 py-2 text-xs font-bold rounded-xl bg-gray-900 border border-gray-700 hover:border-brand-500 text-slate-200 hover:text-white transition-all shadow"
+          >
+            📋 Copy Checklist
+          </button>
+          <button
+            type="button"
+            onclick="window.print()"
+            class="px-4 py-2 text-xs font-bold rounded-xl bg-brand-500 hover:bg-brand-400 text-white transition-all shadow-lg shadow-brand-500/20"
+          >
+            🖨️ Print / Save PDF
+          </button>
+        </div>
+      </div>
+
+      <div id="checklist-items" class="space-y-3.5 text-xs sm:text-sm text-slate-300">
+        {categorySlug === 'turnkey-assets' && (
+          <>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 01.</span>
+              <span><strong>Google Brand Account Transfer:</strong> Ensure the seller invites your Google account as Manager, upgrades to Owner, and completes the mandatory 7-day primary owner handover.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 02.</span>
+              <span><strong>Original Email (OGE) Handover:</strong> Secure the original registration email address and password, updating 2FA recovery phone numbers and backup codes immediately.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 03.</span>
+              <span><strong>YouTube Analytics Inspection:</strong> Audit lifetime traffic sources to ensure watch hours originate from Browse & Suggested feeds rather than external SMM bot panels.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 04.</span>
+              <span><strong>Active YPP & Strike Status:</strong> Confirm 0 active copyright strikes, 0 community guideline strikes, and active monetization status in YouTube Studio.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 05.</span>
+              <span><strong>AdSense Linking:</strong> Re-link your approved personal or business Google AdSense account in the Studio Earn tab before publishing new video batches.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 06.</span>
+              <span><strong>Escrow Release Authorization:</strong> Only authorize escrow fund disbursement after all recovery credentials and Primary Owner access have been fully validated.</span>
+            </div>
+          </>
+        )}
+
+        {categorySlug === 'virtual-creators' && (
+          <>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 01.</span>
+              <span><strong>Proprietary LoRA Face Lock:</strong> Verify 100% facial and physical likeness consistency across multiple outfits, lighting setups, and camera angles.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 02.</span>
+              <span><strong>Commercial IP Licensing:</strong> Secure full, unrestricted commercial ownership of the virtual character weights, prompt libraries, and image assets.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 03.</span>
+              <span><strong>Fanvue Single-Owner KYC:</strong> Complete identity verification under human operator credentials with explicit platform approval for synthetic avatars.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 04.</span>
+              <span><strong>Voice Note Engine Setup:</strong> Configure AI voice cloning models (e.g. ElevenLabs) to automate high-converting audio pay-per-view messages.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 05.</span>
+              <span><strong>Multi-Currency Payout Rails:</strong> Set up cryptocurrency settlement (USDT) and bank rails to safeguard creator earnings against arbitrary card processor holds.</span>
+            </div>
+          </>
+        )}
+
+        {(categorySlug === 'creator-commerce' || categorySlug === 'reviews') && (
+          <>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 01.</span>
+              <span><strong>In-App Webview Audit:</strong> Verify link routing to prevent lost affiliate sales; ensure external links automatically launch native mobile apps.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 02.</span>
+              <span><strong>Platform Transaction Fee Check:</strong> Select software platforms that charge 0% transaction surcharges on digital downloads and course sales.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 03.</span>
+              <span><strong>Meta Graph API Approval:</strong> Ensure Instagram DM automation tools hold official Meta Tech Provider status to protect accounts from shadowbans.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 04.</span>
+              <span><strong>Community Gamification Engine:</strong> Deploy level-unlock point systems to sustain 60%+ daily active student engagement and reduce monthly churn.</span>
+            </div>
+            <div class="flex items-start space-x-3 p-3.5 rounded-xl bg-gray-900/80 border border-gray-800">
+              <span class="text-emerald-400 font-bold">☑ 05.</span>
+              <span><strong>Lifetime Compounding MRR:</strong> Maximize passive distribution by promoting software offering 40% recurring monthly commissions for the customer's life.</span>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  function initChecklistCopy() {
+    const btn = document.getElementById('copy-checklist-btn');
+    const container = document.getElementById('checklist-items');
+    if (!btn || !container) return;
+
+    btn.addEventListener('click', () => {
+      const text = container.innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied to Clipboard!';
+        btn.classList.add('text-emerald-400', 'border-emerald-500');
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.classList.remove('text-emerald-400', 'border-emerald-500');
+        }, 2000);
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initChecklistCopy);
+  } else {
+    initChecklistCopy();
+  }
+</script>

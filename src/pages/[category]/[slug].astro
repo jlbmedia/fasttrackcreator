@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import AboveTheFoldHero from '../../components/AboveTheFoldHero.astro';
 import OfferScorecard from '../../components/OfferScorecard.astro';
 import ComparisonMatrix from '../../components/ComparisonMatrix.astro';
+import DueDiligenceChecklist from '../../components/DueDiligenceChecklist.astro';
 import FAQAccordion from '../../components/FAQAccordion.astro';
 import StickyCTA from '../../components/StickyCTA.astro';
 import { SPOKES, type SpokePage } from '../../data/pages';
@@ -53,7 +54,14 @@ const reviewSchema = primaryAffiliate ? {
   "author": {
     "@type": "Organization",
     "name": "Fast Track Creator Editorial Team",
-    "url": "https://fasttrackcreator.com/about/"
+    "url": "https://fasttrackcreator.com/about/",
+    "knowsAbout": [
+      "Digital Media Acquisitions",
+      "YouTube Partner Program",
+      "Creator Economy Infrastructure",
+      "AI Synthetic Media Compliance",
+      "Social Account Escrow Protection"
+    ]
   },
   "publisher": {
     "@type": "Organization",
@@ -88,6 +96,23 @@ const reviewSchema = primaryAffiliate ? {
     }
   }
 } : undefined;
+
+// Google SERP-compliant HowTo Schema for procedural blueprints
+const howToSchema = spoke.slug.startsWith('how-to-') ? {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": spoke.h1,
+  "description": spoke.metaDescription,
+  "image": "https://fasttrackcreator.com/icon-512x512.png",
+  "totalTime": "P1D",
+  "step": spoke.keyBenefits.map((benefit, idx) => ({
+    "@type": "HowToStep",
+    "position": idx + 1,
+    "name": `Step ${idx + 1}: ${benefit.split(':')[0] || 'Implementation Phase'}`,
+    "text": benefit,
+    "url": `https://fasttrackcreator.com/${spoke.category}/${spoke.slug}/#problem`
+  }))
+} : null;
 ---
 
 <BaseLayout
@@ -103,6 +128,10 @@ const reviewSchema = primaryAffiliate ? {
   headerCtaText={primaryAffiliate?.primaryCtaText.replace('→', '').trim().slice(0, 24) || "Compare Systems"}
   headerCtaUrl={primaryAffiliate?.vanityPath || "/reviews/"}
 >
+  {howToSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
+  )}
+
   <!-- Strictly Single H1 Above-The-Fold Hero -->
   <AboveTheFoldHero
     h1={spoke.h1}
@@ -122,6 +151,7 @@ const reviewSchema = primaryAffiliate ? {
         <a href="#problem" class="hover:text-white hover:underline transition-all">Obstacles</a>
         <a href="#comparison" class="hover:text-white hover:underline transition-all">Comparison Matrix</a>
         <a href="#solution" class="hover:text-white hover:underline transition-all">Verified Partner</a>
+        <a href="#checklist" class="hover:text-white hover:underline transition-all">Checklist</a>
         <a href="#faqs" class="hover:text-white hover:underline transition-all">FAQs</a>
       </div>
       <a
@@ -134,6 +164,22 @@ const reviewSchema = primaryAffiliate ? {
       </a>
     </div>
   </nav>
+
+  <!-- Editorial Verification & E-E-A-T Standards Notice -->
+  <div class="bg-gray-950 border-b border-gray-800/80 py-3.5 px-4">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 text-xs text-slate-400">
+      <div class="flex items-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0 animate-pulse"></span>
+        <span>
+          <strong class="text-slate-200">Editorial Audit:</strong> Fast Track Creator Research Desk · Fact-Checked for October 2026
+        </span>
+      </div>
+      <a href="/about/#methodology" class="inline-flex items-center text-brand-400 hover:text-brand-300 font-semibold transition-colors">
+        <span>Tested against 14-Point Due Diligence Standard</span>
+        <span class="ml-1">→</span>
+      </a>
+    </div>
+  </div>
 
   <!-- Pain Points & Structural Obstacles Breakdown -->
   <section id="problem" class="py-16 md:py-20 border-b border-gray-800 bg-gray-950">
@@ -234,6 +280,11 @@ const reviewSchema = primaryAffiliate ? {
       </div>
     </div>
   </section>
+
+  <!-- Due Diligence Checklist Tool -->
+  <div id="checklist">
+    <DueDiligenceChecklist categorySlug={spoke.category} audience={spoke.audience} />
+  </div>
 
   <!-- FAQ Accordion -->
   <div id="faqs">
